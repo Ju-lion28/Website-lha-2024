@@ -8,33 +8,47 @@
 }
 
 @font-face {
+  font-family: "VariableFont";
+  src: url("/assets/font/RobotoMono/RobotoMono-VariableFont_wght.ttf");
+  font-weight: 100 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "VariableFont";
+  src: url("/assets/font/RobotoMono/RobotoMono-Italic-VariableFont_wght.ttf");
+  font-weight: 100 700;
+  font-style: italic;
+}
+
+/* @font-face {
   font-family: SpaceMono;
-  src: url(assets/font/SpaceMono/SpaceMono-Regular.ttf);
+  src: url(assets/font/RobotoMono/RobotoMono-Regular.ttf);
 }
 
 @font-face {
   font-family: SpaceMono;
-  src: url(assets/font/SpaceMono/SpaceMono-Bold.ttf);
+  src: url(assets/font/RobotoMono/RobotoMono-Bold.ttf);
   font-weight: bold;
 }
 
 @font-face {
   font-family: SpaceMono;
-  src: url(assets/font/SpaceMono/SpaceMono-Italic.ttf);
+  src: url(assets/font/RobotoMono/RobotoMono-Italic.ttf);
   font-style: italic;
 }
 
 @font-face {
   font-family: SpaceMono;
-  src: url(assets/font/SpaceMono/SpaceMono-BoldItalic.ttf);
+  src: url(assets/font/RobotoMono/RobotoMono-BoldItalic.ttf);
   font-style: italic;
   font-weight: bold;
-}
+} */
 
 html {
   background: var(--background);
   color: var(--text);
-  font-family: SpaceMono;
+  font-family: VariableFont;
   padding: 20px;
 }
 
@@ -44,12 +58,13 @@ a:active,
 a:hover {
   color: var(--primary);
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 img#mainpic {
   max-width: 100%;
   height: auto;
+  border-radius: 25px;
 }
 
 a:hover {
@@ -58,12 +73,14 @@ a:hover {
 
 h1 {
   color: var(--accent);
-  font-size: xxx-large;
+  font-size: 48px;
   text-align: center;
 }
 
 h2 {
   color: var(--primary);
+  font-size: 32px;
+  font-style: italic;
 }
 
 .content {
@@ -83,12 +100,17 @@ div#picker {
   text-align: center;
 }
 
+div.footer {
+  background-color: var(--primary);
+  color: var(--secondary);
+}
+
 menu#links-menu {
   list-style-type: none;
   display: flex;
   padding: 0;
   margin: 16px 0;
-  column-gap: 5em;
+  column-gap: 80px;
   flex-direction: row;
   flex-wrap: wrap;
   text-align: center;
@@ -101,7 +123,7 @@ li.navbar {
   font-size: 1em;
   text-decoration: none;
   font-stretch: ultra-expanded;
-  transition: all 0.3s cubic-bezier(0.18, 0.89, 0.43, 1.54);
+  transition: all 0.3s cubic-bezier(0.18, 0.89, 0.4, 1.15);
 }
 
 li.navbar:hover {
@@ -115,18 +137,18 @@ li.navbar:hover {
 }
 
 #navImage {
-  height: 50px;
-  width: 50px;
-  padding: 2em;
+  height: 48px;
+  width: 48px;
+  padding: 32px;
   /* transition: all .3s cubic-bezier(0.4, 0, 1, 1); */
   transition: all 0.3s cubic-bezier(0.18, 0.89, 0.43, 1.54);
   float: left;
 }
 
 #navImage:hover {
-  height: 82px;
-  width: 82px;
-  padding: 1em;
+  height: 80px;
+  width: 80px;
+  padding: 16px;
 }
 
 .btn {
