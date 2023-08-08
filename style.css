@@ -21,30 +21,6 @@
   font-style: italic;
 }
 
-/* @font-face {
-  font-family: SpaceMono;
-  src: url(assets/font/RobotoMono/RobotoMono-Regular.ttf);
-}
-
-@font-face {
-  font-family: SpaceMono;
-  src: url(assets/font/RobotoMono/RobotoMono-Bold.ttf);
-  font-weight: bold;
-}
-
-@font-face {
-  font-family: SpaceMono;
-  src: url(assets/font/RobotoMono/RobotoMono-Italic.ttf);
-  font-style: italic;
-}
-
-@font-face {
-  font-family: SpaceMono;
-  src: url(assets/font/RobotoMono/RobotoMono-BoldItalic.ttf);
-  font-style: italic;
-  font-weight: bold;
-} */
-
 html {
   background: var(--background);
   color: var(--text);
