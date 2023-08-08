@@ -1,0 +1,160 @@
+:root {
+  --text: #8d0660;
+  --background: #fcf0fa;
+  --primary: #732640;
+  --secondary: #f7ebd4;
+  --accent: #217a9a;
+  --darker-accent: #124254;
+}
+
+@font-face {
+  font-family: SpaceMono;
+  src: url(assets/font/SpaceMono/SpaceMono-Regular.ttf);
+}
+
+@font-face {
+  font-family: SpaceMono;
+  src: url(assets/font/SpaceMono/SpaceMono-Bold.ttf);
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: SpaceMono;
+  src: url(assets/font/SpaceMono/SpaceMono-Italic.ttf);
+  font-style: italic;
+}
+
+@font-face {
+  font-family: SpaceMono;
+  src: url(assets/font/SpaceMono/SpaceMono-BoldItalic.ttf);
+  font-style: italic;
+  font-weight: bold;
+}
+
+html {
+  background: var(--background);
+  color: var(--text);
+  font-family: SpaceMono;
+  padding: 20px;
+}
+
+a,
+a:visited,
+a:active,
+a:hover {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+img#mainpic {
+  max-width: 100%;
+  height: auto;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h1 {
+  color: var(--accent);
+  font-size: xxx-large;
+  text-align: center;
+}
+
+h2 {
+  color: var(--primary);
+}
+
+.content {
+  border-radius: 25px;
+  margin: auto;
+  min-width: 100px;
+  text-align: left;
+  padding: 20px;
+}
+
+div#picker {
+  display: flex;
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  text-align: center;
+}
+
+menu#links-menu {
+  list-style-type: none;
+  display: flex;
+  padding: 0;
+  margin: 16px 0;
+  column-gap: 5em;
+  flex-direction: row;
+  flex-wrap: wrap;
+  text-align: center;
+  transition: all 0.3s cubic-bezier(0.18, 0.89, 0.43, 1.54);
+}
+
+li.navbar {
+  display: inline;
+  text-align: center;
+  font-size: 1em;
+  text-decoration: none;
+  font-stretch: ultra-expanded;
+  transition: all 0.3s cubic-bezier(0.18, 0.89, 0.43, 1.54);
+}
+
+li.navbar:hover {
+  display: inline-block;
+  letter-spacing: .5em;
+  /* -webkit-transform: scale(1.5, 1); Safari and Chrome */
+  /* -moz-transform: scale(1.5, 1); Firefox */
+  /* -ms-transform: scale(1.5, 1); IE 9 */
+  /* -o-transform: scale(1.5, 1); Opera */
+  /* transform: scale(1.5, 1); W3C */
+}
+
+#navImage {
+  height: 50px;
+  width: 50px;
+  padding: 2em;
+  /* transition: all .3s cubic-bezier(0.4, 0, 1, 1); */
+  transition: all 0.3s cubic-bezier(0.18, 0.89, 0.43, 1.54);
+  float: left;
+}
+
+#navImage:hover {
+  height: 82px;
+  width: 82px;
+  padding: 1em;
+}
+
+.btn {
+  padding: 10px 20px;
+  color: black;
+  border: none;
+  background: none;
+  cursor: pointer;
+  text-align: left;
+  font-size: 20px;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--accent);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--darker-accent);
+}
