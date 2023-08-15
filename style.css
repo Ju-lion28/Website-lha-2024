@@ -8,14 +8,14 @@
 }
 
 @font-face {
-  font-family: "RobotoMono";
+  font-family: "SourceCodePro";
   src: url("/assets/font/SourceCodePro/SourceCodePro-VariableFont_wght.ttf");
-  font-weight: 100 700;
+  font-weight: 200 900;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "RobotoMono";
+  font-family: "SourceCodePro";
   src: url("/assets/font/SourceCodePro/SourceCodePro-Italic-VariableFont_wght.ttf");
   font-weight: 200 900;
   font-style: italic;
@@ -24,7 +24,7 @@
 html {
   background: var(--background);
   color: var(--text);
-  font-family: RobotoMono;
+  font-family: SourceCodePro;
   font-size: 16px;
   padding: 16px;
 }
