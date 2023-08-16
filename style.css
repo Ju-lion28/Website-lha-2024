@@ -39,7 +39,7 @@ a:hover {
 }
 
 img#mainpic {
-  max-width: 100%;
+  width: 1280px;
   height: auto;
   border-radius: 25px;
 }
@@ -60,10 +60,11 @@ h2 {
   font-style: italic;
 }
 
-.content {
+article.content {
   border-radius: 25px;
   margin: auto;
   min-width: 100px;
+  max-width: 1280px;
   text-align: left;
   padding: 20px;
 }
