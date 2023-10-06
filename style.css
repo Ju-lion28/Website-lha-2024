@@ -1,10 +1,18 @@
-:root {
-  --text: #8d0660;
-  --background: #fcf0fa;
+:root[data-theme="light"] {
+  --text: #8e0661;
+  --background: #fceefa;
   --primary: #732640;
   --secondary: #f7ebd4;
-  --accent: #217a9a;
+  --accent: #217b9c;
   --darker-accent: #124254;
+}
+:root[data-theme="dark"] {
+  --text: #f971cc;
+  --background: #11030f;
+  --primary: #d98ca6;
+  --secondary: #2b1f08;
+  --accent: #63bdde;
+  --darker-accent: #27637b;
 }
 
 @font-face {
