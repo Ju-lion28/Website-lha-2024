@@ -37,6 +37,10 @@ html {
   padding: 16px;
 }
 
+body {
+  transition: all 0.3s cubic-bezier(0.2, 0, 0, 1);
+}
+
 a,
 a:visited,
 a:active,
@@ -47,7 +51,7 @@ a:hover {
 }
 
 img#mainpic {
-  width: 1280px;
+  width: 100%;
   height: auto;
   border-radius: 25px;
 }
@@ -147,22 +151,16 @@ li.navbar:hover {
   font-size: 20px;
 }
 
-/* width */
+/* scrollbar */
 ::-webkit-scrollbar {
   width: 10px;
 }
-
-/* Track */
 ::-webkit-scrollbar-track {
   background: var(--background);
 }
-
-/* Handle */
 ::-webkit-scrollbar-thumb {
   background: var(--accent);
 }
-
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: var(--darker-accent);
 }
