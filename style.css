@@ -113,7 +113,7 @@ menu#links-menu {
     list-style-type: none;
     display: flex;
     padding: 0;
-    margin: 16px 0;
+    margin: 16px;
     column-gap: 80px;
     flex-direction: row;
     flex-wrap: wrap;
