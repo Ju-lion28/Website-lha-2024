@@ -150,9 +150,9 @@ li.navbar:hover {
 }
 
 #navImage:hover {
-    height: 80px;
-    width: 80px;
-    padding: 16px;
+    height: 64px;
+    width: 64px;
+    padding: 8px;
 }
 
 article.content {
