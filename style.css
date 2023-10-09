@@ -118,7 +118,6 @@ menu#links-menu {
     flex-direction: row;
     flex-wrap: wrap;
     text-align: center;
-    transition: all 0.3s cubic-bezier(0.18, 0.89, 0.43, 1.54);
 }
 
 li.navbar {
