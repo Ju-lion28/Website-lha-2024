@@ -5,7 +5,7 @@ const loadPageWithAnimation = (url) => {
     // Remove the loading transition effect after a delay and redirect to the URL
     setTimeout(() => {
         window.location.href = url; // Redirect to the clicked URL
-    }, 1000); // Adjust the timeout duration as needed
+    }, 300); // Adjust the timeout duration as needed
 };
 
 // Event listener for navigation links (including images inside anchor tags)
