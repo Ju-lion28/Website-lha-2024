@@ -56,15 +56,16 @@ a:hover {
     font-weight: 700;
 }
 
+a:hover {
+    text-decoration: underline;
+}
+
 img#mainpic {
     width: 100%;
     height: auto;
     border-radius: 25px;
 }
 
-a:hover {
-    text-decoration: underline;
-}
 
 h1 {
     color: var(--accent);
