@@ -36,18 +36,17 @@ if (storedTheme) {
 document.addEventListener('DOMContentLoaded', function () {
     document.body.classList.add('fade-in');
 
-    const lightThemeButton = document.getElementById('light-theme');
-    const darkThemeButton = document.getElementById('dark-theme');
+    const themeToggleButton = document.getElementById('themeToggleButton');
 
-    if (lightThemeButton && darkThemeButton) {
-        lightThemeButton.addEventListener('click', () => {
-            document.documentElement.setAttribute('data-theme', 'light');
-            localStorage.setItem('theme', 'light'); // Store the theme preference
-        });
-
-        darkThemeButton.addEventListener('click', () => {
-            document.documentElement.setAttribute('data-theme', 'dark');
-            localStorage.setItem('theme', 'dark'); // Store the theme preference
+    if (themeToggleButton) {
+        themeToggleButton.addEventListener('click', () => {
+            if (storedTheme === 'light') {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+            } else if (storedTheme === 'dark') {
+                document.documentElement.setAttribute('data-theme', 'light');
+                localStorage.setItem('theme', 'light');
+            }
         });
     };
 });
