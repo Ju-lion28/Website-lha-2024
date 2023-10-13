@@ -107,8 +107,18 @@ div.footer {
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
     box-shadow: 0px -5px 10px #00000033;
+    display: flex; /* Display flex to easily put highscore on left, */
+    justify-content: space-between;  /* Seperates the content to "put it on the left" by making a space between them */
 }
 
+/* Show different cursor so people know it's clickable */
+#highscore {
+    cursor: pointer;
+}
+
+#resetbutton {
+    cursor: pointer;
+}
 
 menu#links-menu {
     list-style-type: none;

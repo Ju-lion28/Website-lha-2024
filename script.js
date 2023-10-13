@@ -50,3 +50,63 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     };
 });
+
+// Highscore
+
+// Safety. Makes sure "HIGHSCORE is a number and that it exists"
+window.onload = function () {
+    if (localStorage.getItem("HIGHSCORE") === null || NaN) {
+        localStorage.setItem("HIGHSCORE", Number(0));
+    }
+}
+
+const highscoreBox = document.getElementById("highscore")
+
+// Modifies in DOM
+function updateHighScoreDOM(score) {
+    highscoreBox.innerHTML = "Highscore: " + score;
+}
+
+// DOM event listeners, click and keydown
+
+// Syntax source of 'localStorage.HIGHSCORE': https://www.w3schools.com/jsref/prop_win_localstorage.asp
+
+document.onclick = function () {
+    localStorage.HIGHSCORE = Number(localStorage.HIGHSCORE) + 2;
+    updateHighScoreDOM(localStorage.HIGHSCORE);
+};
+
+document.onkeydown = function () {
+    localStorage.HIGHSCORE = Number(localStorage.HIGHSCORE) + 1;
+    updateHighScoreDOM(localStorage.HIGHSCORE);
+};
+
+//Link event listener
+var links = document.querySelectorAll('a');
+links.forEach(function (link) {
+    link.addEventListener('click', function () {
+        localStorage.HIGHSCORE = Number(localStorage.HIGHSCORE) + 10;
+        updateHighScoreDOM(localStorage.HIGHSCORE);
+    });
+});
+
+//Reset button
+const resetButton = document.getElementById("resetbutton")
+
+// Set highscore to 0
+resetButton.onclick = function resetScore() {
+    console.log("Score Reset")
+    localStorage.setItem("HIGHSCORE", Number(0 - 2)); //Forces HIGHSCORE to show as 0
+}
+
+// Show clear button and hide score
+highscoreBox.onmouseover = function () {
+    resetButton.hidden = false
+    highscoreBox.hidden = true
+}
+
+// Hide clear button and show score
+highscoreBox.onmouseout = function () {
+    resetButton.hidden = true
+    highscoreBox.hidden = false
+}
