@@ -26,7 +26,8 @@ document.addEventListener('click', (event) => {
 
 
 // Check if there is a stored theme preference, and if not, set the default theme to "light"
-const storedTheme = localStorage.getItem('theme');
+let storedTheme = localStorage.getItem('theme');
+
 if (storedTheme) {
     document.documentElement.setAttribute('data-theme', storedTheme);
 } else {
@@ -36,20 +37,21 @@ if (storedTheme) {
 document.addEventListener('DOMContentLoaded', function () {
     document.body.classList.add('fade-in');
 
-    const themeToggleButton = document.getElementById('themeToggleButton');
+    const themeToggleButton = document.getElementById('themeToggleButton'); // Moved this line here
 
-    if (themeToggleButton) {
-        themeToggleButton.addEventListener('click', () => {
-            if (storedTheme === 'light') {
-                document.documentElement.setAttribute('data-theme', 'dark');
-                localStorage.setItem('theme', 'dark');
-            } else if (storedTheme === 'dark') {
-                document.documentElement.setAttribute('data-theme', 'light');
-                localStorage.setItem('theme', 'light');
-            }
-        });
-    };
+    themeToggleButton.addEventListener('click', () => {
+        if (storedTheme === 'light') {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            localStorage.setItem('theme', 'dark'); // Update and store the theme
+            storedTheme = 'dark'; // Update the storedTheme variable
+        } else if (storedTheme === 'dark') {
+            document.documentElement.setAttribute('data-theme', 'light');
+            localStorage.setItem('theme', 'light'); // Update and store the theme
+            storedTheme = 'light'; // Update the storedTheme variable
+        }
+    });
 });
+
 
 // Highscore
 
