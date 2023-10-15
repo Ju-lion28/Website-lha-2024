@@ -44,10 +44,12 @@ document.addEventListener('DOMContentLoaded', function () {
             document.documentElement.setAttribute('data-theme', 'dark');
             localStorage.setItem('theme', 'dark'); // Update and store the theme
             storedTheme = 'dark'; // Update the storedTheme variable
+            themeToggleButton.setAttribute("src", "../assets/images/icons/brightness.png")
         } else if (storedTheme === 'dark') {
             document.documentElement.setAttribute('data-theme', 'light');
             localStorage.setItem('theme', 'light'); // Update and store the theme
             storedTheme = 'light'; // Update the storedTheme variable
+            themeToggleButton.setAttribute("src", "../assets/images/icons/moon.png")
         }
     });
 });
