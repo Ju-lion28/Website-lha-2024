@@ -25,46 +25,35 @@ document.addEventListener('click', (event) => {
 });
 
 
-var svg = document.getElementById("themeToggleButton");
-var s = Snap(svg);
-var light = Snap.select('#light');
-var dark = Snap.select('#dark');
-var lightPoints = light.node.getAttribute('d');
-var darkPoints = dark.node.getAttribute('d');
-var toDark = function(){
-  light.animate({ d: darkPoints }, 1000, mina.easeout());  
-}
-var toLight = function(){
-  light.animate({ d: lightPoints }, 1000, mina.easeout()); 
-}
 
 // Check if there is a stored theme preference, and if not, set the default theme to "light"
-let storedTheme = localStorage.getItem('theme');
-
-if (storedTheme) {
-    document.documentElement.setAttribute('data-theme', storedTheme);
-} else {
-    document.documentElement.setAttribute('data-theme', 'light');
-}
 
 document.addEventListener('DOMContentLoaded', function () {
+    
     document.body.classList.add('fade-in');
-
-    const themeToggleButton = document.getElementById('themeToggleButton'); // Moved this line here
-
+    
+    let storedTheme = localStorage.getItem('theme');
+    const themeToggleButton = document.getElementById('themeToggleButton');
+    
+    if (storedTheme) {
+        document.documentElement.setAttribute('data-theme', storedTheme);
+        themeToggleButton.setAttribute('src', `../assets/images/icons/theme/${storedTheme}.png`)
+    } else {
+        document.documentElement.setAttribute('data-theme', 'light');
+        themeToggleButton.setAttribute("src", "../assets/images/icons/theme/light.png")
+    }
+    
     themeToggleButton.addEventListener('click', () => {
         if (storedTheme === 'light') {
             document.documentElement.setAttribute('data-theme', 'dark');
             localStorage.setItem('theme', 'dark'); // Update and store the theme
             storedTheme = 'dark'; // Update the storedTheme variable
-            // themeToggleButton.setAttribute("src", "../assets/images/icons/theme/dark.svg")
-            toDark()
+            themeToggleButton.setAttribute("src", "../assets/images/icons/theme/dark.png")
         } else if (storedTheme === 'dark') {
             document.documentElement.setAttribute('data-theme', 'light');
             localStorage.setItem('theme', 'light'); // Update and store the theme
             storedTheme = 'light'; // Update the storedTheme variable
-            // themeToggleButton.setAttribute("src", "../assets/images/icons/theme/light.svg")
-            toLight()
+            themeToggleButton.setAttribute("src", "../assets/images/icons/theme/light.png")
         }
     });
 });
