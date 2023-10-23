@@ -29,12 +29,12 @@ document.addEventListener('click', (event) => {
 // Check if there is a stored theme preference, and if not, set the default theme to "light"
 
 document.addEventListener('DOMContentLoaded', function () {
-    
+
     document.body.classList.add('fade-in');
-    
+
     let storedTheme = localStorage.getItem('theme');
     const themeToggleButton = document.getElementById('themeToggleButton');
-    
+
     if (storedTheme) {
         document.documentElement.setAttribute('data-theme', storedTheme);
         themeToggleButton.setAttribute('src', `../assets/images/icons/theme/${storedTheme}.png`)
@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function () {
         document.documentElement.setAttribute('data-theme', 'light');
         themeToggleButton.setAttribute("src", "../assets/images/icons/theme/light.png")
     }
-    
+
     themeToggleButton.addEventListener('click', () => {
         if (storedTheme === 'light') {
             document.documentElement.setAttribute('data-theme', 'dark');
@@ -99,7 +99,7 @@ links.forEach(function (link) {
 });
 
 //Reset button
-const resetButton = document.getElementById("resetbutton")
+const resetButton = document.getElementById("resetButton")
 
 // Set highscore to 0
 resetButton.onclick = function resetScore() {
