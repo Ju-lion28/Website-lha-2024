@@ -33,38 +33,47 @@ document.addEventListener("DOMContentLoaded", function () {
   document.body.classList.add("fade-in");
 
   let storedTheme = localStorage.getItem("theme");
-  const themeToggleButton = document.getElementById("themeToggleButton");
+  let themeToggleButton = document.getElementById("themeToggleButton");
+  let themeIcon = document.getElementById("themeIcon")
 
-  if (storedTheme) {
+  if (localStorage.getItem("theme")) {
+    console.log("found theme")
+    console.log(localStorage.getItem("theme"))
     document.documentElement.setAttribute("data-theme", storedTheme);
-    themeToggleButton.setAttribute(
+    themeIcon.setAttribute(
       "src",
-      `../assets/images/icons/theme/${storedTheme}.png`
+      `../assets/images/icons/theme/${storedTheme}.svg`
     );
   } else {
+    console.log("default")
     document.documentElement.setAttribute("data-theme", "light");
-    themeToggleButton.setAttribute(
+    themeIcon.setAttribute(
       "src",
-      "../assets/images/icons/theme/light.png"
+      "../assets/images/icons/theme/light.svg"
     );
-  }
+    localStorage.setItem("theme", "light");
+    storedTheme = localStorage.getItem("theme")
+  };
 
-  themeToggleButton.addEventListener("click", () => {
+  themeIcon.addEventListener("click", () => {
+    console.log("running")
     if (storedTheme === "light") {
+      console.log("light to dark")
       document.documentElement.setAttribute("data-theme", "dark");
       localStorage.setItem("theme", "dark"); // Update and store the theme
-      storedTheme = "dark"; // Update the storedTheme variable
-      themeToggleButton.setAttribute(
+      storedTheme = localStorage.getItem("theme"); // Update the storedTheme variable
+      themeIcon.setAttribute(
         "src",
-        "../assets/images/icons/theme/dark.png"
+        "../assets/images/icons/theme/dark.svg"
       );
     } else if (storedTheme === "dark") {
+      console.log("dark to light")
       document.documentElement.setAttribute("data-theme", "light");
       localStorage.setItem("theme", "light"); // Update and store the theme
-      storedTheme = "light"; // Update the storedTheme variable
-      themeToggleButton.setAttribute(
+      storedTheme = localStorage.getItem("theme"); // Update the storedTheme variable
+      themeIcon.setAttribute(
         "src",
-        "../assets/images/icons/theme/light.png"
+        "../assets/images/icons/theme/light.svg"
       );
     }
   });

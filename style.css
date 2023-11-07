@@ -11,7 +11,7 @@
   --text: #f971cc;
   --background: #11030f;
   --primary: #d98ca6;
-  --secondary: #2b1f08;
+  --secondary: #3e2c0c;
   --accent: #63bdde;
   --darker-accent: #27637b;
 }
@@ -159,19 +159,31 @@ li.navbar:hover {
   padding: 8px;
 }
 
-#themeToggleButton {
+button.theme {
+  outline: none;
+  border: none;
+  background-color: var(--secondary);
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
   height: 48px;
   width: 48px;
-  padding: 16px;
   /* transition: all .3s cubic-bezier(0.4, 0, 1, 1); */
   transition: all 0.3s cubic-bezier(0.18, 0.89, 0.43, 1.54);
   float: left;
+  margin-left: 8px;
 }
 
-#themeToggleButton:hover {
+button.theme:hover {
   height: 64px;
   width: 64px;
   padding: 8px;
+
+}
+
+#themeIcon {
+  height: 48px;
+  width: 48px;
 }
 
 article.content {
