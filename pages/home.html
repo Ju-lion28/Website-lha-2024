@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta name="description" content="LaurenHill Academy's website submission for the 2024 CRC competition"/>
+    <title>LHA Robotics</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="../style.css"/>
+    <link rel="icon" type="image/x-icon" href="../assets/images/icons/logo/favicon.png"/>
+    <script>
+        function getBrowserLanguage() {
+            return navigator.language || navigator.userLanguage;
+        }
+
+        const browserLanguage = getBrowserLanguage();
+        const languageCode = browserLanguage.split('-')[0];
+
+        const script = document.createElement('script');
+        script.src = `../locales/${languageCode}.js`;
+        script.onload = updateLocalization; // Call the function to update localization after the script is loaded
+        document.head.appendChild(script);
+
+        function updateLocalization() {
+            // Access the localized strings from the loaded script
+            const localizedStrings = window.localization || {};
+
+            // Update the text of the elements with the localized strings
+            const gameNavElement = document.getElementById('gameNav');
+            if (gameNavElement) {
+                gameNavElement.innerText = localizedStrings.home.menu_options.game;
+            }
+
+            const journalNavElement = document.getElementById('journalNav');
+            if (journalNavElement) {
+                journalNavElement.innerText = localizedStrings.home.menu_options.journal;
+            }
+
+            const rosterNavElement = document.getElementById('rosterNav');
+            if (rosterNavElement) {
+                rosterNavElement.innerText = localizedStrings.home.menu_options.roster;
+            }
+
+            const aboutUsElement = document.getElementById('aboutUs');
+            if (aboutUsElement) {
+                aboutUsElement.innerText = localizedStrings.home.about_us.title;
+            }
+
+            const aboutTextElement = document.getElementById('aboutText');
+            if (aboutTextElement) {
+                aboutTextElement.innerText = localizedStrings.home.about_us.text;
+            }
+        }
+    </script>
+</head>
+
+<body>
+<div class="header">
+    <a href="home.html">
+        <img src="../assets/images/icons/logo/SimpleIcon.png" id="navImage" alt="Logo"/>
+    </a>
+    <menu class="navbar" id="links-menu">
+        <li class="navbar" id="crcNav"><a href="en_crc.html">CRC</a></li>
+        <li class="navbar" id="gameNav"><a href="en_game.html">Game</a></li>
+        <li class="navbar" id="journalNav"><a href="en_journal.html">Journal</a></li>
+        <li class="navbar" id="rosterNav"><a href="en_roster.html">Roster</a></li>
+    </menu>
+    <button class="theme" id="themeToggleButton">
+        <embed id="themeIcon" src="../assets/images/icons/theme/light.svg"/>
+    </button>
+</div>
+
+<article class="content">
+    <h1>LHA Robotics 2024</h1>
+
+    <img src="../assets/images/content/groupPic2023.jpg" alt="Group photo from 2023 CRC AVIA competition"
+         id="mainpic"/>
+
+    <h2 id="aboutUs"></h2>
+    <p id="aboutText"></p>
+    <br/>
+</article>
+
+<div class="footer">
+    Copyright © 2024 LarenHill Academy Robotics
+    <div class="score" id="highscore"></div>
+    <div class="score" id="resetButton" hidden>Reset Score</div>
+</div>
+
+<script src="../script.js"></script>
+</body>
+
+</html>
