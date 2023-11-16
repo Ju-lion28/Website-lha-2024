@@ -8,50 +8,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" href="../style.css"/>
     <link rel="icon" type="image/x-icon" href="../assets/images/icons/logo/favicon.png"/>
-    <script>
-        function getBrowserLanguage() {
-            return navigator.language || navigator.userLanguage;
-        }
-
-        const browserLanguage = getBrowserLanguage();
-        const languageCode = browserLanguage.split('-')[0];
-
-        const script = document.createElement('script');
-        script.src = `../locales/${languageCode}.js`;
-        script.onload = updateLocalization; // Call the function to update localization after the script is loaded
-        document.head.appendChild(script);
-
-        function updateLocalization() {
-            // Access the localized strings from the loaded script
-            const localizedStrings = window.localization || {};
-
-            // Update the text of the elements with the localized strings
-            const gameNavElement = document.getElementById('gameNav');
-            if (gameNavElement) {
-                gameNavElement.innerText = localizedStrings.home.menu_options.game;
-            }
-
-            const journalNavElement = document.getElementById('journalNav');
-            if (journalNavElement) {
-                journalNavElement.innerText = localizedStrings.home.menu_options.journal;
-            }
-
-            const rosterNavElement = document.getElementById('rosterNav');
-            if (rosterNavElement) {
-                rosterNavElement.innerText = localizedStrings.home.menu_options.roster;
-            }
-
-            const aboutUsElement = document.getElementById('aboutUs');
-            if (aboutUsElement) {
-                aboutUsElement.innerText = localizedStrings.home.about_us.title;
-            }
-
-            const aboutTextElement = document.getElementById('aboutText');
-            if (aboutTextElement) {
-                aboutTextElement.innerText = localizedStrings.home.about_us.text;
-            }
-        }
-    </script>
 </head>
 
 <body>
@@ -66,12 +22,22 @@
         <li class="navbar" id="rosterNav"><a href="en_roster.html">Roster</a></li>
     </menu>
     <button class="theme" id="themeToggleButton">
-        <embed id="themeIcon" src="../assets/images/icons/theme/light.svg"/>
+        <img src="../assets/images/icons/theme/light.svg" alt="Website Theme Icon" id="themeIcon"/>
     </button>
+    <div class="dropdown">
+        <button class="dropdown_button" id="language">
+            <img src="../assets/images/icons/lang/translate.png" alt="Language" id="langIcon"/>
+        </button>
+        <div class="dropdown-content">
+            <button class="langButton" id="enButton" onclick="setLanguage('en')">English</button>
+            <button class="langButton" id="frButton" onclick="setLanguage('fr')">Français</button>
+            <button class="langButton" id="esButton" onclick="setLanguage('es')">Español</button>
+        </div>
+    </div>
 </div>
 
 <article class="content">
-    <h1>LHA Robotics 2024</h1>
+    <h1 id="title-1">LHA Robotics 2024</h1>
 
     <img src="../assets/images/content/groupPic2023.jpg" alt="Group photo from 2023 CRC AVIA competition"
          id="mainpic"/>
@@ -88,6 +54,31 @@
 </div>
 
 <script src="../script.js"></script>
+
+<script>
+    function setLanguage(value) {
+        localStorage.setItem('language', value);
+        location.reload();
+    }
+
+    const script = document.createElement('script');
+    script.src = `../locales/${localStorage.getItem('language').split('-')[0]}.js`;
+    script.onload = updateLocalization; // Call the function to update localization after the script is loaded
+    document.head.appendChild(script);
+
+    function updateLocalization() {
+        // Access the localized strings from the loaded script
+        const localizedStrings = window.localization || {};
+
+        document.getElementById('aboutText').innerText = localizedStrings.home.about_us.text;
+        document.getElementById('aboutUs').innerText = localizedStrings.home.about_us.title;
+        document.getElementById('gameNav').innerHTML = `<a href="en_game.html">${localizedStrings.home.menu_options.game}</a>`;
+        document.getElementById('journalNav').innerHTML = `<a href="en_journal.html">${localizedStrings.home.menu_options.journal}</a>`;
+        document.getElementById('langIcon').alt = localizedStrings.home.menu_options.language;
+        document.getElementById('rosterNav').innerHTML = `<a href="en_roster.html">${localizedStrings.home.menu_options.roster}</a>`;
+        document.getElementById('title-1').innerText = localizedStrings.home.title;
+    }
+</script>
 </body>
 
 </html>
