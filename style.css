@@ -1,20 +1,19 @@
 :root[data-theme="light"] {
-    --text: #d9005a;
-    --background: #fceefa;
-    --primary: #a6364b;
-    --secondary: #fff2e6;
-    --accent: #00a8cc;
-    --darker-accent: #0d3950;
-}
-
-:root[data-theme="dark"] {
-    --text: #f971cc;
-    --background: #11030f;
-    --primary: #cf7c92;
-    --secondary: #513b13;
-    --accent: #78c3e7;
-    --darker-accent: #205368;
-}
+    --text: #1f191a;
+    --background: #fbeff9;
+    --primary: #f26376;
+    --secondary: #e5cde1;
+    --accent: #4f8a96;
+    --darker-accent: #2e5157;
+  }
+  :root[data-theme="dark"] {
+    --text: #e6e0e1;
+    --background: #10040e;
+    --primary: #9c0d20;
+    --secondary: #321a2e;
+    --accent: #69a4b0;
+    --darker-accent: #30484c;
+  }
 
 @font-face {
     font-family: "SourceCodePro";
@@ -31,14 +30,13 @@
 }
 
 html {
-    background: var(--background);
     color: var(--text);
+    background: var(--background);
     font-family: SourceCodePro, monospace;
     font-size: 16px;
 }
 
 body {
-    background-color: rgba(252, 238, 250, 0.9); /* Adjust the opacity as needed */
     margin: 0; /* Remove default margin */
     display: flex;
     flex-direction: column;
@@ -155,7 +153,7 @@ div.header {
 
 div.footer {
     background-color: var(--primary);
-    color: var(--secondary);
+    color: var(--text);
     padding: 16px;
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
@@ -326,4 +324,3 @@ article.content {
 ::-webkit-scrollbar-thumb:hover {
     background: var(--darker-accent);
 }
-
