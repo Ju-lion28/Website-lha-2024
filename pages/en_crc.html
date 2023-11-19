@@ -12,19 +12,46 @@
 </head>
 
 <body>
-    <div id="picker">
-        <a href="../index.html">
-            <img src="../assets/images/icons/logo/SimpleIcon.png" id="navImage" alt="Image Logo" />
-        </a>
-        <menu class="navbar" id="links-menu">
-            <li class="navbar" id="crcNav"><a href="../pages/en_crc.html">CRC</a></li>
-            <li class="navbar" id="gameNav"><a href="../pages/en_game.html">Game</a></li>
-            <li class="navbar" id="journalNav"><a href="../pages/en_journal.html">Journal</a></li>
-            <li class="navbar" id="rosterNav"><a href="../pages/en_roster.html">Roster</a></li>
-        </menu>
+<div class="header">
+    <a href="../index.html">
+        <img src="../assets/images/icons/logo/SimpleIcon.png" id="navImage" alt="Logo" />
+    </a>
+    <menu class="navbar" id="links-menu">
+        <li class="navbar" id="crcNav"><a href="../pages/en_crc.html">CRC</a></li>
+        <li class="navbar" id="gameNav"><a href="../pages/en_game.html">Game</a></li>
+        <li class="navbar" id="journalNav"><a href="../pages/en_journal.html">Journal</a></li>
+        <li class="navbar" id="rosterNav"><a href="../pages/en_roster.html">Roster</a></li>
+    </menu>
+    <button class="theme" id="themeToggleButton">
+        <img src="../assets/images/icons/theme/light.svg" alt="Website Theme Icon" id="themeIcon" />
+    </button>
+    <div class="dropdown">
+        <button class="dropdown_button" id="language">
+            <img src="../assets/images/icons/lang/translate.png" alt="Language" id="langIcon" />
+        </button>
+        <div class="dropdown-content">
+            <button class="langButton" id="enButton" onclick="setLanguage('en')">English</button>
+            <button class="langButton" id="frButton" onclick="setLanguage('fr')">Français</button>
+            <button class="langButton" id="esButton" onclick="setLanguage('es')">Español</button>
+        </div>
     </div>
-    <br />
-    aughhhh CRC
+</div>
+
+<article class="content">
+    <h1 id="title-1">LHA Robotics 2024</h1>
+
+    aughhh CRC
+    <br/>
+</article>
+
+<div class="footer">
+    Copyright © 2024 LarenHill Academy Robotics
+    <div class="score" id="highscore"></div>
+    <div class="score" id="resetButton" hidden>Reset Score</div>
+</div>
+
+<script src="../script.js"></script>
+
 </body>
 
 </html>
