@@ -36,7 +36,13 @@ document.addEventListener("DOMContentLoaded", function () {
     let storedTheme = localStorage.getItem("theme");
     let storedLanguage = localStorage.getItem("language");
     let themeToggleButton = document.getElementById("themeToggleButton");
-    let themeIcon = document.getElementById("themeIcon")
+    let themeIcon = document.getElementById("themeIcon");
+    let hamburgerIcon = document.querySelector('.hamburger-icon');
+    let navbarButtons = document.querySelector('.navbar-buttons');
+
+    hamburgerIcon.addEventListener('click', function () {
+        navbarButtons.classList.toggle('show');
+    });
 
     if (localStorage.getItem("theme")) {
         console.log("found theme")

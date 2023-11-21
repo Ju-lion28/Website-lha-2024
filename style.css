@@ -5,15 +5,16 @@
     --secondary: #e5cde1;
     --accent: #4f8a96;
     --darker-accent: #2e5157;
-  }
-  :root[data-theme="dark"] {
+}
+
+:root[data-theme="dark"] {
     --text: #e6e0e1;
     --background: #10040e;
     --primary: #9c0d20;
     --secondary: #321a2e;
     --accent: #69a4b0;
     --darker-accent: #30484c;
-  }
+}
 
 @font-face {
     font-family: "SourceCodePro";
@@ -86,6 +87,11 @@ img#mainpic {
     padding: 10px;
     right: 0;
     left: auto;
+    top: 100%; /* Position the dropdown below the header */
+    transition: all 1s cubic-bezier(0.18, 0.89, 0.4, 1.15);
+    transform-origin: top; /* Set transform origin to top */
+    transform: scaleY(0); /* Start with the menu scaled to 0 height */
+    opacity: 0;
 }
 
 .dropdown-content button {
@@ -95,7 +101,7 @@ img#mainpic {
     border: none;
     background-color: transparent;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
     color: var(--text);
 }
 
@@ -122,6 +128,8 @@ img#mainpic {
 
 .dropdown:hover .dropdown-content {
     display: block;
+    opacity: 100%;
+    transform: scaleY(1); /* Scale the menu to its natural height on hover */
 }
 
 
@@ -149,6 +157,7 @@ div.header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    transition: all 0.3s cubic-bezier(0.18, 0.89, 0.4, 1.15);
 }
 
 div.footer {
@@ -157,7 +166,7 @@ div.footer {
     padding: 16px;
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
-    box-shadow: 0px -5px 10px #00000033;
+    box-shadow: 0 -5px 10px #00000033;
     margin-top: auto; /* Push the footer to the bottom of the container */
     display: flex;
     justify-content: space-between;
@@ -168,31 +177,27 @@ div.score {
     cursor: pointer;
     margin: 0;
     padding: 0 0 8px;
+    text-align: right;
 }
 
 menu#links-menu {
     list-style-type: none;
     display: flex;
     flex-grow: 1; /* Allow the navbar to take up the remaining space */
-    padding-left: 100px;
     margin: 12px;
     column-gap: 80px;
     justify-content: center; /* Center the navbar text */
 }
 
-.menu-container {
-    display: flex;
-    align-items: center;
-}
-
 .navbar {
     display: inline;
-    text-align: center;
+    justify-content: center;
+    margin-left: auto;
     font-size: 1.2em;
+    text-align: center;
     text-decoration: none;
     font-stretch: ultra-expanded;
     transition: all 0.3s cubic-bezier(0.18, 0.89, 0.4, 1.15);
-    justify-content: center;
 }
 
 .navbar a {
@@ -234,10 +239,10 @@ button.theme {
     padding: 0;
     height: 48px;
     width: 48px;
+    margin-left: auto;
     margin-right: 25px; /* Adjust the spacing as needed */
     transition: all 0.3s cubic-bezier(0.18, 0.89, 0.43, 1.54);
 }
-
 
 button.theme:hover {
     transform: scale(1.1);
@@ -323,4 +328,83 @@ article.content {
 
 ::-webkit-scrollbar-thumb:hover {
     background: var(--darker-accent);
+}
+
+#hamburgerIcon {
+    height: 100%;
+    width: 100%;
+}
+
+.hamburger-icon {
+    display: none; /* Hide by default on larger screens */
+    background: transparent;
+    border: none;
+    padding: 0;
+    height: 48px;
+    width: 48px;
+    margin-right: 25px; /* Adjust the spacing as needed */
+    transition: all 0.3s cubic-bezier(0.18, 0.89, 0.43, 1.54);
+}
+
+@media screen and (max-width: 600px) {
+    .navbar-buttons {
+        display: none;
+        text-align: center;
+        background-color: var(--secondary);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        padding: 10px;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        opacity: 0;
+        transform-origin: top;
+        transform: scaleY(0);
+        transition: opacity 0.3s ease, transform 0.3s ease;
+        white-space: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        max-width: 100%; /* Ensure the container takes up the full width */
+    }
+
+    .navbar-buttons.show {
+        display: block;
+        opacity: 1;
+        transform: scaleY(1);
+    }
+
+    .navbar-buttons li {
+        display: inline-block;
+        margin-bottom: 10px;
+        white-space: nowrap;
+    }
+
+    .navbar-buttons a {
+        color: var(--text);
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 1.2em;
+        text-align: center;
+        display: inline-block;
+        padding-top: 10px;
+    }
+
+    .navbar-buttons a:hover {
+        color: var(--accent);
+    }
+
+    .hamburger-icon {
+        display: inline-block; /* Show on smaller screens */
+    }
+
+    .dropdown-content {
+        top: 80px; /* Adjust the top position as needed */
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+        opacity: 1;
+        transform: scaleY(1);
+    }
 }
