@@ -11,7 +11,7 @@ const en = {
         game: "Juego",
         journal: "Revista",
         language: "Idioma",
-        roster: "Lista"
+        roster: "Miembros"
     },
 };
 
