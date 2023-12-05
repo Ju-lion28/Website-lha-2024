@@ -157,3 +157,19 @@ highscoreBox.onmouseout = function () {
     resetButton.hidden = true;
     highscoreBox.hidden = false;
 };
+
+// Show user description
+
+const personDescrition = document.getElementById("description")
+const personBox = document.getElementById("person")
+
+
+personBox.onmouseover =  function () {
+    personDescrition.hidden = false;
+    console.log("mouse over")
+}
+
+personBox.onmouseout = function () {
+    personDescrition.hidden = true
+    console.log("mouse out")
+}

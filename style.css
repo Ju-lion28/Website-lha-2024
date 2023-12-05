@@ -272,6 +272,33 @@ article.content {
     font-size: 1.5em;
 }
 
+.roster {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+#person {
+    background-color: var(--primary);
+    border-radius: 16px;
+    padding: 8px;
+    margin: 8px;
+}
+
+#person img {
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+}
+
+.description{
+    background-color: #4f8a96;
+}
+
+
+
 /* Styles for buttons */
 .btn {
     padding: 10px 20px;
