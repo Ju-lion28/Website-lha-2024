@@ -160,16 +160,18 @@ highscoreBox.onmouseout = function () {
 
 // Show user description
 
-const personDescrition = document.getElementById("description")
-const personBox = document.getElementById("person")
+const persons = document.querySelectorAll(".person");
 
+persons.forEach(person => {
+    const description = person.querySelector(".description");
 
-personBox.onmouseover =  function () {
-    personDescrition.hidden = false;
-    console.log("mouse over")
-}
+    person.addEventListener("mouseover", () => {
+        description.hidden = false;
+        console.log("mouse over");
+    });
 
-personBox.onmouseout = function () {
-    personDescrition.hidden = true
-    console.log("mouse out")
-}
+    person.addEventListener("mouseout", () => {
+        description.hidden = true;
+        console.log("mouse out");
+    });
+});

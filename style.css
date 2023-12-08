@@ -279,24 +279,31 @@ article.content {
     flex-direction: row;
 }
 
-#person {
+.person {
+    position: relative; /* Ensure relative positioning for child elements */
     background-color: var(--primary);
     border-radius: 16px;
     padding: 8px;
     margin: 8px;
 }
 
-#person img {
+.person img {
     width: 200px;
     height: 200px;
     border-radius: 100%;
 }
 
-.description{
+.description {
+    position: absolute; /* Position absolute to remove from normal flow */
+    top: 100%; /* Position it below the person box */
+    left: 50%; /* Center it horizontally */
+    transform: translateX(-50%); /* Center it horizontally */
     background-color: #4f8a96;
+    width: 200px; /* Set a fixed width */
+    padding: 8px; /* Adjust padding as needed */
+    border-radius: 8px; /* Add border-radius for styling */
+    z-index: 99;
 }
-
-
 
 /* Styles for buttons */
 .btn {
