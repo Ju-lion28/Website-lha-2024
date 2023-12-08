@@ -39,7 +39,7 @@ html {
 
 body {
     margin: 0; /* Remove default margin */
-    display: flex;
+    display: grid;
     flex-direction: column;
     min-height: 100vh; /* Set the minimum height of the body to 100% of the viewport height */
     user-select: none;
@@ -285,6 +285,7 @@ article.content {
     border-radius: 16px;
     padding: 8px;
     margin: 8px;
+    cursor: pointer;
     transition: all 0.3s cubic-bezier(0.18, 0.89, 0.43, 1.54);
 }
 
@@ -302,8 +303,38 @@ article.content {
     background-color: #4f8a96;
     width: 200px; /* Set a fixed width */
     padding: 8px; /* Adjust padding as needed */
-    border-radius: 8px; /* Add border-radius for styling */
-    z-index: 99;
+    border-radius: 16px; /* Add border-radius for styling */
+    z-index: 1;
+}
+
+.full-screen {
+    position: fixed;
+    align-self: center;
+    justify-self: center;
+    padding: 16px;
+    justify-content: center;
+    background-color: var(--accent);
+    z-index: 2; /* Place it above the normal layout */
+    border-radius: 16px;
+    display: none;
+}
+
+.full-screen img {
+    width: 500px;
+    height: 500px;
+    border-radius: 16px;
+}
+
+.full-screen .description {
+    width: calc(100% - 32px);
+    padding: 16px;
+    border-radius: 16px;
+    white-space: normal;
+    visibility: visible;
+}
+
+.full-screen.active {
+    display: block;
 }
 
 /* Styles for buttons */

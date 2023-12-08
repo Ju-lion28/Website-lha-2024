@@ -164,6 +164,9 @@ const persons = document.querySelectorAll(".person");
 
 persons.forEach(person => {
     const description = person.querySelector(".description");
+    const fullScreen = document.createElement("div");
+    fullScreen.className = "full-screen";
+    fullScreen.innerHTML = '<p>John Appleseed</p><img src="../assets/images/content/Screenshot 2023-12-05 155448.png" alt="John Appleseed"><p class="description">Blah blah</p>';
 
     person.addEventListener("mouseover", () => {
         description.hidden = false;
@@ -174,4 +177,16 @@ persons.forEach(person => {
         description.hidden = true;
         console.log("mouse out");
     });
+
+    person.addEventListener("click", () => {
+        fullScreen.classList.toggle("active");
+        description.hidden = false;
+    });
+
+    fullScreen.addEventListener("click", () => {
+        fullScreen.classList.remove("active");
+        description.hidden = true;
+    });
+
+    document.body.appendChild(fullScreen);
 });
