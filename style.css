@@ -285,6 +285,7 @@ article.content {
     border-radius: 16px;
     padding: 8px;
     margin: 8px;
+    transition: all 0.3s cubic-bezier(0.18, 0.89, 0.43, 1.54);
 }
 
 .person img {
