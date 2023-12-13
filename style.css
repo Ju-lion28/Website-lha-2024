@@ -284,7 +284,7 @@ article.content {
 .roster .person {
     position: relative;
     width: 300px;
-    height: 400px;
+    height: 350px;
     background-color: var(--primary);
     border-radius: 16px;
     margin: 16px;
@@ -304,13 +304,13 @@ article.content {
 }
 
 .roster .person:hover .data {
-    transform: translateY(-60px);
+    transform: translateY(-55px);
 }
 
 .roster .person .data .picture {
     position: relative;
-    width: 150px;
-    height: 150px;
+    width: 180px;
+    height: 180px;
     overflow: hidden;
 }
 
@@ -321,7 +321,7 @@ article.content {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 100%;
+    border-radius: 16px;
 }
 
 .roster .person .data .name h3 {
@@ -342,15 +342,15 @@ article.content {
 
 .roster .person .description li {
     list-style-position: outside;
-    margin: 0 10px;
-    transform: translateY(40px);
+    margin: 0 20px;
+    transform: translateY(50px);
     transition: 0.5s;
     line-height: 1.5em;
     opacity: 0;
 }
 
 .roster .person:hover .description li {
-    transform: translateY(0px);
+    transform: translateY(20px);
     opacity: 1;
 }
 
