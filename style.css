@@ -158,6 +158,7 @@ div.header {
     align-items: center;
     justify-content: space-between;
     transition: all 0.3s cubic-bezier(0.18, 0.89, 0.4, 1.15);
+    z-index: 99;
 }
 
 div.footer {
@@ -186,6 +187,7 @@ menu#links-menu {
     flex-grow: 1; /* Allow the navbar to take up the remaining space */
     margin: 12px;
     column-gap: 20px;
+    padding: 0;
     justify-content: center; /* Center the navbar text */
     flex-wrap: wrap;
 }
@@ -199,7 +201,7 @@ menu#links-menu {
     text-align: center;
     text-decoration: none;
     font-stretch: ultra-expanded;
-    transition: all 0.3s cubic-bezier(0.18, 0.89, 0.4, 1.15);
+    transition: letter-spacing 0.3s cubic-bezier(0.18, 0.89, 0.4, 1.15);
 }
 
 .navbar a {
@@ -209,9 +211,17 @@ menu#links-menu {
     transition: color 0.3s ease;
 }
 
-li.navbar:hover {
-    display: inline-block;
-    letter-spacing: 0.5em;
+@media screen and (min-width: 800px) {
+    li.navbar:hover {
+        display: inline-block;
+        letter-spacing: 0.5em;
+    }
+}
+
+@media screen and (max-width: 801px) {
+    li.navbar:hover {
+        text-decoration: underline var(--primary);
+    }
 }
 
 #navImage {
@@ -427,8 +437,6 @@ article.content {
     padding: 0;
     height: 48px;
     width: 48px;
-    margin-right: auto;
-    margin-left: auto; /* Adjust the spacing as needed */
     transition: all 0.3s cubic-bezier(0.18, 0.89, 0.43, 1.54);
 }
 
@@ -482,7 +490,7 @@ article.content {
     }
 
     .hamburger-icon {
-        display: inline-block; /* Show on smaller screens */
+        display: inline-block;
     }
 
     .dropdown-content {
