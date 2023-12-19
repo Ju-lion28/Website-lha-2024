@@ -185,14 +185,16 @@ menu#links-menu {
     display: flex;
     flex-grow: 1; /* Allow the navbar to take up the remaining space */
     margin: 12px;
-    column-gap: 80px;
+    column-gap: 20px;
     justify-content: center; /* Center the navbar text */
+    flex-wrap: wrap;
 }
 
 .navbar {
     display: inline;
     justify-content: center;
     margin-left: auto;
+    margin-right: auto;
     font-size: 1.2em;
     text-align: center;
     text-decoration: none;
@@ -239,7 +241,7 @@ button.theme {
     padding: 0;
     height: 48px;
     width: 48px;
-    margin-left: auto;
+    margin-left: 25px;
     margin-right: 25px; /* Adjust the spacing as needed */
     transition: all 0.3s cubic-bezier(0.18, 0.89, 0.43, 1.54);
 }
@@ -425,7 +427,8 @@ article.content {
     padding: 0;
     height: 48px;
     width: 48px;
-    margin-right: 25px; /* Adjust the spacing as needed */
+    margin-right: auto;
+    margin-left: auto; /* Adjust the spacing as needed */
     transition: all 0.3s cubic-bezier(0.18, 0.89, 0.43, 1.54);
 }
 
@@ -449,6 +452,7 @@ article.content {
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
         max-width: 100%; /* Ensure the container takes up the full width */
+
     }
 
     .navbar-buttons.show {
@@ -464,7 +468,7 @@ article.content {
     }
 
     .navbar-buttons a {
-        color: var(--text);
+        color:#f26376;
         text-decoration: none;
         font-weight: 700;
         font-size: 1.2em;
