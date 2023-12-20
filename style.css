@@ -87,10 +87,10 @@ img#mainpic {
     padding: 10px;
     right: 0;
     left: auto;
-    top: 100%; /* Position the dropdown below the header */
+    top: 100%;
     transition: all 1s cubic-bezier(0.18, 0.89, 0.4, 1.15);
-    transform-origin: top; /* Set transform origin to top */
-    transform: scaleY(0); /* Start with the menu scaled to 0 height */
+    transform-origin: top;
+    transform: scaleY(0);
     opacity: 0;
 }
 
@@ -131,7 +131,6 @@ img#mainpic {
     opacity: 100%;
     transform: scaleY(1); /* Scale the menu to its natural height on hover */
 }
-
 
 h1 {
     color: var(--accent);
@@ -194,7 +193,6 @@ menu#links-menu {
 
 .navbar {
     display: inline;
-    justify-content: center;
     margin-left: auto;
     margin-right: auto;
     font-size: 1.2em;
@@ -231,17 +229,13 @@ menu#links-menu {
     transition: all 0.3s cubic-bezier(0.18, 0.89, 0.43, 1.54);
 }
 
-#navImage:hover {
-    transform: scale(1.1);
-}
-
 button.dropdown_button {
     background-color: transparent;
     border: none;
     padding: 0;
     height: 48px;
     width: 48px;
-    margin-right: 25px; /* Adjust the spacing as needed */
+    margin-right: 25px;
     transition: all 0.3s cubic-bezier(0.18, 0.89, 0.43, 1.54);
 }
 
@@ -251,16 +245,16 @@ button.theme {
     padding: 0;
     height: 48px;
     width: 48px;
-    margin-left: 25px;
-    margin-right: 25px; /* Adjust the spacing as needed */
+    margin-right: 25px;
     transition: all 0.3s cubic-bezier(0.18, 0.89, 0.43, 1.54);
 }
 
+#navImage:hover,
 button.theme:hover {
     transform: scale(1.1);
 }
 
-/* when user is holding down left click, scale it 0.8 */
+#navImage:active,
 button.theme:active {
     transform: scale(0.8);
 }
@@ -290,7 +284,7 @@ article.content {
     align-items: center;
     flex-wrap: wrap;
     flex-direction: row;
-    margin: 40px;
+    margin: 40px auto;
 }
 
 .roster .person {
@@ -321,19 +315,18 @@ article.content {
 
 .roster .person .data .picture {
     position: relative;
-    width: 180px;
-    height: 180px;
+    width: 200px;
+    height: 200px;
     overflow: hidden;
 }
 
 .roster .person .data .picture img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
     border-radius: 16px;
+    height: 100%;
+    left: 0;
+    object-fit: cover;
+    top: 0;
+    width: 100%;
 }
 
 .roster .person .data .name h3 {
@@ -348,8 +341,8 @@ article.content {
 
 .roster .person .description {
     position: absolute;
-    bottom: 50px;
-    padding: 0;
+    top: 230px;
+    padding: 5px;
 }
 
 .roster .person .description li {
@@ -442,25 +435,23 @@ article.content {
 
 @media screen and (max-width: 600px) {
     .navbar-buttons {
+        color: var(--text);
         display: none;
         text-align: center;
         background-color: var(--secondary);
         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
         border-radius: 8px;
-        padding: 10px;
         position: absolute;
         top: 80px;
-        left: 0;
+        left: 2%;
         right: 0;
-        opacity: 0;
         transform-origin: top;
         transform: scaleY(0);
         transition: opacity 0.3s ease, transform 0.3s ease;
         white-space: nowrap;
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
-        max-width: 100%; /* Ensure the container takes up the full width */
-
+        max-width: 90%;
     }
 
     .navbar-buttons.show {
@@ -476,13 +467,13 @@ article.content {
     }
 
     .navbar-buttons a {
-        color:#f26376;
+        color: var(--primary);
         text-decoration: none;
         font-weight: 700;
         font-size: 1.2em;
         text-align: center;
         display: inline-block;
-        padding-top: 10px;
+        padding: 10px 5px 0 5px;
     }
 
     .navbar-buttons a:hover {
@@ -491,10 +482,6 @@ article.content {
 
     .hamburger-icon {
         display: inline-block;
-    }
-
-    .dropdown-content {
-        top: 80px; /* Adjust the top position as needed */
     }
 
     .dropdown:hover .dropdown-content {

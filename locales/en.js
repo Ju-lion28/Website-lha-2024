@@ -13,6 +13,16 @@ const en = {
         language: "Language",
         roster: "Roster"
     },
+    roster: {
+        art: "Digital Art",
+        kiosk: "Kiosk Design",
+        media: "Media/Production",
+        programming: "Programming",
+        robot_building: "Robot Building",
+        robot_design: "Robot Design",
+        secondary: "Secondary",
+        website: "Website"
+    }
 };
 
 window.localization = en;

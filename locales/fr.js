@@ -1,3 +1,5 @@
+// noinspection SpellCheckingInspection
+
 const fr = {
     name: "Français",
     home: {
@@ -13,6 +15,16 @@ const fr = {
         language: "Langue",
         roster: "Roster"
     },
+    roster: {
+        art: "L'Art Digital",
+        kiosk: "Conception de Kiosque",
+        media: "Médias / Production",
+        programming: "Programmation",
+        robot_building: "Construction de robots",
+        robot_design: "Conception de robots",
+        secondary: "Secondaire",
+        website: "Site Web"
+    }
 };
 
 window.localization = fr;
