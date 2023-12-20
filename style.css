@@ -310,7 +310,7 @@ article.content {
 }
 
 .roster .person:hover .data {
-    transform: translateY(-55px);
+    transform: translateY(-50px);
 }
 
 .roster .person .data .picture {

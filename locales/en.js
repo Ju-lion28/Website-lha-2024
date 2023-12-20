@@ -19,7 +19,7 @@ const en = {
         media: "Media/Production",
         programming: "Programming",
         robot_building: "Robot Building",
-        robot_design: "Robot Design",
+        robot_design: "& Design",
         secondary: "Secondary",
         website: "Website"
     }

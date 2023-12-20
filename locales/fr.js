@@ -21,7 +21,7 @@ const fr = {
         media: "Médias / Production",
         programming: "Programmation",
         robot_building: "Construction de robots",
-        robot_design: "Conception de robots",
+        robot_design: "et Conception",
         secondary: "Secondaire",
         website: "Site Web"
     }
