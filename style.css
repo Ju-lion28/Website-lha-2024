@@ -546,3 +546,37 @@ article.content {
     .sidenav a {font-size: 18px;}
   }
   
+/*https://www.w3schools.com/howto/howto_js_sidenav.asp*/
+
+.sidenav {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 0; /* Default Hidden */
+    position: fixed; 
+    z-index: 1; 
+    top: 0; 
+    left: 0;
+    background-color: rgba(229, 205, 255, 0.5);
+    overflow-x: hidden; 
+    padding-top: 100px;
+    transition: 0.5s; 
+    /* opacity: 0.5; */
+}
+
+#sidenavLink {
+    padding: 8px 8px 8px 28px;
+    display: block;
+    transition: 0.3s;
+
+}
+
+.sidenav .btn {
+    padding-left: 28px;
+    background-color: var(--secondary);
+    width: min-content;
+}
+
+.minorSideNavLink {
+    padding-left: 56px;
+}

@@ -42,15 +42,15 @@
     </div>
 </div>
 
-<div id="mySidenav" class="sidenav">
-    <a href="#">Empty</a>
-    <a href="#">About</a>
-    <a href="#">Services</a>
-    <a href="#">Clients</a>
-    <a href="#">Contact</a>
+<div id="sidenav" class="sidenav">
     <button class= "btn" onclick="closeNav()">Close</button>
-  </div>
-
+    <a href="#General" id="sidenavLink">General</a>
+    <a href="#Robot" id="sidenavLink">Robot</a>
+    <a href="#Programming" id="sidenavLink">Programming</a>
+        <a href="#month" class="minorSideNavLink">Month</a>
+    <a href="#Kiosk" id="sidenavLink">Kiosk</a>
+    <a href="#Media" id="sidenavLink">Media</a>
+</div>
 
 <article class="content" id="content">
     <h1 id="title-1">Journal</h1>
@@ -58,15 +58,14 @@
     <img  src="https://placehold.co/600x400" alt="placehloder"></div>
     <br/>
 
-    <h2>General</h2>
-    <h2>Robot</h2>
-    <h2>Programming</h2>
+    <h2 id="General">General</h2>
+    <h2 id="Robot">Robot</h2>
+    <h2 id="Programming">Programming</h2>
         <h3>Month</h3>
-    <h2>Kiosk</h2>
-    <h2>Media</h2>
-      
-      <!-- Use any element to open the sidenav -->
-      <span onclick="openNav()">open</span>
+    <h2 id="Kiosk">Kiosk</h2>
+    <h2 id="Media">Media</h2>
+    
+    <button class="btn" onclick="openNav()">open</button>
   
     <br/>
 </article>
@@ -82,13 +81,13 @@
 <script>
     //Side nav
 
-    function openNav() {
-  document.getElementById("mySidenav").style.width = "250px";
+function openNav() {
+  document.getElementById("sidenav").style.width = "250px";
 }
 
 /* Set the width of the side navigation to 0 */
 function closeNav() {
-  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("sidenav").style.width = "0";
 }
 
     //https://www.w3schools.com/howto/howto_js_sidenav.asp
