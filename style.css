@@ -512,43 +512,6 @@ article.content {
 /*https://www.w3schools.com/howto/howto_js_sidenav.asp*/
 
 .sidenav {
-    height: 100%; /* 100% Full-height */
-    width: 0; /* 0 width - change this with JavaScript */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Stay on top */
-    top: 0; /* Stay at the top */
-    left: 0;
-    background-color: #111; /* Black*/
-    overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 100px; /* Place content 60px from the top */
-    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
-}
-  
-  /* The navigation menu links */
-  .sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
-  }
-  
-  /* When you mouse over the navigation links, change their color */
-  .sidenav a:hover {
-    color: #f1f1f1;
-  }
-
-  
-  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-@media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
-  }
-  
-/*https://www.w3schools.com/howto/howto_js_sidenav.asp*/
-
-.sidenav {
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -564,13 +527,6 @@ article.content {
     /* opacity: 0.5; */
 }
 
-#sidenavLink {
-    padding: 8px 8px 8px 28px;
-    display: block;
-    transition: 0.3s;
-
-}
-
 .sidenav .btn {
     padding-left: 28px;
     background-color: var(--secondary);
@@ -579,4 +535,34 @@ article.content {
 
 .minorSideNavLink {
     padding-left: 56px;
+}
+
+#sidenavLink {
+    padding: 8px 8px 8px 28px;
+    display: block;
+    transition: 0.3s;
+}
+
+#openNav, #closeSidenav {
+    background: none;
+}
+
+#openNavImage, #closeSidenav {
+    height: 48px;
+    width: 48px;
+    padding: 16px;
+    transition: all 0.3s cubic-bezier(0.18, 0.89, 0.43, 1.54);
+    padding: 16px;
+}
+
+#openNavImage:hover,
+#closeSidenav:hover,
+button.theme:hover {
+    transform: scale(1.1);
+}
+
+#openNavImage:active,
+#closeSidenav:active,
+button.theme:active {
+    transform: scale(0.8);
 }

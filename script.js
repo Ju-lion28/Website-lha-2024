@@ -1,11 +1,19 @@
 // Loading Animation
 const loadPageWithAnimation = (url) => {
-    document.body.style.opacity = 0;
+    // Makes sure in-page links work
+    if (url === null) {
+        document.body.style.opacity = 100;
+    } else if (url.toString().includes("#")) {
+        document.body.style.opacity = 100;
+        window.location.href = url
+    } else {
+        document.body.style.opacity = 0;
 
-    // Remove the loading transition effect after a delay and redirect to the URL
-    setTimeout(() => {
-        window.location.href = url; // Redirect to the clicked URL
-    }, 300); // Adjust the timeout duration as needed
+        // Remove the loading transition effect after a delay and redirect to the URL
+        setTimeout(() => {
+            window.location.href = url; // Redirect to the clicked URL
+        }, 300); // Adjust the timeout duration as needed
+    }
 };
 
 // Event listener for navigation links (including images inside anchor tags)

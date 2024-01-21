@@ -16,6 +16,11 @@
     <a href="../index.html">
         <img src="../assets/images/icons/logo/SimpleIcon.png" id="navImage" alt="Logo"/>
     </a>
+    <a onclick="openNav()" id="openNav">
+        <img src="../assets/images/icons/noun-menu-102108.png" alt="SideNav" id="openNavImage">
+    </a>
+    <a onclick="closeNav()" id="closeNav" hidden><img src="../assets/images/icons/noun-arrow-6029766.png" alt="Close Menu" id="closeSidenav"></img></a>
+
     <div class="navbar">
         <button class="hamburger-icon">
             <img src="../assets/images/icons/hamburger.png" alt="Hamburger Icon" id="hamburgerIcon"/>
@@ -43,7 +48,6 @@
 </div>
 
 <div id="sidenav" class="sidenav">
-    <button class= "btn" onclick="closeNav()">Close</button>
     <a href="#General" id="sidenavLink">General</a>
     <a href="#Robot" id="sidenavLink">Robot</a>
     <a href="#Programming" id="sidenavLink">Programming</a>
@@ -64,9 +68,7 @@
         <h3>Month</h3>
     <h2 id="Kiosk">Kiosk</h2>
     <h2 id="Media">Media</h2>
-    
-    <button class="btn" onclick="openNav()">open</button>
-  
+
     <br/>
 </article>
 
@@ -81,14 +83,32 @@
 <script>
     //Side nav
 
-function openNav() {
-  document.getElementById("sidenav").style.width = "250px";
-}
+    let navOpen = false;
 
-/* Set the width of the side navigation to 0 */
-function closeNav() {
-  document.getElementById("sidenav").style.width = "0";
-}
+    function openNav() {
+        document.getElementById("sidenav").style.width = "250px";
+
+        document.getElementById("openNav").hidden = true
+        document.getElementById("openNavImage").hidden = true
+
+
+        document.getElementById("closeNav").hidden = false
+        document.getElementById("closeNavImage").hidden = false
+    }
+
+    /* Set the width of the side navigation to 0 */
+    function closeNav() {
+        document.getElementById("sidenav").style.width = "0";
+
+        document.getElementById("openNav").hidden = false
+        document.getElementById("openNavImage").hidden = false
+
+        document.getElementById("closeNav").hidden = true
+        document.getElementById("closeNavImage").hidden = true
+
+    }
+
+
 
     //https://www.w3schools.com/howto/howto_js_sidenav.asp
 
