@@ -175,6 +175,7 @@ div.footer {
     margin-top: auto; /* Push the footer to the bottom of the container */
     display: flex;
     justify-content: space-between;
+    z-index: 99;
 }
 
 /* Show different cursor so people know it's clickable */
