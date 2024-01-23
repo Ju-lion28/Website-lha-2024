@@ -22,6 +22,9 @@ const en = {
         robot_design: "& Design",
         secondary: "Secondary",
         website: "Website"
+    },
+    journal: {
+        
     }
 };
 

@@ -52,11 +52,14 @@ body {
 
 a,
 a:visited,
-a:active,
-a:hover {
+a:active {
     color: var(--primary);
     text-decoration: none;
     font-weight: 700;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 img#mainpic {
@@ -277,9 +280,11 @@ button.theme:active {
 }
 
 article.content {
+    display: grid;
+    justify-items: stretch;
     margin: auto;
     min-width: 100px;
-    max-width: 1280px;
+    max-width: 100vh;
     text-align: left;
     padding: 65px 32px;
     transition: margin-left .5s;
@@ -526,24 +531,20 @@ article.content {
     overflow-x: hidden; 
     padding-top: 100px;
     transition: 0.5s; 
-    /* opacity: 0.5; */
 }
 
-.sidenav .btn {
-    padding-left: 28px;
-    background-color: var(--secondary);
-    width: min-content;
+#sidenavLink {
+    padding: 8px 8px 8px 28px;
+    display: block;
+    font-size: 1.5em;
+    transition: 0.3s;
 }
 
 .minorSideNavLink {
     padding-left: 56px;
 }
 
-#sidenavLink {
-    padding: 8px 8px 8px 28px;
-    display: block;
-    transition: 0.3s;
-}
+
 
 #openNav, #closeSidenav {
     background: none;
@@ -567,4 +568,9 @@ button.theme:hover {
 #closeSidenav:active,
 button.theme:active {
     transform: scale(0.8);
+}
+
+
+.journalImage {
+    align-self: center;
 }

@@ -17,9 +17,9 @@
         <img src="../assets/images/icons/logo/SimpleIcon.png" id="navImage" alt="Logo"/>
     </a>
     <a onclick="openNav()" id="openNav">
-        <img src="../assets/images/icons/noun-menu-102108.png" alt="SideNav" id="openNavImage">
+        <img src="../assets/images/icons/openNav.svg" alt="SideNav" id="openNavImage">
     </a>
-    <a onclick="closeNav()" id="closeNav" hidden><img src="../assets/images/icons/noun-arrow-6029766.png" alt="Close Menu" id="closeSidenav"></img></a>
+    <a onclick="closeNav()" id="closeNav" hidden><img src="../assets/images/icons/closeNav.svg" alt="Close Menu" id="closeSidenav"></img></a>
 
     <div class="navbar">
         <button class="hamburger-icon">
@@ -58,19 +58,72 @@
 
 <article class="content" id="content">
     <h1 id="title-1">Journal</h1>
-    <div id = "placeholder">
-    <img  src="https://placehold.co/600x400" alt="placehloder"></div>
+    <img class="journalImage" src="https://placehold.co/600x400" alt="placehloder"></img>
     <br/>
 
     <h2 id="General">General</h2>
     <h2 id="Robot">Robot</h2>
     <h2 id="Programming">Programming</h2>
-        <h3>Month</h3>
+    <h3 id="">August</h3>
+    <p>
+        Website had an arcade style theme
+        crt screen effect
+        main colours were black and blue
+        pixelated font
+        Added A readme file
+        The font changed up a bunch
+        Added a .gitignore
+    </p>
+    <h3>October</h3>
+    <p>
+        Finally made some order
+        Every page is now a thing
+        Colour and theme changed to more candy aesthetic
+        Continuity in all pages
+        Dark mode light mode
+        Added a fade out transition when switching between pages
+        Polishing up of what we already have
+        Header
+        Theme switcher
+        Transition
+        Spacing and sizing of images etc.
+        Yanni Added a “scoring feature”
+        2 point per click
+        10 per link
+        The theme switcher broke and we spent the rest of the month fixing it
+    </p>
+    <h3>November</h3>
+    <p>
+        A wild abadi appeared:
+        Fixed some formatting issues (made it pretty)
+        Fixed translation
+        Got rid of all the duplicate files (bc of french)
+        Made the language change automatically on its own depending on system preferences
+        Fixed our theme switcher issues
+        Julian told him to add the option to change the language manually
+        Got rid of duplicate homepage
+        Remember how we made every page the same all the way back in october… Well now we did that again. The home screen
+        was the nicest one with all of the nice features. So we added them to all other pages for consistency.
+        Header changes
+        Theme switcher
+        Language options
+        Added a hamburger (the lil three lines thing that expands) menu in place of the normal header that activates when
+        the screen size is small. (for phones)
+    </p>
+    <h3>December</h3>
+    <p>
+        We set up the roster
+        Boxes with people names and people faces
+        No description yet
+        Tried to make them clickable… didnt work so we made them hover-able
+        It was weird. And now it still is
+    </p>
     <h2 id="Kiosk">Kiosk</h2>
     <h2 id="Media">Media</h2>
 
     <br/>
 </article>
+
 
 <div class="footer">
     Copyright © 2023-2024 LaurenHill Academy Robotics
@@ -107,10 +160,6 @@
         document.getElementById("closeNavImage").hidden = true
 
     }
-
-
-
-    //https://www.w3schools.com/howto/howto_js_sidenav.asp
 
 
     function setLanguage(value) {

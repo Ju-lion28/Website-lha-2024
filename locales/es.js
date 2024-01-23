@@ -17,14 +17,17 @@ const en = {
     },
     roster: {
         art: "Arte Digital",
-        kiosk: "Diseño de Quiosco",
-        media: "Medios/Producción",
+        kiosk: "Diseño de kiosco",
+        media: "Media/Producción",
         programming: "Programación",
         robot_building: "Construcción de Robots",
         robot_design: "y Diseño",
-        secondary: "Secundario",
-        website: "Sitio Web"
-    }
-};
+        secondary: "Secundaria",
+        website: "Sitio Web",
+        Kiosk: "Kiosco",
+        design : "diseño",
+        building : "Construcción",
+    },
+   
 
 window.localization = en;

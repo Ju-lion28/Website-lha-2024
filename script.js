@@ -1,29 +1,32 @@
 const loadPageWithAnimation = (url) => {
     // Makes sure in-page links work
     if (url === null) {
-      document.body.style.opacity = 100;
+        document.body.style.opacity = 100;
     } else if (url.toString().includes("#")) {
-      // Smooth scroll to the target element with the specified ID
-      const targetId = url.substring(url.indexOf("#") + 1);
-      const targetElement = document.getElementById(targetId);
-  
-      if (targetElement) {
-        targetElement.scrollIntoView({
-          behavior: 'smooth'
-        });
-      }
-  
-      document.body.style.opacity = 100;
+        // Smooth scroll to the target element with the specified ID
+        const targetId = url.substring(url.indexOf("#") + 1);
+        const targetElement = document.getElementById(targetId);
+
+        if (targetElement) {
+
+            targetElement.style.paddingTop = "92px"
+            targetElement.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start',
+            inline: 'nearest'
+            });
+        }
+        
+        document.body.style.opacity = 100;
     } else {
-      document.body.style.opacity = 0;
+        document.body.style.opacity = 0;
   
-      // Remove the loading transition effect after a delay and redirect to the URL
-      setTimeout(() => {
-        window.location.href = url; // Redirect to the clicked URL
-      }, 300); // Adjust the timeout duration as needed
+        // Remove the loading transition effect after a delay and redirect to the URL
+        setTimeout(() => {
+            window.location.href = url; // Redirect to the clicked URL
+        }, 300); // Adjust the timeout duration as needed
     }
-  };
-  
+};
 
 // Event listener for navigation links (including images inside anchor tags)
 document.addEventListener("click", (event) => {
