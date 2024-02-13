@@ -161,7 +161,7 @@ div.header {
     right: 25px;
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -175,7 +175,7 @@ div.footer {
     padding: 16px;
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
-    box-shadow: 0 -5px 10px #00000033;
+    box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.2);
     margin-top: auto; /* Push the footer to the bottom of the container */
     display: flex;
     justify-content: space-between;
