@@ -7,15 +7,24 @@ const loadPageWithAnimation = (url) => {
         const targetId = url.substring(url.indexOf("#") + 1);
         const targetElement = document.getElementById(targetId);
 
-        if (targetElement) {
+        const scrolledEvent = new Event("scrolledIntoView");
 
-            targetElement.style.paddingTop = "92px"
+        targetElement.addEventListener('scrolledIntoView', function () {
+            targetElement.style.display = "none"
+        });
+
+        if (targetElement) {;
+
+            targetElement.style.display = "block"
             targetElement.scrollIntoView({
             behavior: 'smooth',
             block: 'start',
             inline: 'nearest'
-            });
-        }
+        })
+            setTimeout(() => {
+                targetElement.dispatchEvent(scrolledEvent)
+            }, 700)
+        };
         
         document.body.style.opacity = 100;
     } else {
@@ -177,3 +186,4 @@ highscoreBox.onmouseout = function () {
     resetButton.hidden = true;
     highscoreBox.hidden = false;
 };
+
