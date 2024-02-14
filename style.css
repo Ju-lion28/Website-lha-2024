@@ -574,3 +574,11 @@ button.theme:active {
 .journalImage {
     align-self: center;
 }
+.id {
+    color: var(--background);
+    display: none;
+}
+
+h3.id {
+    padding-top: 10px;
+}
