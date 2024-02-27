@@ -42,7 +42,6 @@ body {
     display: grid;
     flex-direction: column;
     min-height: 100vh; /* Set the minimum height of the body to 100% of the viewport height */
-    user-select: none;
 }
 
 .fade-in {
@@ -300,7 +299,8 @@ article.content {
     margin: 40px auto;
 }
 
-.roster .person {
+.leaders .person,
+.team .person {
     position: relative;
     width: 300px;
     height: 350px;
@@ -310,30 +310,35 @@ article.content {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: transform 0.3s ease; /* Added transition for smoother scaling */
 }
 
-.roster .person .data {
+.leaders .person .data,
+.team .person .data {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    transition: 0.5s;
+    transition: 0.3s ease;
     transform: translateY(-40px);
 }
 
-.roster .person:hover .data {
-    transform: translateY(-50px);
+.leaders .person:hover,
+.team .person:hover {
+    transform: scale(1.1); /* Scale the person box by 1.2 when hovered */
 }
 
-.roster .person .data .picture {
+.leaders .person .data .picture,
+.team .person .data .picture {
     position: relative;
     width: 200px;
     height: 200px;
     overflow: hidden;
 }
 
-.roster .person .data .picture img {
+.leaders .person .data .picture img,
+.team .person .data .picture img {
     border-radius: 16px;
     height: 100%;
     left: 0;
@@ -342,7 +347,8 @@ article.content {
     width: 100%;
 }
 
-.roster .person .data .name h3 {
+.leaders .person .data .name h3,
+.team .person .data .name h3 {
     text-transform: uppercase;
     letter-spacing: 2px;
     font-weight: 700;
@@ -351,29 +357,34 @@ article.content {
     margin: 10px 0 20px;
 }
 
-[data-theme="light"] .roster .person .data .name h3 {
+[data-theme="light"] .leaders .person .data .name h3,
+[data-theme="light"] .team .person .data .name h3 {
     color: var(--darker-accent);
 }
-[data-theme="dark"] .roster .person .data .name h3 {
+[data-theme="dark"] .leaders .person .data .name h3,
+[data-theme="dark"] .team .person .data .name h3 {
     color: var(--accent);
 }
 
-.roster .person .description {
+.leaders .person .description,
+.team .person .description {
     position: absolute;
     top: 230px;
     padding: 5px;
 }
 
-.roster .person .description li {
+.leaders .person .description li,
+.team .person .description li {
     list-style-position: outside;
     margin: 0 20px;
     transform: translateY(50px);
-    transition: 0.5s;
+    transition: 0.3s ease;
     line-height: 1.5em;
     opacity: 0;
 }
 
-.roster .person:hover .description li {
+.leaders .person:hover .description li,
+.team .person:hover .description li {
     transform: translateY(20px);
     opacity: 1;
 }
@@ -581,4 +592,10 @@ button.theme:active {
 
 h3.id {
     padding-top: 10px;
+}
+
+#title-1 {
+    text-align: -webkit-center;
+    font-size: 50px;
+    margin: 30px;
 }
