@@ -16,7 +16,7 @@ const loadPageWithAnimation = (url) => {
         if (targetElement) {;
 
             targetElement.style.display = "block"
-            targetElement.scrollIntoViewIfNeeded({
+            targetElement.scrollIntoView({
             behavior: 'smooth',
             block: 'start',
             inline: 'nearest'

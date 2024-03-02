@@ -591,6 +591,7 @@ button.theme:active {
     width: 600px;
     height: 400px;
     box-sizing: border-box;
+    border-radius: 16px;
 }
 .id {
     color: var(--background);
