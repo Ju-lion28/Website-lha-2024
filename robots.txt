@@ -1,2 +1,4 @@
+# robots.txt for laurenhill2024.crcrobotics.com
+
 User-agent: *
 Disallow: /
