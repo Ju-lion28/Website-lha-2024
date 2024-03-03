@@ -601,7 +601,14 @@ button.theme:active {
     margin: 30px;
 }
 
+#title-2 {
+    text-align: -webkit-center;
+    font-size: 45px;
+    margin: 30px;
+}
 
-
-
-   
+#title-3 {
+    text-align: -webkit-center;
+    font-size: 45px;
+    margin: 30px;
+}
