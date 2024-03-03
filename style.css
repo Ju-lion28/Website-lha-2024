@@ -35,6 +35,7 @@ html {
     background: var(--background);
     font-family: SourceCodePro, monospace;
     font-size: 16px;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -592,14 +593,6 @@ button.theme:active {
     height: 400px;
     box-sizing: border-box;
     border-radius: 16px;
-}
-.id {
-    color: var(--background);
-    display: none;
-}
-
-h3.id {
-    padding-top: 10px;
 }
 
 #title-1 {

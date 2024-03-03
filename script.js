@@ -3,6 +3,8 @@ const loadPageWithAnimation = (url) => {
     if (url === null) {
         document.body.style.opacity = 100;
     } else if (url.toString().includes("#")) {
+
+        /*
         // Smooth scroll to the target element with the specified ID
         const targetId = url.substring(url.indexOf("#") + 1);
         const targetElement = document.getElementById(targetId);
@@ -25,6 +27,34 @@ const loadPageWithAnimation = (url) => {
                 targetElement.dispatchEvent(scrolledEvent)
             }, 700)
         };
+        */
+       
+        const targetId = url.substring(url.indexOf("#" + 1));
+        const header = document.getElementById("header")
+        const targetElement = document.getElementById(targetId.replace("#", ''));
+
+        function smoothScroll(element, options) {
+            return new Promise((resolve) => {
+                element.scrollIntoView(options);
+        
+                function checkScroll() {
+                    const rect = element.getBoundingClientRect();
+                    if (Math.abs(rect.top) < 1) {
+                        resolve();
+                    } else {
+                        requestAnimationFrame(checkScroll);
+                    }
+                }
+                requestAnimationFrame(checkScroll);
+            });
+        }
+        
+        if (targetElement) { 
+            smoothScroll(targetElement, { behavior: "smooth", block: 'start' })
+                .then(() => {
+                    window.scrollBy(0, -header.offsetHeight);
+                });
+        }
         
         document.body.style.opacity = 100;
     } else {
