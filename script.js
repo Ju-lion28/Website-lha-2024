@@ -109,14 +109,14 @@ document.addEventListener("DOMContentLoaded", function () {
         document.documentElement.setAttribute("data-theme", storedTheme);
         themeIcon.setAttribute(
             "src",
-            `../assets/images/icons/theme/${storedTheme}.svg`
+            `../assets/icons/theme/${storedTheme}.svg`
         );
     } else {
         console.log("default")
         document.documentElement.setAttribute("data-theme", "light");
         themeIcon.setAttribute(
             "src",
-            "../assets/images/icons/theme/light.svg"
+            "../assets/icons/theme/light.svg"
         );
         localStorage.setItem("theme", "light");
         storedTheme = localStorage.getItem("theme")
@@ -142,7 +142,7 @@ document.addEventListener("DOMContentLoaded", function () {
             storedTheme = localStorage.getItem("theme"); // Update the storedTheme variable
             themeIcon.setAttribute(
                 "src",
-                "../assets/images/icons/theme/dark.svg"
+                "../assets/icons/theme/dark.svg"
             );
         } else if (storedTheme === "dark") {
             console.log("dark to light")
@@ -151,7 +151,7 @@ document.addEventListener("DOMContentLoaded", function () {
             storedTheme = localStorage.getItem("theme"); // Update the storedTheme variable
             themeIcon.setAttribute(
                 "src",
-                "../assets/images/icons/theme/light.svg"
+                "../assets/icons/theme/light.svg"
             );
         }
     });
