@@ -595,6 +595,13 @@ button.theme:active {
     border-radius: 16px;
 }
 
+.journalVideo {
+    border-radius: 16px;
+    margin: 0 auto;
+    width: 80%;
+    height: 80%;
+}
+
 #title-1 {
     text-align: -webkit-center;
     font-size: 50px;
