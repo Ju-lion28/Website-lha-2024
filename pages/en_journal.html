@@ -42,7 +42,6 @@
         <div class="dropdown-content">
             <button class="langButton" id="enButton" onclick="setLanguage('en')">English</button>
             <button class="langButton" id="frButton" onclick="setLanguage('fr')">Français</button>
-            <button class="langButton" id="esButton" onclick="setLanguage('es')">Español</button>
         </div>
     </div>
 </div>
@@ -76,6 +75,7 @@
 <article class="content" id="content">
     <h1>Journal</h1>
 
+    <!-- ROBOT -->
     <h2 id="Robot">Robot</h2>
     <h3 id="Sep-Robot">September</h3>
     <p>
@@ -91,14 +91,17 @@
     </p>
 
     <h3 id="Nov-Robot">November</h3>
-    <img class="journalImage" src="../assets/content/images/journal/robot/robot-brainstorm.PNG"></img>
+    <img class="journalImage" src="../assets/content/images/journal/robot/robot-brainstorm.PNG">
     <p>
         Kickoff!!! The Kickoff was great and we excitedly began planning and brainstorming ideas. 
         After the initial brainstorming was complete we ordered parts and prepared for assembly.
     </p>
 
     <h3 id="Dec-Robot">December</h3>
-    <img class="journalImage" src="../assets/content/images/journal/robot/robot-3.JPEG"></img>
+    <div class="multImg_container">
+        <img class="journalImage" src="../assets/content/images/journal/robot/robot-3.JPEG">
+        <img class="journalImage" src="../assets/content/images/journal/robot/robot-5.jpg">
+    </div>
     <p>
         In December is when we started building. 
         The first prototypes we made were rough but after a bit of trial and error we got to a good design for the base.
@@ -126,8 +129,13 @@
     </p>
 
 
+    <!-- PROGRAMMING -->
     <h2 id="Programming">Programming</h2>
     <h3 id="August-Prog">August</h3>
+    <div class="multImg_container">
+        <img src="../assets/content/images/journal/programming/crt-lang.png" alt="Fist version language page" class="journalImage">
+        <img src="../assets/content/images/journal/programming/crt-home.png" alt="Fist version main page" class="journalImage">
+    </div>
     <p>
         In August, significant updates were made to the website. 
         We transitioned to an arcade-style theme, complete with a CRT screen effect, and introduced a color scheme predominantly comprised of black and blue. 
@@ -136,14 +144,12 @@
         Additionally, a .gitignore file was implemented to streamline version control processes.
     </p>
 
-    <img src="../assets/content/images/journal/programming/crt-lang.png" alt="Fist version language page" class="journalImage">
-    <br>
-    <img src="../assets/content/images/journal/programming/crt-home.png" alt="Fist version main page" class="journalImage">
-
     <h3 id="October-Prog">October</h3>
-
-    <img src="../assets/content/images/journal/programming/website-oct.png" alt="New October Design" style="height: auto; width: 400px" class="journalImage">
-
+    <div class="multImg_container">
+        <img src="../assets/content/images/journal/programming/website-oct.png" alt="New October Design" class="journalImage">
+        <img src="../assets/content/images/journal/programming/first-h-score.gif" class="journalVideo" alt="First highscore">
+        <img src="../assets/content/images/journal/programming/first-theme-switcher.png" alt="First theme switcher icon" class="journalImage">        
+    </div>
     <p>
         In October, our efforts focused on enhancing the website's organization and visual appeal. 
         We implemented a systematic approach, ensuring that every page served a distinct purpose. 
@@ -155,14 +161,12 @@
         However, the theme switcher encountered issues, requiring extensive troubleshooting for the remainder of the month. 
         Despite this setback, our commitment to quality and functionality remained unwavering as we worked diligently to resolve the issue and ensure a smooth user experience.
     </p>
-    
-    <div style="display: flex; flex-direction: row; justify-content: center; gap: 20px;">
-        <img src="../assets/content/images/journal/programming/first-h-score.gif" class="journalVideo" alt="First highscore">
-        <img src="../assets/content/images/journal/programming/first-theme-switcher.png" alt="First theme switcher icon" style="height: 75%; width:75%;" class="journalImage">
-    </div>
-  
 
     <h3 id="November-Prog">November</h3>
+    <div class="multImg_container">
+        <img src="../assets/content/images/journal/programming/translation.gif" alt="Auto Translation" class="journalVideo">
+        <img src="../assets/content/images/journal/programming/working-theme-switcher.gif" alt="Theme Switcher" class="journalVideo">
+    </div>
     <p>
         In November, our focus shifted towards refining the website's functionality and appearance. 
         Addressing formatting issues, we improved the overall aesthetic appeal. 
@@ -176,11 +180,8 @@
         These updates reflect our commitment to delivering a seamless and user-friendly website experience.
     </p>
 
-    <img src="../assets/content/images/journal/programming/translation.gif" alt="Auto Translation" class="journalVideo">
-    <img src="../assets/content/images/journal/programming/working-theme-switcher.gif" alt="Theme Switcher" class="journalVideo">
-
-
     <h3 id="December-Prog">December</h3>
+    <img src="../assets/content/images/journal/programming/first-roster.gif" class="journalVideo" alt="First Roster Pager">
     <p>
         In December, our focus shifted towards setting up the roster section of the website. 
         We introduced boxes displaying both people's names and faces, although descriptions were not yet included. 
@@ -188,9 +189,11 @@
         Despite these efforts, the functionality remained peculiar, and challenges persisted in achieving the desired interaction. 
     </p>
 
-    <img src="../assets/content/images/journal/programming/first-roster.gif" class="journalVideo" alt="First Roster Pager">
-
     <h3 id="January-February-Prog">January & February</h3>
+    <div class="multImg_container">
+        <img src="../assets/content/images/journal/programming/Journal-Side-Nav-1.gif" class="journalVideo" alt="Journal SideNav 1">
+        <img src="../assets/content/images/journal/programming/placeholder-people.gif" class="journalVideo" alt="Placeholder People on Roster page">
+    </div>
     <p>
         In January and February, we further developed the user experience on the website. 
         This included, but was not limited to, multiple minor bug fixes. 
@@ -199,41 +202,44 @@
         Lastly, we included more info one our journal page.
     </p>
 
-    <img src="../assets/content/images/journal/programming/Journal-Side-Nav-1.gif" class="journalVideo" alt="Journal SideNav 1">
-    <img src="../assets/content/images/journal/programming/placeholder-people.gif" class="journalVideo" alt="Placeholder People on Roster page">
-
     <h3 id="March-Prog">March</h3>
+    <img src="../assets/content/images/journal/programming/Journal-improvements.gif" class="journalVideo" alt="Improvements to Journal Page; Working Side Navbar, images, and video">
     <p>
         In March, we made the final changes to prepare our website for publication. 
         As always, numerous bug fixes and quality of life changes.
         We significantly improved the journal, with much more detail, an improved Side Navbar, and images + videos. 
         ADD MORE
     </p>
-    
-    <img src="../assets/content/images/journal/programming/Journal-improvements.gif" class="journalVideo" alt="Improvements to Journal Page; Working Side Navbar, images, and video">
 
+
+    <!-- KIOSK -->
     <h2 id="Kiosk">Kiosk</h2>
     <h3 id="Dec-Kiosk" >December</h3>
-    <img style="height: auto; width: 400px" class="journalImage" src="../assets/images/content/kiosk-5.jpg">
+    <img class="journalImage" src="../assets/content/images/journal/kiosk/kiosk-5.jpg">
     <p>
         After rebuilding the kiosk, we began sketching. 
         We completed half of it before the break. 
-        We also planned the colors to be used.</p>
+        We also planned the colors to be used.
+    </p>
+
     <h3 id="Jan-Kiosk">January</h3>
     <img class="journalImage" src="../assets/content/images/journal/kiosk/kiosk-2.JPG">
     <p>
         We finished the sketch during this month. However, we couldn't start painting immediately because we lacked paint. 
-        Eventually, we painted the pink land and the base of the sky.</p>
-    
+        Eventually, we painted the pink land and the base of the sky.
+    </p>
+
     <h3 id="Feb-Kiosk">February</h3>
-    <img class="journalImage" src="../assets/content/images/journal/kiosk/kiosk-4.jpg"></img>
+    <img class="journalImage" src="../assets/content/images/journal/kiosk/kiosk-4.jpg">
     <p>
         In February, we painted mountains and lakes, 
         which were made out of chocolate, 
-        and added intricate details to them.</p>
-    
-    <h2 id="Media">Media</h2>
+        and added intricate details to them.
+    </p>
 
+
+    <!-- MEDIA -->
+    <h2 id="Media">Media</h2>
     <h3 id="Aug-Media">August</h3>
     <p>
         In August we wrote the video script. 
@@ -248,6 +254,10 @@
     </p>
 
     <h3 id="Feb-Media">February</h3>
+    <div class="multImg_container">
+        <img class="journalImage" src="../assets/content/images/journal/media/media-0.jpg">
+        <img class="journalImage" src="../assets/content/images/journal/media/media-1.jpg">
+    </div>
     <p>
         Filming went smoothly. 
         On Monday, Samir, George and Uzma started to film part 2 of the movie since Uzma had to leave for Bangladesh. 
@@ -257,8 +267,6 @@
         We 3D printed props for the movie and we started filming the last parts of the movie and the editing started.
     </p>
 
-    
-    
     <br/>
 </article>
 

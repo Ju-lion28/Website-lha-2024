@@ -584,22 +584,38 @@ button.theme:active {
     transform: scale(0.8);
 }
 
+.multImg_container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.multImg_container img,
+.multImg_container video {
+    max-width: 400px;
+    width: auto;
+    height: auto;
+}
 
 .journalImage {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 600px;
-    height: 400px;
-    box-sizing: border-box;
+    justify-self: center;
+    max-width: 600px;
+    max-height: 600px;
+    width: auto;
+    height: auto;
     border-radius: 16px;
 }
 
 .journalVideo {
+    justify-self: center;
     border-radius: 16px;
-    margin: 0 auto;
-    width: 80%;
-    height: 80%;
+    max-width: 600px;
+    max-height: 600px;
+    width: auto;
+    height: auto;
 }
 
 #title-1 {
