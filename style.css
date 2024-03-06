@@ -617,21 +617,3 @@ button.theme:active {
     width: auto;
     height: auto;
 }
-
-#title-1 {
-    text-align: -webkit-center;
-    font-size: 50px;
-    margin: 30px;
-}
-
-#title-2 {
-    text-align: -webkit-center;
-    font-size: 45px;
-    margin: 30px;
-}
-
-#title-3 {
-    text-align: -webkit-center;
-    font-size: 45px;
-    margin: 30px;
-}
