@@ -8,6 +8,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" href="../style.css"/>
     <link rel="icon" type="image/x-icon" href="../assets/icons/logo/favicon.png"/>
+
+    <script>
+        // Proper alt tags
+
+        for (let person of people) {
+            // Person name. Based of title a.k.a (element[0]) of 'person' div
+            let name = person.children[0].innerText
+
+            // Set the 'alt' attribut of first an only image element of person div
+            person.getElementsByTagName("img")[0].setAttribute("alt", name)
+        }
+    </script>
+
 </head>
 
 <style>
@@ -56,7 +69,7 @@
                     <h3>Julian Sarli</h3>
                 </div>
                 <div class="picture">
-                    <img src="../assets/content/images/roster/julian.jpg" alt="John Appleseed">
+                    <img src="../assets/content/images/roster/julian.jpg" alt="">
                 </div>
             </div>
             <ul class="description">
@@ -70,7 +83,7 @@
                     <h3>Oliver Johnstone</h3>
                 </div>
                 <div class="picture">
-                    <img src="../assets/content/images/roster/blank.webp" alt="John Appleseed">
+                    <img src="../assets/content/images/roster/blank.webp" alt="">
                 </div>
             </div>
             <ul class="description">
@@ -84,7 +97,7 @@
                     <h3>George Vogas</h3>
                 </div>
                 <div class="picture">
-                    <img src="../assets/content/images/roster/blank.webp" alt="John Appleseed">
+                    <img src="../assets/content/images/roster/blank.webp" alt="">
                 </div>
             </div>
             <ul class="description">
@@ -98,7 +111,7 @@
                     <h3>Uzma Noor Karim</h3>
                 </div>
                 <div class="picture">
-                    <img src="../assets/content/images/roster/blank.webp" alt="John Appleseed">
+                    <img src="../assets/content/images/roster/blank.webp" alt="">
                 </div>
             </div>
             <ul class="description">
@@ -112,7 +125,7 @@
                     <h3>Étienne Bédard</h3>
                 </div>
                 <div class="picture">
-                    <img src="../assets/content/images/roster/blank.webp" alt="John Appleseed">
+                    <img src="../assets/content/images/roster/blank.webp" alt="">
                 </div>
             </div>
             <ul class="description">
@@ -125,7 +138,7 @@
                     <h3> Angelo Delli Colli</h3>
                 </div>
                 <div class="picture">
-                    <img src="../assets/content/images/roster/blank.webp" alt="John Appleseed">
+                    <img src="../assets/content/images/roster/blank.webp" alt="">
                 </div>
             </div>
             <ul class="description">
@@ -138,7 +151,7 @@
                     <h3> Magy Dimitry</h3>
                 </div>
                 <div class="picture">
-                    <img src="../assets/content/images/roster/blank.webp" alt="John Appleseed">
+                    <img src="../assets/content/images/roster/blank.webp" alt="">
                 </div>
             </div>
             <ul class="description">
@@ -151,7 +164,7 @@
                     <h3> Rogelio Pabros</h3>
                 </div>
                 <div class="picture">
-                    <img src="../assets/content/images/roster/blank.webp" alt="John Appleseed">
+                    <img src="../assets/content/images/roster/blank.webp" alt="">
                 </div>
             </div>
             <ul class="description">
@@ -181,7 +194,7 @@
                     <h3>Arwyn Azcona</h3>
                 </div>
                 <div class="picture">
-                    <img src="../assets/content/images/roster/arwyn.jpeg" alt="John Appleseed">
+                    <img src="../assets/content/images/roster/arwyn.jpeg" alt="">
                 </div>
             </div>
             <ul class="description">
@@ -195,7 +208,7 @@
                     <h3>Eli Bensamana</h3>
                 </div>
                 <div class="picture">
-                    <img src="../assets/content/images/roster/eli.jpg" alt="John Appleseed">
+                    <img src="../assets/content/images/roster/eli.jpg" alt="">
                 </div>
             </div>
             <ul class="description">
@@ -209,7 +222,7 @@
                     <h3>Mauricio Chacin</h3>
                 </div>
                 <div class="picture">
-                    <img src="../assets/content/images/roster/mauricio.jpg" alt="John Appleseed">
+                    <img src="../assets/content/images/roster/mauricio.jpg" alt="">
                 </div>
             </div>
             <ul class="description">
@@ -223,7 +236,7 @@
                     <h3>Sang Monychornai</h3>
                 </div>
                 <div class="picture">
-                    <img src="../assets/content/images/roster/Mony Chornai Sang.jpeg" alt="John Appleseed">
+                    <img src="../assets/content/images/roster/Mony Chornai Sang.jpeg" alt="">
                 </div>
             </div>
             <ul class="description">
@@ -237,7 +250,7 @@
                     <h3>Nathan Yarmush</h3>
                 </div>
                 <div class="picture">
-                    <img src="../assets/content/images/roster/Nathan Yarmush.jpg" alt="John Appleseed">
+                    <img src="../assets/content/images/roster/Nathan Yarmush.jpg" alt="">
                 </div>
             </div>
             <ul class="description">
@@ -251,7 +264,7 @@
                     <h3>Olivia Chin</h3>
                 </div>
                 <div class="picture">
-                    <img src="../assets/content/images/roster/olivia.jpeg" alt="John Appleseed">
+                    <img src="../assets/content/images/roster/olivia.jpeg" alt="">
                 </div>
             </div>
             <ul class="description">
@@ -265,7 +278,7 @@
                     <h3>Rayhaan Sarwar</h3>
                 </div>
                 <div class="picture">
-                    <img src="../assets/content/images/roster/rayhaan.jpeg" alt="John Appleseed">
+                    <img src="../assets/content/images/roster/rayhaan.jpeg" alt="">
                 </div>
             </div>
             <ul class="description">
@@ -279,7 +292,7 @@
                     <h3>Rory Dore</h3>
                 </div>
                 <div class="picture">
-                    <img src="../assets/content/images/roster/Rory_Dore.png" alt="John Appleseed">
+                    <img src="../assets/content/images/roster/Rory_Dore.png" alt="">
                 </div>
             </div>
             <ul class="description">
@@ -293,7 +306,7 @@
                     <h3>Samir Hannoush</h3>
                 </div>
                 <div class="picture">
-                    <img src="../assets/content/images/roster/samir.jpg" alt="John Appleseed">
+                    <img src="../assets/content/images/roster/samir.jpg" alt="">
                 </div>
             </div>
             <ul class="description">
@@ -307,7 +320,7 @@
                     <h3>Tiarra Victoria</h3>
                 </div>
                 <div class="picture">
-                    <img src="../assets/content/images/roster/tiarra.jpg" alt="John Appleseed">
+                    <img src="../assets/content/images/roster/tiarra.jpg" alt="">
                 </div>
             </div>
             <ul class="description">
@@ -321,7 +334,7 @@
                     <h3>Kurt Francis</h3>
                 </div>
                 <div class="picture">
-                    <img src="../assets/content/images/roster/kurt.jpeg" alt="John Appleseed">
+                    <img src="../assets/content/images/roster/kurt.jpeg" alt="">
                 </div>
             </div>
             <ul class="description">
@@ -335,7 +348,7 @@
                     <h3>Yanni Eliopoulos</h3>
                 </div>
                 <div class="picture">
-                    <img src="../assets/content/images/roster/yanni.jpeg" alt="John Appleseed">
+                    <img src="../assets/content/images/roster/yanni.jpeg" alt="">
                 </div>
             </div>
             <ul class="description">
@@ -350,7 +363,7 @@
                     <h3>Ethan Godfrey</h3>
                 </div>
                 <div class="picture">
-                    <img src="../assets/content/images/roster/ethan.jpeg" alt="John Appleseed">
+                    <img src="../assets/content/images/roster/ethan.jpeg" alt="">
                 </div>
             </div>
             <ul class="description">
@@ -364,7 +377,7 @@
                     <h3>Ansen Mah</h3>
                 </div>
                 <div class="picture">
-                    <img src="../assets/content/images/roster/blank.webp" alt="John Appleseed">
+                    <img src="../assets/content/images/roster/blank.webp" alt="">
                 </div>
             </div>
             <ul class="description">
@@ -378,7 +391,7 @@
                     <h3>Zackary Low Berthe</h3>
                 </div>
                 <div class="picture">
-                    <img src="../assets/content/images/roster/blank.webp" alt="John Appleseed">
+                    <img src="../assets/content/images/roster/blank.webp" alt="">
                 </div>
             </div>
             <ul class="description">
@@ -392,7 +405,7 @@
                     <h3>Evan Ku</h3>
                 </div>
                 <div class="picture">
-                    <img src="../assets/content/images/roster/blank.webp" alt="John Appleseed">
+                    <img src="../assets/content/images/roster/blank.webp" alt="">
                 </div>
             </div>
             <ul class="description">
@@ -406,7 +419,7 @@
                     <h3>Zayd Koudri</h3>
                 </div>
                 <div class="picture">
-                    <img src="../assets/content/images/roster/blank.webp" alt="John Appleseed">
+                    <img src="../assets/content/images/roster/blank.webp" alt="">
                 </div>
             </div>
             <ul class="description">
@@ -420,7 +433,7 @@
                     <h3>Nathan Kontolemos</h3>
                 </div>
                 <div class="picture">
-                    <img src="../assets/content/images/roster/blank.webp" alt="John Appleseed">
+                    <img src="../assets/content/images/roster/blank.webp" alt="">
                 </div>
             </div>
             <ul class="description">
@@ -434,7 +447,7 @@
                     <h3 style="font-size: 18px;">Daria Ivanka Kasnakian</h3>
                 </div>
                 <div class="picture">
-                    <img src="../assets/content/images/roster/blank.webp" alt="John Appleseed">
+                    <img src="../assets/content/images/roster/blank.webp" alt="">
                 </div>
             </div>
             <ul class="description">
@@ -448,7 +461,7 @@
                     <h3>Ilaria Iglio</h3>
                 </div>
                 <div class="picture">
-                    <img src="../assets/content/images/roster/blank.webp" alt="John Appleseed">
+                    <img src="../assets/content/images/roster/blank.webp" alt="">
                 </div>
             </div>
             <ul class="description">
@@ -462,7 +475,7 @@
                     <h3 style="font-size: 18px;">Callia Garnes-Henry</h3>
                 </div>
                 <div class="picture">
-                    <img src="../assets/content/images/roster/blank.webp" alt="John Appleseed">
+                    <img src="../assets/content/images/roster/blank.webp" alt="">
                 </div>
             </div>
             <ul class="description">
@@ -476,7 +489,7 @@
                     <h3>Jamal Coleman</h3>
                 </div>
                 <div class="picture">
-                    <img src="../assets/content/images/roster/blank.webp" alt="John Appleseed">
+                    <img src="../assets/content/images/roster/blank.webp" alt="">
                 </div>
             </div>
             <ul class="description">
@@ -490,7 +503,7 @@
                     <h3>Maria Christoulas</h3>
                 </div>
                 <div class="picture">
-                    <img src="../assets/content/images/roster/blank.webp" alt="John Appleseed">
+                    <img src="../assets/content/images/roster/blank.webp" alt="">
                 </div>
             </div>
             <ul class="description">
@@ -504,7 +517,7 @@
                     <h3>Brian Chengheng</h3>
                 </div>
                 <div class="picture">
-                    <img src="../assets/content/images/roster/blank.webp" alt="John Appleseed">
+                    <img src="../assets/content/images/roster/blank.webp" alt="">
                 </div>
             </div>
             <ul class="description">
@@ -518,7 +531,7 @@
                     <h3>Amy Botsis</h3>
                 </div>
                 <div class="picture">
-                    <img src="../assets/content/images/roster/blank.webp" alt="John Appleseed">
+                    <img src="../assets/content/images/roster/blank.webp" alt="">
                 </div>
             </div>
             <ul class="description">
@@ -532,7 +545,7 @@
                     <h3>Maya Benarroch</h3>
                 </div>
                 <div class="picture">
-                    <img src="../assets/content/images/roster/blank.webp" alt="John Appleseed">
+                    <img src="../assets/content/images/roster/blank.webp" alt="">
                 </div>
             </div>
             <ul class="description">
@@ -546,7 +559,7 @@
                     <h3>Ashley Antat</h3>
                 </div>
                 <div class="picture">
-                    <img src="../assets/content/images/roster/blank.webp" alt="John Appleseed">
+                    <img src="../assets/content/images/roster/blank.webp" alt="">
                 </div>
             </div>
             <ul class="description">
@@ -560,7 +573,7 @@
                     <h3>Maryam Anderson</h3>
                 </div>
                 <div class="picture">
-                    <img src="../assets/content/images/roster/blank.webp" alt="John Appleseed">
+                    <img src="../assets/content/images/roster/blank.webp" alt="">
                 </div>
             </div>
             <ul class="description">
@@ -574,7 +587,7 @@
                     <h3>Davide Macera</h3>
                 </div>
                 <div class="picture">
-                    <img src="../assets/content/images/roster/blank.webp" alt="John Appleseed">
+                    <img src="../assets/content/images/roster/blank.webp" alt="">
                 </div>
             </div>
             <ul class="description">
@@ -588,7 +601,7 @@
                     <h3>Gabriel Piccirilli</h3>
                 </div>
                 <div class="picture">
-                    <img src="../assets/content/images/roster/blank.webp" alt="John Appleseed">
+                    <img src="../assets/content/images/roster/blank.webp" alt="">
                 </div>
             </div>
             <ul class="description">
@@ -602,7 +615,7 @@
                     <h3>Holly Raymond</h3>
                 </div>
                 <div class="picture">
-                    <img src="../assets/content/images/roster/blank.webp" alt="John Appleseed">
+                    <img src="../assets/content/images/roster/blank.webp" alt="">
                 </div>
             </div>
             <ul class="description">
@@ -616,7 +629,7 @@
                     <h3>Jack Rego</h3>
                 </div>
                 <div class="picture">
-                    <img src="../assets/content/images/roster/blank.webp" alt="John Appleseed">
+                    <img src="../assets/content/images/roster/blank.webp" alt="">
                 </div>
             </div>
             <ul class="description">
@@ -630,7 +643,7 @@
                     <h3>Tiana Salibi</h3>
                 </div>
                 <div class="picture">
-                    <img src="../assets/content/images/roster/blank.webp" alt="John Appleseed">
+                    <img src="../assets/content/images/roster/blank.webp" alt="">
                 </div>
             </div>
             <ul class="description">
@@ -644,7 +657,7 @@
                     <h3>Hannan Shah</h3>
                 </div>
                 <div class="picture">
-                    <img src="../assets/content/images/roster/blank.webp" alt="John Appleseed">
+                    <img src="../assets/content/images/roster/blank.webp" alt="">
                 </div>
             </div>
             <ul class="description">
