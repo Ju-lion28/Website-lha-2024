@@ -12,3 +12,4 @@
 npm install .
 ```
 
+### Build script
