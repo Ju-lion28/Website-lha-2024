@@ -2,11 +2,18 @@
   "name": "website-lha-2024",
   "version": "1.0.0",
   "description": "[website](https://laurenhill2024.crcrobotics.com/) submission for CRC KRYPTIK competition",
-  "main": "",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "sh build.sh",
+    "build-explicit": "NODE_OPTIONS=--trace-deprecation npx parcel build index.html"
   },
   "dependencies": {
     "jsdom": "^24.0.0"
+  },
+  "devDependencies": {
+    "@parcel/compressor-brotli": "^2.12.0",
+    "@parcel/compressor-gzip": "^2.12.0",
+    "@parcel/optimizer-svgo": "^2.12.0",
+    "parcel": "^2.12.0",
+    "sharp": "^0.31.3"
   }
 }
