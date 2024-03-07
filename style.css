@@ -215,7 +215,7 @@ menu#links-menu {
 .navbar a {
     text-decoration: none;
     color: var(--primary);
-    font-size: 1.2em;
+    font-size: 1.1em;
     transition: color 0.3s ease;
 }
 

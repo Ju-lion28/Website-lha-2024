@@ -6,26 +6,26 @@
     <meta name="description" content="LaurenHill Academy's website submission for the 2024 CRC competition"/>
     <title>LHA Robotics</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="stylesheet" href="./style.css"/>
+    <link async rel="stylesheet" href="./style.css"/>
     <link rel="icon" type="image/x-icon" href="./assets/icons/logo/favicon.png"/>
 </head>
 
 <body>
 <div class="header">
     <a href="./index.html">
-        <img src="./assets/icons/logo/SimpleIcon.png" id="navImage" alt="Logo"/>
+        <img type="image/png" src="./assets/icons/logo/SimpleIcon.png" id="navImage" alt="Logo"/>
     </a>
     
     <button class="hamburger-icon">
-        <img src="./assets/icons/hamburger.png" alt="Hamburger Icon" id="hamburgerIcon"/>
+        <img type="image/png" src="./assets/icons/hamburger.png" alt="Hamburger Icon" id="hamburgerIcon"/>
     </button>
 
     <div class="navbar">
         <menu class="navbar-buttons" id="links-menu">
-            <li class="navbar" id="crcNav"><a href="pages/en_crc.html">CRC</a></li>
-            <li class="navbar" id="gameNav"><a href="pages/en_game.html">Game</a></li>
-            <li class="navbar" id="journalNav"><a href="pages/en_journal.html">Journal</a></li>
-            <li class="navbar" id="rosterNav"><a href="pages/en_roster.html">Roster</a></li>
+            <li class="navbar" id="gameNav"><a href="/pages/game.html">Game</a></li>
+            <li class="navbar" id="journalNav"><a href="/pages/journal.html">Journal</a></li>
+            <li class="navbar" id="ExpNav"><a href="/pages/Experience.html">Experience</a></li>
+            <li class="navbar" id="rosterNav"><a href="/pages/roster.html">Roster</a></li>
         </menu>
     </div>
 
@@ -34,11 +34,11 @@
     </button>
     <div class="dropdown">
         <button class="dropdown_button" id="language">
-            <img src="./assets/icons/lang/translate.png" alt="Language" id="langIcon"/>
+            <img type="image/png" src="./assets/icons/lang/translate.png" alt="Language" id="langIcon"/>
         </button>
         <div class="dropdown-content">
-            <button class="langButton" id="enButton" onclick="setLanguage('en')">English</button>
-            <button class="langButton" id="frButton" onclick="setLanguage('fr')">Français</button>
+            <button class="langButton" id="enButton" >English</button>
+            <button class="langButton" id="frButton">Français</button>
         </div>
     </div>
 </div>
@@ -46,7 +46,7 @@
 <article class="content">
     <h1 id="title-1">LHA Robotics 2024</h1>
 
-    <img src="./assets/content/images/home/Group photo.JPG" alt="Group photo 2024 LHA Robotics"
+    <img type="image/jpg" src="./assets/content/images/home/Group photo.jpg" alt="Group photo 2024 LHA Robotics"
          id="mainpic"/>
 
     <h2 id="aboutUs"></h2>
@@ -73,7 +73,13 @@
 <script src="./script.js"></script>
 
 <script>
+
+    document.getElementById('enButton').addEventListener('click', () => setLanguage('en'));
+
+    document.getElementById('frButton').addEventListener('click', () => setLanguage('fr'));
+
     function setLanguage(value) {
+        console.log("clicked")
         localStorage.setItem('language', value);
         location.reload();
     }
@@ -89,10 +95,10 @@
 
         document.getElementById('aboutText').innerText = localizedStrings.home.about_us.text;
         document.getElementById('aboutUs').innerText = localizedStrings.home.about_us.title;
-        document.getElementById('gameNav').innerHTML = `<a href="pages/en_game.html">${localizedStrings.menu_options.game}</a>`;
-        document.getElementById('journalNav').innerHTML = `<a href="pages/en_journal.html">${localizedStrings.menu_options.journal}</a>`;
+        document.getElementById('gameNav').innerHTML = `<a href="pages/game.html">${localizedStrings.menu_options.game}</a>`;
+        document.getElementById('journalNav').innerHTML = `<a href="pages/journal.html">${localizedStrings.menu_options.journal}</a>`;
         document.getElementById('langIcon').alt = localizedStrings.menu_options.language;
-        document.getElementById('rosterNav').innerHTML = `<a href="pages/en_roster.html">${localizedStrings.menu_options.roster}</a>`;
+        document.getElementById('rosterNav').innerHTML = `<a href="pages/roster.html">${localizedStrings.menu_options.roster}</a>`;
         document.getElementById('title-1').innerText = localizedStrings.home.title;
     }
 </script>
