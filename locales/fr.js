@@ -35,18 +35,18 @@ const fr = {
 	},
 	journal: {
 		months: {
-			january: "Janvier",
-			february: "Février",
-			march: "Mars",
-			april: "Avril",
+			jan: "Janvier",
+			feb: "Février",
+			mar: "Mars",
+			apr: "Avril",
 			may: "Mai",
-			june: "Juin",
-			july: "Juillet",
-			august: "Août",
-			september: "Septembre",
-			october: "Octobre",
-			november: "Novembre",
-			december: "Décembre"
+			jun: "Juin",
+			jul: "Juillet",
+			aug: "Août",
+			sep: "Septembre",
+			oct: "Octobre",
+			nov: "Novembre",
+			dec: "Décembre"
 		}
 	}
 };
