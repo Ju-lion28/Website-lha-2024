@@ -4,7 +4,7 @@
 
 ## For building and misc. scripts
 
-1. Install NodeJS
+1. Install [NodeJS](https://nodejs.org/en)
 
 2. Install the local packages
 
@@ -12,4 +12,6 @@
 npm install .
 ```
 
-### Build script
+## Build script
+
+...
