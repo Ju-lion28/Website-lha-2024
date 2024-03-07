@@ -600,16 +600,7 @@ button.theme:active {
     height: auto;
 }
 
-.journalImage {
-    justify-self: center;
-    max-width: 600px;
-    max-height: 600px;
-    width: auto;
-    height: auto;
-    border-radius: 16px;
-}
-
-.journalVideo {
+.journalMedia {
     justify-self: center;
     border-radius: 16px;
     max-width: 600px;
