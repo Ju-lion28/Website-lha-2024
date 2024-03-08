@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "[website](https://laurenhill2024.crcrobotics.com/) submission for CRC KRYPTIK competition",
   "scripts": {
-    "build-inferior": "sh build.sh",
+    "build": "sh build.sh",
     "build-win": "build.cmd",
     "build-explicit": "NODE_OPTIONS=--trace-deprecation npx parcel build index.html"
   },
