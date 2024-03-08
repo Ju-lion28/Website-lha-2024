@@ -43,8 +43,14 @@
 <article class="content">
     <h1 id="title-1">LHA Robotics 2024</h1>
 
+        <div id="galleryContainer" style="display: none;">
+            <img src="" alt="Gallery Image"  id="imageContainer" width="200px" height="100%">
+            <button onclick="changeImage('+1')">Front</button>
+            <button onclick="changeImage('-1')">Back</button>
+        </div>
+
         <button type="button" id="xp-gallery-button" onclick="openGallery()">
-            <a id="xp-gallery-link" target="_blank" rel="noopener noreferrer">See The Gallery</a>
+            <a id="xp-gallery-link" rel="noopener noreferrer">See The Gallery</a>
         </button>
         <br>
         <div id="student-experience" >
@@ -71,11 +77,13 @@
 </div>
 
 <script src="../script.js"></script>
+<script src="../gallery.js" defer></script>
 
 <script>
 
     function openGallery() {
-        window.open("google.com", "_blank")
+        changeImage("+0")
+        document.getElementById("galleryContainer").style.display = "block"
     }
 
     document.getElementById('enButton').addEventListener('click', () => setLanguage('en'));
