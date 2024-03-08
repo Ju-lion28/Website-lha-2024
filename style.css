@@ -300,8 +300,7 @@ article.content {
     margin: 40px auto;
 }
 
-.leaders .person,
-.team .person {
+.roster .person {
     position: relative;
     width: 300px;
     height: 350px;
@@ -312,11 +311,9 @@ article.content {
     justify-content: center;
     align-items: center;
     transition: transform 0.3s ease; /* Added transition for smoother scaling */
-    
 }
 
-.leaders .person .data,
-.team .person .data {
+.roster .person .data {
     position: relative;
     display: flex;
     justify-content: center;
@@ -326,21 +323,18 @@ article.content {
     transform: translateY(-40px);
 }
 
-.leaders .person:hover,
-.team .person:hover {
-    transform: scale(1.1); /* Scale the person box by 1.2 when hovered */
+.roster .person:hover {
+    transform: scale(1.1); /* Scale the person card by 1.1 when hovered */
 }
 
-.leaders .person .data .picture,
-.team .person .data .picture {
+.roster .person .data .picture {
     position: relative;
     width: 200px;
     height: 200px;
     overflow: hidden;
 }
 
-.leaders .person .data .picture img,
-.team .person .data .picture img {
+.roster .person .data .picture img {
     border-radius: 16px;
     height: 100%;
     left: 0;
@@ -349,35 +343,30 @@ article.content {
     width: 100%;
 }
 
-.leaders .person .data .name h3,
-.team .person .data .name h3 {
+.roster .person .data .name h3 {
     text-transform: uppercase;
     letter-spacing: 2px;
     font-weight: 700;
     font-size: 1.5em;
     text-align: center;
     margin: 10px 0 20px;
-   
 }
 
-[data-theme="light"] .leaders .person .data .name h3,
-[data-theme="light"] .team .person .data .name h3 {
+[data-theme="light"] .roster .person .data .name h3 {
     color: var(--darker-accent);
 }
-[data-theme="dark"] .leaders .person .data .name h3,
-[data-theme="dark"] .team .person .data .name h3 {
+
+[data-theme="dark"] .roster .person .data .name h3 {
     color: var(--accent);
 }
 
-.leaders .person .description,
-.team .person .description {
+.roster .person .description {
     position: absolute;
     top: 230px;
     padding: 5px;
 }
 
-.leaders .person .description li,
-.team .person .description li {
+.roster .person .description li {
     list-style-position: outside;
     margin: 0 20px;
     transform: translateY(50px);
@@ -386,8 +375,7 @@ article.content {
     opacity: 0;
 }
 
-.leaders .person:hover .description li,
-.team .person:hover .description li {
+.roster .person:hover .description li {
     transform: translateY(20px);
     opacity: 1;
 }
