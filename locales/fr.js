@@ -60,6 +60,12 @@ const fr = {
 			nov: "Novembre",
 			dec: "Décembre"
 		},
+		names: {
+			kiosk: "Kiosque",
+			media: "Médias",
+			programming: "Programmation",
+			robot: "Robot"
+		},
 		Programming: {
 			aug: "En août, des mises à jour importantes ont été apportées au site web. Nous avons opté pour un thème de style arcade, avec un effet d'écran CRT, et introduit une palette de couleurs composée principalement de noir et de bleu. L'ajout d'une police de caractères pixelisée a renforcé l'esthétique rétro. Les améliorations pratiques comprennent l'incorporation d'un fichier readme et des ajustements à la sélection de la police. En outre, un fichier .gitignore a été mis en place pour rationaliser les processus de contrôle des versions.",
 			oct: "En octobre, nos efforts se sont concentrés sur l'amélioration de l'organisation et de l'attrait visuel du site web. Nous avons mis en œuvre une approche systématique, en veillant à ce que chaque page ait un objectif distinct. Nous avons abandonné le thème de l'arcade pour adopter une esthétique plus vibrante, unifiant les couleurs et le thème sur toutes les pages pour une expérience cohérente. Nous avons ajouté des modes sombre et clair parce que le mode sombre est génial. L'ajout d'une transition en fondu entre les pages a amélioré l'expérience globale de l'utilisateur, en lui offrant un parcours de navigation fluide. En outre, nous avons consacré du temps à l'amélioration des fonctionnalités existantes, en peaufinant des éléments tels que les en-têtes, les commutateurs de thèmes, les transitions, ainsi que l'espacement et la taille des images. Yanni a introduit une fonction de notation, attribuant 2 points par clic et 10 points par lien, améliorant ainsi l'engagement de l'utilisateur. Cependant, le sélecteur de thème a rencontré des problèmes qui ont nécessité un dépannage approfondi pendant le reste du mois. Malgré ce contretemps, notre engagement envers la qualité et la fonctionnalité est resté inébranlable et nous avons travaillé avec diligence pour résoudre le problème et garantir une expérience utilisateur fluide.",

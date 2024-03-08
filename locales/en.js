@@ -58,6 +58,12 @@ const en = {
 			nov: "November",
 			dec: "December"
 		},
+		names: {
+			kiosk: "Kiosk",
+			media: "Media",
+			programming: "Programming",
+			robot: "Robot"
+		},
 		Programming: {
 			aug: "In August, significant updates were made to the website. We transitioned to an arcade-style theme, complete with a CRT screen effect, and introduced a color scheme predominantly comprised of black and blue. The addition of a pixelated font enhanced the retro aesthetic. Practical improvements included the incorporation of a readme file and adjustments to the font selection. Additionally, a .gitignore file was implemented to streamline version control processes.",
 			oct: "In October, our efforts focused on enhancing the website's organization and visual appeal. We implemented a systematic approach, ensuring that every page served a distinct purpose. Transitioning from the previous arcade theme, we embraced a more vibrant candy aesthetic, unifying the color and theme across all pages for a cohesive experience. We added dark/light modes because dark mode is awesome. Adding a fade-out transition between pages elevated the overall user experience, providing a seamless browsing journey. Additionally, we dedicated time to polishing existing features, refining elements such as headers, theme switchers, transitions, and image spacing and sizing. Yanni introduced a scoring feature, awarding 2 points per click and 10 points per link, enhancing user engagement. However, the theme switcher encountered issues, requiring extensive troubleshooting for the remainder of the month. Despite this setback, our commitment to quality and functionality remained unwavering as we worked diligently to resolve the issue and ensure a smooth user experience.",

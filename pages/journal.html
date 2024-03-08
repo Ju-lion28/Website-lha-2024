@@ -61,7 +61,7 @@
     <a href="#Oct-Prog" class="minorSideNavLink">October</a>
     <a href="#Nov-Prog" class="minorSideNavLink">November</a>
     <a href="#Dec-Prog" class="minorSideNavLink">December</a>
-    <a href="#Jan-Feb-Prog" class="minorSideNavLink">January & February</a>
+    <a href="#Jan_Feb-Prog" class="minorSideNavLink">January & February</a>
     <a href="#Mar-Prog" class="minorSideNavLink">March</a>
     <a href="#Kiosk" id="sidenavLink">Kiosk</a>
     <a href="#Dec-Kiosk" class="minorSideNavLink">December</a>
@@ -222,7 +222,7 @@
         interaction.
     </p>
 
-    <h3 id="Jan-Feb-Prog">January & February</h3>
+    <h3 id="Jan_Feb-Prog">January & February</h3>
     <div class="multImg_container">
         <video autoplay muted loop class="journalMedia" alt="Journal SideNav 1">
             <source src="../assets/content/videos/journal/programming/Journal-Side-Nav-1.mp4" type="video/mp4">
@@ -231,7 +231,7 @@
             <source src="../assets/content/videos/journal/programming/placeholder-people.mp4" type="video/mp4">
         </video>
     </div>
-    <p id="Jan-Feb-Prog-Desc">
+    <p id="Jan_Feb-Prog-Desc">
         In January and February, we further developed the user experience on the website.
         This included, but was not limited to, multiple minor bug fixes.
         We also made adjustments to stylesheets and scaling of content on the website.
@@ -385,6 +385,9 @@
 		const localizedStrings = window.localization || {};
 
 		const h3Elements = document.querySelectorAll('h3[id^="Jan"], h3[id^="Feb"], h3[id^="Mar"], h3[id^="Apr"], h3[id^="May"], h3[id^="Jun"], h3[id^="Jul"], h3[id^="Aug"], h3[id^="Sep"], h3[id^="Oct"], h3[id^="Nov"], h3[id^="Dec"]');
+		const pElements = document.querySelectorAll('p[id^="Jan"], p[id^="Feb"], p[id^="Mar"], p[id^="Apr"], p[id^="May"], p[id^="Jun"], p[id^="Jul"], p[id^="Aug"], p[id^="Sep"], p[id^="Oct"], p[id^="Nov"], p[id^="Dec"]');
+		const h2Elements = document.querySelectorAll('h2[id^="Robot"], h2[id^="Programming"], h2[id^="Kiosk"], h2[id^="Media"]');
+		const sideNavLinks = document.querySelectorAll('#sidenav a');
 
 		h3Elements.forEach(h3 => {
 			const month = h3.id.split('-')[0]; // Extract the month from the id
@@ -394,8 +397,30 @@
 			}
 		});
 
+		h2Elements.forEach(h2 => {
+            const category = h2.id.split('-')[0]; // Extract the category from the id
+            const translatedCategory = localizedStrings.journal.names[category.toLowerCase()]; // Translate the category
+            if (translatedCategory) {
+                h2.textContent = translatedCategory; // Update the content with translated category
+            }
+        });
+
+		sideNavLinks.forEach(link => {
+            const month = link.href.split('#')[1].split('-')[0]; // Extract the month from the href
+            const translatedMonth = localizedStrings.journal.months[month.toLowerCase()]; // Translate the month
+            if (translatedMonth) {
+                link.textContent = translatedMonth; // Update the content with translated month
+            }
+
+			const category = link.href.split('#')[1].split('-')[0]; // Extract the category from the href
+            const translatedCategory = localizedStrings.journal.names[category.toLowerCase()]; // Translate the category
+            if (translatedCategory) {
+                link.textContent = translatedCategory; // Update the content with translated category
+            }
+        });
+
 		// Translate each paragraph based on its id
-		const pElements = document.querySelectorAll('p[id^="Jan"], p[id^="Feb"], p[id^="Mar"], p[id^="Apr"], p[id^="May"], p[id^="Jun"], p[id^="Jul"], p[id^="Aug"], p[id^="Sep"], p[id^="Oct"], p[id^="Nov"], p[id^="Dec"]');
+
 		pElements.forEach(p => {
 			const month = p.id.split('-')[0]; // Extract the month from the id
 			const category = p.id.split('-')[1]; // Extract the category from the id
