@@ -48,6 +48,7 @@ const fr = {
 		months: {
 			jan: "Janvier",
 			feb: "Février",
+			jan_feb: "Janvier et Février",
 			mar: "Mars",
 			apr: "Avril",
 			may: "Mai",

@@ -46,6 +46,7 @@ const en = {
 		months: {
 			jan: "January",
 			feb: "February",
+			jan_feb: "January and February",
 			mar: "March",
 			apr: "April",
 			may: "May",
