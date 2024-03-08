@@ -596,3 +596,21 @@ button.theme:active {
     width: auto;
     height: auto;
 }
+
+#xp-gallery-button {
+    background-color: var(--secondary);
+    border-radius: 12px;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.1em;
+    width: 25%;
+    display: block;
+    margin: auto;
+}
+
+#xp-gallery-link {
+    text-decoration: none;
+}
