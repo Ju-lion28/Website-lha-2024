@@ -12,3 +12,4 @@ mkdir dist\assets\icons
 mkdir dist\assets\icons\theme
 
 copy assets\icons\theme\* dist\assets\icons\theme
+copy robots.txt dist

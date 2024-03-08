@@ -13,3 +13,4 @@ mkdir dist/assets/icons
 mkdir dist/assets/icons/theme
 
 cp assets/icons/theme/* dist/assets/icons/theme
+cp robots.txt dist
