@@ -588,7 +588,7 @@ button.theme:active {
     height: auto;
 }
 
-.journalMedia {
+.Media {
     justify-self: center;
     border-radius: 16px;
     max-width: 600px;
@@ -614,3 +614,5 @@ button.theme:active {
 #xp-gallery-link {
     text-decoration: none;
 }
+
+
