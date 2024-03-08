@@ -17,11 +17,11 @@ npm install .
 MacOS/Linux
 
 ```
-idk ask yanni
+npm run build
 ```
 
 Windows
 
 ```
-.\build.cmd
+npm run build-win
 ```
