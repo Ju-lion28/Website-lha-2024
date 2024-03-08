@@ -78,6 +78,15 @@ const fr = {
 			nov: "Kickoff !!! Le kickoff a été formidable et nous avons commencé à planifier et à réfléchir à des idées avec enthousiasme. Une fois le brainstorming initial terminé, nous avons commandé des pièces et nous nous sommes préparés à l'assemblage.",
 			dec: "C'est en décembre que nous avons commencé à construire. Les premiers prototypes que nous avons réalisés étaient grossiers, mais après quelques essais et erreurs, nous sommes parvenus à une bonne conception de la base."
 		}
+	},
+	experience: {
+		title1 : "LHA Robotics 2024",
+		xpgallerylink: "Voir la Galerie", 
+		stxp1: "La compétition CRC est vraiment l'une des plus grandes opportunités pour notre équipe. L'année dernière, c'était la première fois que nous revenions au CRC et, sans expérience, nous avons tout de même réussi à obtenir un excellent classement, à tisser des liens avec d'autres écoles et à acquérir davantage de connaissances sur ce qu'il faut préparer et comment se préparer pour l'année à venir. ",
+		stxp2: "L'année dernière, nous avons eu beaucoup de mal à nous organiser, alors cette année, nous en avons tenu compte. Nous avons créé des équipes et des sous-équipes afin d'être plus efficaces. Cependant, nous avons accepté trop de personnes dans l'équipe et nous n'avons pas pu suivre qui était où et qui faisait quoi. Il y a donc eu des conflits pour déterminer qui devait aller où en fonction de ses compétences, mais nous nous en sommes sortis ensemble. Aujourd'hui, nous avons réussi à stabiliser le flux et tout se passe bien. ",
+		stxp3: "L'une des nombreuses valeurs d'apprentissage a été la compréhension du rôle de leader. Nous avons tous coopéré pour déléguer des tâches et maintenir l'ordre dans nos équipes. ",
+		stxp4: "La partie la plus intéressante de l'équipe de robotique est qu'elle est principalement composée de diplômés, ce qui nous permet de créer de nombreux souvenirs inoubliables. La course aux collations dans la salle des robots, la vieille radio à moitié cassée qui tient compagnie à l'équipe du kiosque pendant qu'elle peint, et l'équipe de programmation qui passe 'le meilleur moment de sa vie' à déboguer son travail.",
+		stxp5: "De nombreux modèles de ballons ont été utilisés pour jouer à l'attrapeur agressif et de nombreux cheveux ont été arrachés à cause du stress. Sans oublier de mentionner les énormes poches sous les yeux de la plupart des gens. Beaucoup de temps a été sacrifié et de nombreuses heures d'étude se sont transformées en séances de construction de robots ou de peinture de kiosques, ce qui s'est traduit par de mauvaises notes aux examens. De plus, j'ai passé d'innombrables jours à l'extérieur avec nos amis, mais j'ai continué à travailler sur les éléments à soumettre PENDANT NOTRE PAUSE. Les larmes n'ont pas seulement coulé, elles ont jailli. "
 	}
 };
 

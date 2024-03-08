@@ -78,6 +78,15 @@ const en = {
 			jan: "This is when we started work on the ball pick-up mechanisms. We went through three prototypes before finally landing on the right one. In the meantime we were also working on shooting mechanisms.",
 			feb: "As well as some finishing touches, everything is now assembled and (almost) ready to go. All we have to do now is fix up our wiring."
 		}
+	},
+	experience: {
+		title1 : "LHA Robotics 2024",
+		xpgallerylink: "See the Gallery",
+		stxp1: "The CRC competition is truly one of the greatest opportunities for our team. Last year was the first year coming back to CRC and with no experience, we were still able to get a great standing, build bonds with other schools, and obtain more knowledge on what to prepare as well as how to prepare for the upcoming year. ",
+		stxp2: "Last year we struggled a lot with organization, so this year we took it into consideration. We made teams and subteams so that we could accomplish more efficiently. However, we accepted too many people into the team and could not keep track of who was where and doing what. So as a result there were some conflicts as to who should go where based on their skill set but we pulled through together. Now we've accomplished a stable flow and everything is going smoothly. ",
+		stxp3: "One of the many learning values was understanding the role of being a leader. We all cooperatively managed to delegate tasks and keep our teams in order. ",
+		stxp4: "The amazing part of the robotic team is that it mainly consists of graduates, therefore we can create many unforgettable memories. The race for the snacks in the robot room, the old half-broken radio keeping the kiosk team company as they paint, and the programming team having “the time of their lives” debugging their work",
+		stxp5: "Many model balls were used to play aggressive catch and many hairs were pulled from stress. Not to forget to mention the ginormous eye bags that most people have. Lots of time was sacrificed and many study hours turned into robot-building or kiosk-painting sessions resulting in poor marks in exams. Also, countless days I should be spending outside with our friends but am continuously working on the elements that require submission DURING OUR BREAK. Tears did not only shed, they gushed."
 	}
 };
 
