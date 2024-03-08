@@ -14,4 +14,14 @@ npm install .
 
 ## Build script
 
-...
+### MacOS/Linux
+
+```
+idk ask yanni
+```
+
+### Windows
+
+```
+.\build.cmd
+```
