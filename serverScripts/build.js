@@ -79,8 +79,8 @@ function clean() {
 
 function createEnv() {
   try {
-    fsExtra.ensureDirSync("./dist");
-    fsExtra.ensureDirSync("./dist/pages");
+    fsExtra.ensureDirSync("./dist", 0o2775);
+    fsExtra.ensureDirSync("./dist/pages", 0o2775);
 
     fsExtra.copySync("../assets", "./dist/assets", { overwrite: true });
     fsExtra.copySync("../locales", "./dist/locales", { overwrite: true });
