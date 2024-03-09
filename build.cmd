@@ -1,6 +1,6 @@
-rmdir /s /q ./dist
+rmdir /s /q dist
 
-cd ./serverScripts
+cd serverScripts
 
 node build.js
 
