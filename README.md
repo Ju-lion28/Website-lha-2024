@@ -5,13 +5,14 @@
 ## How to build
 
 1. Install [NodeJS](https://nodejs.org/en)
-2. Install the local packages:
+2. Make sure to be in the project's root directory
+3. Install the local packages:
 
     ```sh
     npm install .
     ```
 
-3. For Windows run:
+4. For Windows run:
 
     ```sh
     npm run build-win
