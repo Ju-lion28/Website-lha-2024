@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "[website](https://laurenhill2024.crcrobotics.com/) submission for CRC KRYPTIK competition",
   "scripts": {
+    "build": "build.sh",
     "build-win": "build.cmd"
   },
   "dependencies": {
