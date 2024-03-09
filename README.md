@@ -14,14 +14,6 @@ npm install .
 
 ## Build script
 
-MacOS/Linux
-
-```
-npm run build
-```
-
-Windows
-
-```
-npm run build-win
-```
+1. **Go to the 'serverScripts' directory**
+2. ```node build.js```
+3. a 'dist' folder will then appear

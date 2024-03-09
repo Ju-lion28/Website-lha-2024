@@ -1,0 +1,10 @@
+node_modules
+serverScripts
+.git
+.DS_Store
+.gitignore
+.prettierrc.json
+sharp.config.json
+package.json
+package-lock.json
+README.md
