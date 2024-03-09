@@ -32,7 +32,9 @@ Le concours annuel de robotique du CRC permet aux élèves de différentes écol
 
 Tout d'abord, nous sommes chargés de concevoir et de construire un robot qui participera au jeu le jour de la compétition. Deuxièmement, construire et décorer un kiosque sur le thème choisi par l'équipe. Troisièmement, nous avons filmé et monté une vidéo pour créer une narration en corrélation avec le thème choisi et expliquer le jeu et d'autres informations importantes. Enfin et surtout, la programmation. Nous devons développer un site web🎀 et programmer le robot. De plus, si des mini-jeux sont inclus dans le kiosque, c'est généralement l'équipe de programmation qui s'en charge.
 
-Tous ces éléments doivent être accomplis avant la soumission ; la seule exception est la compétition. Chaque année, un nouveau jeu est fourni à toutes les équipes le jour du coup d'envoi, et le jour de la compétition, chaque équipe est tenue de respecter les règles et règlements de ce jeu particulier. La compétition de cette année s'appelle Kryptik. Elle se déroulera à l'école secondaire Curé-Antoine-Labelle, 216 Boul Marc-Aurèle-Fortin, Laval, QC, H7L 1Z5, du 11 au 13 avril.
+Tous ces éléments doivent être accomplis avant la soumission ; la seule exception est la compétition. Chaque année, un nouveau jeu est fourni à toutes les équipes le jour du coup d'envoi, et le jour de la compétition, chaque équipe est tenue de respecter les règles et règlements de ce jeu particulier.
+
+La compétition de cette année s'appelle Kryptik. Elle se déroulera à l'école secondaire Curé-Antoine-Labelle, 216 Boul Marc-Aurèle-Fortin, Laval, QC, H7L 1Z5, du 11 au 13 avril.
 
 ## Jeu
 
@@ -45,8 +47,6 @@ De chaque côté du terrain de jeu, il y aura 2 des cibles suivantes : (insérer
 Il y aura une cible haute à l'arrière de chaque côté et une cible courte du côté de la couleur de chaque équipe. Le but est de faire entrer les pièces du jeu dans les cibles ou sur le multijoueur et d'obtenir le plus de points possible pour votre équipe.
 
 Il y a également trois multiplicateurs des deux côtés. Ces poteaux de différentes tailles sont disséminés sur le terrain, et selon le nombre de pièces de jeu que vous placez sur le poteau, votre score est multiplié. (Insérer l'image du multijoueur)
-
-Toutes les équipes qui jouent doivent être identifiées par leur couleur et leur numéro avant les parties.
 
 Toutes les équipes jouant doivent être identifiées par leur couleur et leur numéro avant les matchs.
 

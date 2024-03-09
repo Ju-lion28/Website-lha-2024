@@ -41,30 +41,30 @@
 </div>
 
 <article class="content">
-    <h1 id="title-1">CRC & Game</h1>
+    <h1 id="title-1">The Competition</h1>
     <img class="Media" type = "image/png" src="../assets/content/images/Game/CRC_Logo.webp" 
     alt="CRC_Logo">
-    <p>The CRC annual robotics competition allows students from various schools and ages to demonstrate their skill sets creatively and innovatively. </p>
+    <p id="game-1">The CRC annual robotics competition allows students from various schools and ages to demonstrate their skill sets creatively and innovatively.</p>
     
-    <p>Firstly, we are given the task of designing and constructing a robot that will participate in the game on the day of the competition. 
+    <p id="game-2">Firstly, we are given the task of designing and constructing a robot that will participate in the game on the day of the competition. 
         Secondly, build and decorate a kiosk that will encompass the team's chosen theme. 
         Thirdly, we Film and edit a video where we create a narrative in correlation with 
         the theme chosen and explain the game as well as other important information. 
         Lastly and most importantly the programming. We are required to create a website🎀 and program the robot. 
         Additionally, if there are any mini-games included in the kiosk, the program team is usually in charge. </p>
     
-    <p>All these elements must be accomplished before the submission date, the only exception is the actual competition. 
+    <p id="game-3">All these elements must be accomplished before the submission date, the only exception is the actual competition. 
         Every year there is a new game provided to all the teams on the day of the kickoff and the day of the competition, 
         each team is required to follow the rules and regulations of that particular game.</p> 
     
     <img class="Media" type = "image/webp" src="../assets/content/images/Game/Kryptik.webp" 
     alt="Kryptik_logo">  
         
-    <p>This year’s competition is called Kryptik, it will be held at Curé-Antoine-Labelle H.S. 
+    <p id="game-4">This year’s competition is called Kryptik, it will be held at Curé-Antoine-Labelle H.S. 
         216 Boul Marc-Aurèle-Fortin, Laval, QC, H7L 1Z5 from April 11th to the 13th. </p>
     
-    <h1 id="title-2">Game</h1>
-    <p>The goal is simple; get as many possible points for your team. 
+    <h1 id="title-2">The Game</h1>
+    <p id="game-5">The goal is simple; get as many possible points for your team. 
         There is a blue and yellow team each with two robots that will 
         interchange through the competition. The game is played on the 
         playing field represented below</p>
@@ -72,28 +72,28 @@
     <img class="Media" type = "image/jpeg" src="../assets/content/images/Game/Game_Field.webp" 
     alt="Game_Field">
 
-    <p>The robots start in the designated area outlined by the color assigned and are controlled by the pilots and directed by the co-pilots of the team.  
+    <p id="game-6">The robots start in the designated area outlined by the color assigned and are controlled by the pilots and directed by the co-pilots of the team.  
         They must stay within their side or the neutral area indicated by the red area in the middle where the game pieces will be placed at the beginning. 
         The teams must stay within the red zone. After the balls are retrieved at the beginning of the game. </p>
 
-    <p>On each side of the playing field there will be 2 of the following targets:</p>
+    <p id="game-7">On each side of the playing field there will be 2 of the following targets:</p>
     
     <img class="Media" type = "image/jpeg" src="../assets/content/images/Game/tower.webp" 
     alt="target_tower">
 
-    <p>There will be one tall target on the back of each side and one short target on the side with each team’s color. 
+    <p id="game-8">There will be one tall target on the back of each side and one short target on the side with each team’s color. 
         The goal is to get the game pieces into the targets or on the multiplier and get as many points as possible for your team.</p>
 
-    <p>There are also 3 multipliers on both sides. 
+    <p id="game-9">There are also 3 multipliers on both sides. 
         These poles of various sizes are scattered around the field, 
         and depending on how many game pieces you put on the pole, 
         your score multiplies.</p>
 
     <img class="Media" type = "image/png" src="../assets/content/images/Game/Multiplier.webp" alt="Multiplier">
     
-    <p>All the teams playing must be identified with their color and number before the games. </p>
+    <p id="game-10">All the teams playing must be identified with their color and number before the games. </p>
 
-    <p>The referee has full authority and can make any judgment about the game. 
+    <p id="game-11">The referee has full authority and can make any judgment about the game. 
         For example; when a piece of a robot drops and obstructs other players from continuing, 
         if a robot is damaging the playing field or game piece, 
         prevent robots from violating the air space on the edges 
@@ -133,6 +133,21 @@
         document.getElementById('journalNav').innerHTML = `<a href="../pages/journal.html">${localizedStrings.menu_options.journal}</a>`;
         document.getElementById('langIcon').alt = localizedStrings.menu_options.language;
         document.getElementById('rosterNav').innerHTML = `<a href="../pages/roster.html">${localizedStrings.menu_options.roster}</a>`;
+
+        document.getElementById("title-1").innerText = localizedStrings.game.title1
+        document.getElementById("title-2").innerText = localizedStrings.game.title2
+
+        document.getElementById('game-1').innerText = localizedStrings.game.game1
+        document.getElementById('game-2').innerText = localizedStrings.game.game2
+        document.getElementById('game-3').innerText = localizedStrings.game.game3
+        document.getElementById('game-4').innerText = localizedStrings.game.game4
+        document.getElementById('game-5').innerText = localizedStrings.game.game5
+        document.getElementById('game-6').innerText = localizedStrings.game.game6
+        document.getElementById('game-7').innerText = localizedStrings.game.game7
+        document.getElementById('game-8').innerText = localizedStrings.game.game8
+        document.getElementById('game-9').innerText = localizedStrings.game.game9
+        document.getElementById('game-10').innerText = localizedStrings.game.game10
+        document.getElementById('game-11').innerText = localizedStrings.game.game11
     }
 </script>
 
