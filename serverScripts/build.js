@@ -21,11 +21,11 @@ clean();
 createEnv();
 
 try {
+
   const contents = fs.readFileSync(path.join(__dirname, '.buildignore'), { encoding: 'utf8' });
-  const filesToIgnoreArray = String(contents).split("\n");
+  const filesToIgnoreArray = String(contents).split(/\r?\n/);
 
   const files = fs.readdirSync("..", { withFileTypes: true });
-
   const filteredFiles = files.filter(obj => !filesToIgnoreArray.includes(obj.name));
 
   for (const file of filteredFiles) {
