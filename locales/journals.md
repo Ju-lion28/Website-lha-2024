@@ -18,7 +18,8 @@ Kickoff!!! The Kickoff was tremendous, and we excitedly began planning and brain
 
 In December, we started building. The prototypes we made were rough, but after some trial and error, we came up with a good design for the base.
 
-January
+### January
+
 This is when we started work on the ball pick-up mechanisms. We went through three prototypes before finally landing on the right one. In the meantime, we were also working on shooting mechanisms.
 
 ### February
