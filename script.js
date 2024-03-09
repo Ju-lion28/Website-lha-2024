@@ -82,6 +82,13 @@ document.addEventListener("DOMContentLoaded", function () {
         console.log("found theme")
         console.log(localStorage.getItem("theme"))
         document.documentElement.setAttribute("data-theme", storedTheme);
+
+        if (window.location.pathname === "/") {
+            themeIcon.setAttribute(
+                "src",
+                `./assets/icons/theme/${storedTheme}.svg`
+            );
+        }
         themeIcon.setAttribute(
             "src",
             `../assets/icons/theme/${storedTheme}.svg`
@@ -89,12 +96,19 @@ document.addEventListener("DOMContentLoaded", function () {
     } else {
         console.log("default")
         document.documentElement.setAttribute("data-theme", "light");
-        themeIcon.setAttribute(
-            "src",
-            "../assets/icons/theme/light.svg"
-        );
         localStorage.setItem("theme", "light");
         storedTheme = localStorage.getItem("theme")
+
+        if (window.location.pathname === "/") {
+            themeIcon.setAttribute(
+                "src",
+                `./assets/icons/theme/light.svg`
+            );
+        }
+        themeIcon.setAttribute(
+            "src",
+            `../assets/icons/theme/${storedTheme}.svg`
+        );
     }
 
     if (localStorage.getItem("language")) {
@@ -115,18 +129,30 @@ document.addEventListener("DOMContentLoaded", function () {
             document.documentElement.setAttribute("data-theme", "dark");
             localStorage.setItem("theme", "dark"); // Update and store the theme
             storedTheme = localStorage.getItem("theme"); // Update the storedTheme variable
+            if (window.location.pathname === "/") {
+                themeIcon.setAttribute(
+                    "src",
+                    `./assets/icons/theme/dark.svg`
+                );
+            }
             themeIcon.setAttribute(
                 "src",
-                "../assets/icons/theme/dark.svg"
+                `../assets/icons/theme/dark.svg`
             );
         } else if (storedTheme === "dark") {
             console.log("dark to light")
             document.documentElement.setAttribute("data-theme", "light");
             localStorage.setItem("theme", "light"); // Update and store the theme
             storedTheme = localStorage.getItem("theme"); // Update the storedTheme variable
+            if (window.location.pathname === "/") {
+                themeIcon.setAttribute(
+                    "src",
+                    `./assets/icons/theme/light.svg`
+                );
+            }
             themeIcon.setAttribute(
                 "src",
-                "../assets/icons/theme/light.svg"
+                `../assets/icons/theme/light.svg`
             );
         }
     });

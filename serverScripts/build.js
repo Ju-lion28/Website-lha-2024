@@ -9,11 +9,11 @@ const path = require("path");
 
 let jsFiles = [];
 let htmlFiles = [];
-let MiscFiles = [];
+let miscFiles = [];
 let cssFiles = [];
 
-if(process.cwd().toString().includes("serverScripts") === false) {
-  console.log("Please enter serverScripts directory and run the code from there.");
+if (!process.cwd().toString().includes("serverScripts")) {
+  console.log("Please enter the serverScripts directory and run the code from there.");
   process.exit(1);
 }
 
@@ -21,37 +21,37 @@ clean();
 createEnv();
 
 try {
-  const contents = fs.readFileSync('./.buildignore', { encoding: 'utf8' });
+  const contents = fs.readFileSync(path.join(__dirname, '.buildignore'), { encoding: 'utf8' });
   const filesToIgnoreArray = String(contents).split("\n");
 
-  const files = fs.readdirSync("../", { withFileTypes: true });
+  const files = fs.readdirSync("..", { withFileTypes: true });
 
   const filteredFiles = files.filter(obj => !filesToIgnoreArray.includes(obj.name));
 
   for (const file of filteredFiles) {
     switch (true) {
       case file.name.includes(".html"):
-        htmlFiles.push(file.path + file.name);
+        htmlFiles.push(path.join(file.path, file.name));
         break;
       case file.name.includes(".js"):
-        jsFiles.push(file.path + file.name);
+        jsFiles.push(path.join(file.path, file.name));
         break;
       case file.name.includes(".css"):
-        cssFiles.push(file.path + file.name);
+        cssFiles.push(path.join(file.path, file.name));
         break;
       case file.isDirectory():
-        const dirFiles = fs.readdirSync(file.path + file.name, { recursive: true });
+        const dirFiles = fs.readdirSync(path.join(file.path, file.name), { recursive: true });
         for (const dirFile of dirFiles) {
-          const filePath = file.path + file.name + '/' + dirFile;
+          const filePath = path.join(file.path, file.name, dirFile);
           if (dirFile.includes("html")) {
             htmlFiles.push(filePath);
           } else {
-            MiscFiles.push(filePath);
+            miscFiles.push(filePath);
           }
         }
         break;
       default:
-        MiscFiles.push(file.path + file.name);
+        miscFiles.push(path.join(file.path, file.name));
         break;
     }
   }
@@ -59,7 +59,7 @@ try {
   htmlHandler(htmlFiles);
   cssHandler(cssFiles);
   jsHandler(jsFiles);
-  // webpHandler(MiscFiles)
+  // webpHandler(miscFiles)
   console.log("Copied");
 } catch (err) {
   console.error(err.message);
@@ -67,11 +67,8 @@ try {
 
 function clean() {
   try {
-    fsExtra.emptyDirSync("./dist", { recursive: true });
-
-    fsExtra.removeSync("./dist", { recursive: true });
-
-    console.log("Cleaning succesful")
+    fsExtra.emptyDirSync(path.join(__dirname, "dist"), { recursive: true });
+    console.log("Cleaning successful");
   } catch (err) {
     console.error("Error during clean:", err);
   }
@@ -79,11 +76,12 @@ function clean() {
 
 function createEnv() {
   try {
-    fsExtra.ensureDirSync("./dist", 0o2775);
-    fsExtra.ensureDirSync("./dist/pages", 0o2775);
-
-    fsExtra.copySync("../assets", "./dist/assets", { overwrite: true });
-    fsExtra.copySync("../locales", "./dist/locales", { overwrite: true });
+    fsExtra.ensureDirSync(path.join(__dirname, "dist"));
+    fsExtra.ensureDirSync(path.join(__dirname, "dist", "pages"));
+    fsExtra.ensureDirSync(path.join(__dirname, "dist", "assets"));
+    
+    fsExtra.copySync(path.join("..", "assets"), path.join(__dirname, "dist", "assets"), { overwrite: true });
+    fsExtra.copySync(path.join("..", "locales"), path.join(__dirname, "dist", "locales"), { overwrite: true });
 
     console.log("Environment setup completed successfully.");
   } catch (err) {
@@ -97,7 +95,7 @@ function htmlHandler(htmlFiles) {
       const htmlContent = fs.readFileSync(file, 'utf8');
       const minifiedHtml = minifyHtml.minify(Buffer.from(htmlContent), { minify_css: true, minify_js: true });
       const outputname = file.replace(/\.\./g, '');
-      fs.writeFileSync(`./dist${outputname}`, minifiedHtml, 'utf8');
+      fs.writeFileSync(path.join(__dirname, "dist", outputname), minifiedHtml, 'utf8');
     } catch (err) {
       console.error(err.message);
     }
@@ -113,7 +111,7 @@ function jsHandler(jsFiles) {
         bundle: false,
         minify: true,
         sourcemap: false,
-        outfile: `./dist/${outputname}`,
+        outfile: path.join(__dirname, "dist", outputname),
       });
     } catch (error) {
       console.error(error);
@@ -130,7 +128,7 @@ function cssHandler(cssFiles) {
         bundle: false,
         minify: true,
         sourcemap: false,
-        outfile: `./dist/${outputname}`,
+        outfile: path.join(__dirname, "dist", outputname),
         loader: { '.ttf': 'empty' },
       });
     } catch (error) {
@@ -139,17 +137,17 @@ function cssHandler(cssFiles) {
   }
 }
 
-async function webpHandler(MiscFiles) {
-  for (let file of MiscFiles) {
+async function webpHandler(miscFiles) {
+  for (let file of miscFiles) {
     if (file.includes("webp")) {
       const outputname = file.replace(/\.\./g, '');
       const inputPath = path.join(file);
-      const outputPath = path.join("./dist", outputname);
+      const outputPath = path.join(__dirname, "dist", outputname);
 
       console.log(`Processing: ${inputPath} -> ${outputPath}`);
 
       try {
-        await sharp("./" + inputPath)
+        await sharp(inputPath)
           .webp({ lossless: true, quality: 20 })
           .toFile(outputPath, { force: true });
       } catch (error) {
