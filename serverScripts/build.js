@@ -68,10 +68,10 @@ try {
 function clean() {
   try {
     fsExtra.emptyDirSync("./dist", { recursive: true });
-    console.log("Directory ./dist emptied successfully.");
 
     fsExtra.removeSync("./dist", { recursive: true });
-    console.log("Directory ./dist deleted successfully.");
+
+    console.log("Cleaning succesful")
   } catch (err) {
     console.error("Error during clean:", err);
   }
