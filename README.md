@@ -1,19 +1,24 @@
 # Website LHA 2024
 
-[website](https://laurenhill2024.crcrobotics.com/) submission for CRC KRYPTIK competition
+[Website](https://laurenhill2024.crcrobotics.com/) submission for CRC KRYPTIK competition
 
-## For building and misc. scripts
+## How to build
 
 1. Install [NodeJS](https://nodejs.org/en)
+2. Install the local packages:
 
-2. Install the local packages
+    ```sh
+    npm install .
+    ```
 
-```
-npm install .
-```
+3. For Windows run:
 
-## Build script
+    ```sh
+    npm run build-win
+    ```
 
-1. **Go to the 'serverScripts' directory**
-2. ```node build.js```
-3. a 'dist' folder will then appear
+    For MacOS or Linux run:
+
+    ```sh
+    npm run build
+    ```
