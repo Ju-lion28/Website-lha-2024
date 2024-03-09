@@ -2,6 +2,9 @@
   "name": "website-lha-2024",
   "version": "1.0.0",
   "description": "[website](https://laurenhill2024.crcrobotics.com/) submission for CRC KRYPTIK competition",
+  "scripts": {
+    "build-win": "build.cmd"
+  },
   "dependencies": {
     "@minify-html/node": "^0.15.0",
     "@minify-js/node": "^0.6.0",

@@ -39,7 +39,7 @@ fs.readFile('./.buildignore', { encoding: 'utf8' }, (err, contents) => {
 
     filteredFiles = files.filter(obj => !filesToIgnoreArray.includes(obj.name));
 
-    //console.log(filteredFiles)
+    console.log(filteredFiles)
     for (const file of filteredFiles) {
 
       switch (true) {
