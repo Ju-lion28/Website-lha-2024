@@ -4,4 +4,4 @@ cd serverScripts
 
 node build.js
 
-move dist ..
+xcopy dist ..\dist\ /E /Y && rmdir /S /Q dist
