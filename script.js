@@ -95,10 +95,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
     document.documentElement.setAttribute("data-theme", storedTheme);
     themeIcon.setAttribute("src", `../assets/icons/theme/${storedTheme}.svg`);
+    document.getElementById('logo').src = `./assets/content/images/home/logo_${storedTheme}.webp`;
 
     themeToggleButton.addEventListener("click", () => {
         storedTheme = storedTheme === "light" ? "dark" : "light";
         updateTheme(storedTheme);
+        document.getElementById('logo').src = `./assets/content/images/home/logo_${storedTheme}.webp`;
     });
     
     if (localStorage.getItem("language")) {
