@@ -2,6 +2,8 @@ const sharp = require("sharp");
 const minifyHtml = require("@minify-html/node");
 const fsExtra = require('fs-extra');
 const esbuild = require('esbuild');
+const jsdom = require("jsdom");
+const { JSDOM } = jsdom;
 
 const process = require('node:process');
 const fs = require('fs');
@@ -11,6 +13,7 @@ let jsFiles = [];
 let htmlFiles = [];
 let miscFiles = [];
 let cssFiles = [];
+let imageSrcs = [];
 
 if (!process.cwd().toString().includes("serverScripts")) {
   console.log("Please enter the serverScripts directory and run the code from there.");
@@ -21,7 +24,6 @@ clean();
 createEnv();
 
 try {
-
   const contents = fs.readFileSync(path.join(__dirname, '.buildignore'), { encoding: 'utf8' });
   const filesToIgnoreArray = String(contents).split(/\r?\n/);
 
@@ -59,7 +61,8 @@ try {
   htmlHandler(htmlFiles);
   cssHandler(cssFiles);
   jsHandler(jsFiles);
-  webpHandler(miscFiles)
+  loadImages(htmlFiles)
+  webpHandler(imageSrcs)
   console.log("Copied");
 } catch (err) {
   console.error(err.message);
@@ -137,12 +140,31 @@ function cssHandler(cssFiles) {
   }
 }
 
-async function webpHandler(miscFiles) {
-  for (let file of miscFiles) {
-    if (file.includes("webp")) {
-      const outputname = file.replace(/\.\./g, '');
-      const inputPath = path.join(__dirname, '..', 'assets', file);
+function loadImages(htmlFiles) {
+    for (let file of htmlFiles) {
+      try {
+        const input = fs.readFileSync(file, 'utf8');
 
+        const dom = new JSDOM(input.toString());
+
+        images = dom.window.document.querySelectorAll("img")
+
+        for (let image of images) {
+          imageSrcs.push(image.src)
+        }
+
+      } catch (err) {
+        console.error(err.message);
+      }
+    }
+}
+
+async function webpHandler(imageSrcs) {
+  for (let image of imageSrcs) {
+    if (image.includes("webp")) {
+      const inputPath = path.join(__dirname, '..', 'assets', image);
+      
+      const outputname = image.replace(/\.\./g, '');
       const outputPath = path.join(__dirname, "dist", outputname);
 
       console.log(`Processing: ${inputPath} -> ${outputPath}`);
