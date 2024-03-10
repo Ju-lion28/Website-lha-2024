@@ -137,18 +137,18 @@ function cssHandler(cssFiles) {
   }
 }
 
-async function webpHandler(miscFiles) {
+function webpHandler(miscFiles) {
   for (let file of miscFiles) {
     if (file.includes("webp")) {
       const outputname = file.replace(/\.\./g, '');
-      const inputPath = path.join(file);
+      const inputPath = path.join(__dirname, '..', 'assets', file);
+
       const outputPath = path.join(__dirname, "dist", outputname);
 
-      console.log(`Processing: ${outputname}`);
-
+      console.log(`Processing: ${inputPath} -> ${outputPath}`);
       try {
-        await sharp(inputPath)
-          .webp({ nearLossless: true, quality: 80 })
+         sharp(inputPath)
+          .webp({ nearLossless: true, quality: 30 })
           .toFile(outputPath, { force: true });
       } catch (error) {
         console.log(`An error occurred during processing: ${error}`);
