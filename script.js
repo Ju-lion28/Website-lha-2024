@@ -67,7 +67,7 @@ document.addEventListener("click", (event) => {
 document.addEventListener("DOMContentLoaded", function () {
     document.body.classList.add("fade-in");
 
-    let storedTheme = localStorage.getItem("theme");
+    let storedTheme = localStorage.getItem("theme") || "light";
     let storedLanguage = localStorage.getItem("language");
     let themeToggleButton = document.getElementById("themeToggleButton");
     let themeIcon = document.getElementById("themeIcon");
@@ -78,39 +78,20 @@ document.addEventListener("DOMContentLoaded", function () {
         navbarButtons.classList.toggle('show');
     });
 
-    if (localStorage.getItem("theme")) {
-        console.log("found theme")
-        console.log(localStorage.getItem("theme"))
-        document.documentElement.setAttribute("data-theme", storedTheme);
-
-        if (window.location.pathname === "/") {
-            themeIcon.setAttribute(
-                "src",
-                `./assets/icons/theme/${storedTheme}.svg`
-            );
-        }
-        themeIcon.setAttribute(
-            "src",
-            `../assets/icons/theme/${storedTheme}.svg`
-        );
-    } else {
-        console.log("default")
-        document.documentElement.setAttribute("data-theme", "light");
-        localStorage.setItem("theme", "light");
-        storedTheme = localStorage.getItem("theme")
-
-        if (window.location.pathname === "/") {
-            themeIcon.setAttribute(
-                "src",
-                `./assets/icons/theme/light.svg`
-            );
-        }
-        themeIcon.setAttribute(
-            "src",
-            `../assets/icons/theme/${storedTheme}.svg`
-        );
+    function updateTheme(newTheme) {
+        document.documentElement.setAttribute("data-theme", newTheme);
+        localStorage.setItem("theme", newTheme);
+        themeIcon.setAttribute("src", `../assets/icons/theme/${newTheme}.svg`);
     }
 
+    document.documentElement.setAttribute("data-theme", storedTheme);
+    themeIcon.setAttribute("src", `../assets/icons/theme/${storedTheme}.svg`);
+
+    themeToggleButton.addEventListener("click", () => {
+        storedTheme = storedTheme === "light" ? "dark" : "light";
+        updateTheme(storedTheme);
+    });
+    
     if (localStorage.getItem("language")) {
         document.documentElement.setAttribute("language", storedLanguage);
     } else {
@@ -121,41 +102,6 @@ document.addEventListener("DOMContentLoaded", function () {
         localStorage.setItem("language", browserLanguage);
         storedLanguage = localStorage.getItem("language")
     }
-
-    themeToggleButton.addEventListener("click", () => {
-        console.log("running")
-        if (storedTheme === "light") {
-            console.log("light to dark")
-            document.documentElement.setAttribute("data-theme", "dark");
-            localStorage.setItem("theme", "dark"); // Update and store the theme
-            storedTheme = localStorage.getItem("theme"); // Update the storedTheme variable
-            if (window.location.pathname === "/") {
-                themeIcon.setAttribute(
-                    "src",
-                    `./assets/icons/theme/dark.svg`
-                );
-            }
-            themeIcon.setAttribute(
-                "src",
-                `../assets/icons/theme/dark.svg`
-            );
-        } else if (storedTheme === "dark") {
-            console.log("dark to light")
-            document.documentElement.setAttribute("data-theme", "light");
-            localStorage.setItem("theme", "light"); // Update and store the theme
-            storedTheme = localStorage.getItem("theme"); // Update the storedTheme variable
-            if (window.location.pathname === "/") {
-                themeIcon.setAttribute(
-                    "src",
-                    `./assets/icons/theme/light.svg`
-                );
-            }
-            themeIcon.setAttribute(
-                "src",
-                `../assets/icons/theme/light.svg`
-            );
-        }
-    });
 });
 
 // Highscore
