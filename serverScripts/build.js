@@ -137,7 +137,7 @@ function cssHandler(cssFiles) {
   }
 }
 
-function webpHandler(miscFiles) {
+async function webpHandler(miscFiles) {
   for (let file of miscFiles) {
     if (file.includes("webp")) {
       const outputname = file.replace(/\.\./g, '');
@@ -147,7 +147,7 @@ function webpHandler(miscFiles) {
 
       console.log(`Processing: ${inputPath} -> ${outputPath}`);
       try {
-         sharp(inputPath)
+        await sharp(inputPath)
           .webp({ nearLossless: true, quality: 30 })
           .toFile(outputPath, { force: true });
       } catch (error) {
