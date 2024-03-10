@@ -70,7 +70,8 @@ const fr = {
 			oct: "Nous avons décidé d'utiliser la base de l'année dernière pour le robot. Comme c'est notre deuxième année, en sachant ce que nous savons maintenant, nous avons pu faire les bons changements plus rapidement et nous savions ce qu'il fallait prioriser et ce qu'il fallait écarter.",
 			nov: "Kickoff !!! Le kickoff a été formidable et nous avons commencé à planifier et à réfléchir à des idées avec enthousiasme. Une fois le brainstorming initial terminé, nous avons commandé des pièces et nous nous sommes préparés à l'assemblage.",
 			dec: "C'est en décembre que nous avons commencé à construire. Les premiers prototypes que nous avons réalisés étaient grossiers, mais après quelques essais et erreurs, nous sommes parvenus à une bonne conception de la base.",
-			jan: "C'est à ce moment-là que nous avons commencé à travailler sur les mécanismes de ramassage des billes. Nous avons réalisé trois prototypes avant de trouver le bon. Entre-temps, nous avons également travaillé sur les mécanismes de tir."
+			jan: "C'est à ce moment-là que nous avons commencé à travailler sur les mécanismes de ramassage des billes. Nous avons réalisé trois prototypes avant de trouver le bon. Entre-temps, nous avons également travaillé sur les mécanismes de tir.",
+			feb: "Après quelques finitions, tout est maintenant assemblé et (presque) prêt à fonctionner. Il ne nous reste plus qu'à régler le câblage."
 		}
 	},
 	roster: {
