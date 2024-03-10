@@ -289,7 +289,42 @@ article.content {
     padding: 65px 32px;
     transition: margin-left .5s;
 }
-
+@media screen and (max-width : 900px) {
+    article.content {
+        display: flex;
+        justify-content: center;
+        margin: auto;
+        min-width: 100px;
+        max-width: 80vh;
+        text-align: left;
+        padding: 65px 32px;
+        transition: margin-left .5s;
+        flex-direction: column;
+        flex-wrap: wrap;
+        box-sizing: border-box;
+    }
+    p {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    #Map {
+        width: 100%;
+        height: auto;
+    }
+    video {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .txt {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+    }}
 .roster {
     position: relative;
     display: flex;
@@ -593,7 +628,7 @@ button.theme:active {
     border-radius: 16px;
     max-width: 600px;
     max-height: 600px;
-    width: auto;
+    width: 100%;
     height: auto;
 }
 
