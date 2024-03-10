@@ -7,6 +7,6 @@ serverScripts
 sharp.config.json
 package.json
 package-lock.json
-README.md
+README.adoc
 .cspell
 .vscode
