@@ -313,6 +313,12 @@ article.content {
         width: 100%;
         height: auto;
     }
+    video.Media {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+    }
     video {
         width: 100%;
         height: auto;
@@ -324,6 +330,12 @@ article.content {
         height: auto;
         display: flex;
         flex-wrap: wrap;
+    }
+    h1 {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        height: auto;
     }}
 .roster {
     position: relative;
@@ -614,12 +626,14 @@ button.theme:active {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    height: auto;
 }
 
 .multImg_container img,
 .multImg_container video {
     max-width: 400px;
-    width: auto;
+    width: 100%;
     height: auto;
 }
 
