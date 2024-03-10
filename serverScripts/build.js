@@ -148,7 +148,7 @@ async function webpHandler(miscFiles) {
       console.log(`Processing: ${inputPath} -> ${outputPath}`);
       try {
         await sharp(inputPath)
-          .webp({ nearLossless: true, quality: 30 })
+          .webp({ quality: 30, effort: 6 })
           .toFile(outputPath, { force: true });
       } catch (error) {
         console.log(`An error occurred during processing: ${error}`);
