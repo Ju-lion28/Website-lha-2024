@@ -59,7 +59,7 @@ try {
   htmlHandler(htmlFiles);
   cssHandler(cssFiles);
   jsHandler(jsFiles);
-  // webpHandler(miscFiles)
+  webpHandler(miscFiles)
   console.log("Copied");
 } catch (err) {
   console.error(err.message);
@@ -144,11 +144,11 @@ async function webpHandler(miscFiles) {
       const inputPath = path.join(file);
       const outputPath = path.join(__dirname, "dist", outputname);
 
-      console.log(`Processing: ${inputPath} -> ${outputPath}`);
+      console.log(`Processing: ${outputname}`);
 
       try {
         await sharp(inputPath)
-          .webp({ lossless: true, quality: 20 })
+          .webp({ nearLossless: true, quality: 80 })
           .toFile(outputPath, { force: true });
       } catch (error) {
         console.log(`An error occurred during processing: ${error}`);
