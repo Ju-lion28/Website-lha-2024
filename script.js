@@ -83,35 +83,32 @@ document.addEventListener("DOMContentLoaded", function () {
     let hamburgerIcon = document.querySelector('.hamburger-icon');
     let navbarButtons = document.querySelector('.navbar-buttons');
 
-    hamburgerIcon.addEventListener('click', function () {
-        navbarButtons.classList.toggle('show');
-    });
+    hamburgerIcon.addEventListener('click', () => navbarButtons.classList.toggle('show'));
 
     function updateTheme(newTheme) {
         document.documentElement.setAttribute("data-theme", newTheme);
         localStorage.setItem("theme", newTheme);
-        themeIcon.setAttribute("src", `../assets/icons/theme/${newTheme}.svg`);
+        themeIcon.src = `../assets/icons/theme/${newTheme}.svg`;
+        if (window.location.pathname === '/index.html' || window.location.pathname === '/')
+            document.getElementById('logo').src = `./assets/content/images/home/logo_${newTheme}.webp`;
     }
 
     document.documentElement.setAttribute("data-theme", storedTheme);
-    themeIcon.setAttribute("src", `../assets/icons/theme/${storedTheme}.svg`);
-    document.getElementById('logo').src = `./assets/content/images/home/logo_${storedTheme}.webp`;
+    themeIcon.src = `../assets/icons/theme/${storedTheme}.svg`;
+    if (window.location.pathname === '/index.html' || window.location.pathname === '/')
+        document.getElementById('logo').src = `./assets/content/images/home/logo_${storedTheme}.webp`;
 
     themeToggleButton.addEventListener("click", () => {
         storedTheme = storedTheme === "light" ? "dark" : "light";
         updateTheme(storedTheme);
-        document.getElementById('logo').src = `./assets/content/images/home/logo_${storedTheme}.webp`;
     });
-    
-    if (localStorage.getItem("language")) {
-        document.documentElement.setAttribute("language", storedLanguage);
-    } else {
-        let browserLanguage = navigator.language || "en";
-        browserLanguage = browserLanguage.split("-")[0];
 
+    if (!storedLanguage) {
+        let browserLanguage = (navigator.language || "en").split("-")[0];
         document.documentElement.setAttribute("language", browserLanguage);
         localStorage.setItem("language", browserLanguage);
-        storedLanguage = localStorage.getItem("language")
+    } else {
+        document.documentElement.setAttribute("language", storedLanguage);
     }
 });
 

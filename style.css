@@ -219,16 +219,16 @@ menu#links-menu {
     transition: color 0.3s ease;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 981px) {
     li.navbar:hover {
         display: inline-block;
         letter-spacing: 0.5em;
     }
 }
 
-@media screen and (max-width: 801px) {
+@media screen and (max-width: 982px) {
     li.navbar:hover {
-        text-decoration: underline var(--primary);
+        text-decoration: underline var(--accent);
     }
 }
 
