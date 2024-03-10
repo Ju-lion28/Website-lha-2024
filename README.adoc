@@ -1,27 +1,28 @@
-== Website LHA 2024
+= Website LHA 2024
 
 https://laurenhill2024.crcrobotics.com/[Website] submission for CRC
 KRYPTIK competition
 
-=== How to build
+== Build process
+
+NOTE: Make sure to be in the website's [.underline]#root directory.#
 
 [arabic]
 . Install https://nodejs.org/en[NodeJS]
-. Make sure to be in the project’s root directory
 . Install the local packages:
 +
 [source,sh]
 ----
 npm install .
 ----
-. For Windows run:
+. For *Windows* run:
 +
 [source,sh]
 ----
 npm run build-win
 ----
 +
-For MacOS or Linux run:
+For *MacOS* or *Linux* run:
 +
 [source,sh]
 ----
