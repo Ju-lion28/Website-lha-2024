@@ -1,6 +1,6 @@
 :root[data-theme="light"] {
     --text: #000000;
-    --background: #f8f5f5;
+    --background: #e9eaf3;
     --primary: #6a85c5;
     --secondary: #C1C2D9;
     --accent: #3d3366;
@@ -654,7 +654,7 @@ button.theme:active {
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
-    font-size: 1.1em;
+    font-size: 1em;
     width: 25%;
     display: block;
     margin: auto;
@@ -662,6 +662,7 @@ button.theme:active {
 
 #xp-gallery-link {
     text-decoration: none;
+    font-family: "SourceCodePro", monospace;
 }
 
 
