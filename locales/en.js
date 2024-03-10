@@ -15,7 +15,7 @@ const en = {
 	},
 	experience: {
 		title1 : "Student Experience",
-		xpgallerylink: "See the Gallery",
+		xpgallerylink: "See The Gallery",
 		stxp1: "The CRC competition is truly one of the greatest opportunities for our team. Last year was the first year coming back to CRC and with no experience, we were still able to get a great standing, build bonds with other schools, and obtain more knowledge on what to prepare as well as how to prepare for the upcoming year. ",
 		stxp2: "Last year we struggled a lot with organization, so this year we took it into consideration. We made teams and subteams so that we could accomplish more efficiently. However, we accepted too many people into the team and could not keep track of who was where and doing what. So as a result there were some conflicts as to who should go where based on their skill set but we pulled through together. Now we've accomplished a stable flow and everything is going smoothly. ",
 		stxp3: "One of the many learning values was understanding the role of being a leader. We all cooperatively managed to delegate tasks and keep our teams in order. ",

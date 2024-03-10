@@ -1,4 +1,4 @@
-const loadPageWithAnimation = (url) => {
+const loadPageWithAnimation = (url, target) => {
     // Makes sure in-page links work
     if (url === null) {
         document.body.style.opacity = 100;
@@ -32,6 +32,9 @@ const loadPageWithAnimation = (url) => {
         }
         
         document.body.style.opacity = 100;
+    } else if (target === "_blank") {
+        // If the target is _blank, open the link in a new tab
+        window.open(url, "_blank");
     } else {
         document.body.style.opacity = 0;
   
@@ -50,14 +53,20 @@ document.addEventListener("click", (event) => {
     if (target.tagName === "A" || target.closest("a")) {
         event.preventDefault(); // Prevent the default link behavior
 
-        // Get the URL of the clicked link
-        const url =
-            target.tagName === "A"
-                ? target.getAttribute("href")
-                : target.closest("a").getAttribute("href");
+        // Get the URL and target attribute of the clicked link
+        let url, targetAttr;
+        if (target.tagName === "A") {
+            url = target.getAttribute("href");
+            targetAttr = target.getAttribute("target");
+        } else {
+            const closestLink = target.closest("a");
+            url = closestLink.getAttribute("href");
+            targetAttr = closestLink.getAttribute("target");
+        }
 
-        // Load the new page with animation and redirect to the URL
-        loadPageWithAnimation(url);
+        // Load the new page with animation and redirect to the URL, including target attribute
+        console.log(url, targetAttr)
+        loadPageWithAnimation(url, targetAttr);
     }
 });
 

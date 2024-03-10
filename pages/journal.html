@@ -16,11 +16,12 @@
     <a href="../index.html">
         <img src="../assets/icons/logo/SimpleIcon.png" id="navImage" alt="Logo"/>
     </a>
-    <a onclick="openNav()" id="openNav">
+    <a id="openNav">
         <img src="../assets/icons/openNav.svg" alt="SideNav" id="openNavImage">
     </a>
-    <a onclick="closeNav()" id="closeNav" hidden><img src="../assets/icons/closeNav.svg" alt="Close Menu"
-                                                      id="closeSidenav"></a>
+    <a id="closeNav" hidden>
+        <img src="../assets/icons/closeNav.svg" alt="Close Menu" id="closeSidenav">
+    </a>
 
     <div class="navbar">
         <button class="hamburger-icon">
@@ -246,7 +247,9 @@
         We significantly improved the journal, with much more detail, an improved Side Navbar, and images + videos.
         Finally, we made optimizations to the website to speed up load times and image serving. 
     </p>
-
+    <button type="button" id="xp-gallery-button">
+        <a id="xp-gallery-link" target="_blank" href="https://drive.google.com/drive/folders/17ZrNRaLIx-O0xslXfB4sL-5srcIn8X3Q?usp=sharing">See The Gallery</a>
+    </button>
 
     <!-- KIOSK -->
     <h2 id="Kiosk">Kiosk</h2>
@@ -352,7 +355,7 @@
 
 
 		document.getElementById("closeNav").hidden = false
-		document.getElementById("closeNavImage").hidden = false
+		document.getElementById("closeSidenav").hidden = false
 	}
 
 	/* Set the width of the side navigation to 0 */
@@ -363,7 +366,7 @@
 		document.getElementById("openNavImage").hidden = false
 
 		document.getElementById("closeNav").hidden = true
-		document.getElementById("closeNavImage").hidden = true
+		document.getElementById("closeSidenav").hidden = true
 
 	}
 
