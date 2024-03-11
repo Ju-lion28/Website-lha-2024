@@ -76,6 +76,7 @@ const en = {
 			art: "Digital Art",
 			captain: "Captain",
 			kiosk: "Kiosk",
+			logistics: "Logistics",
 			media: "Media/Production",
 			pilot: "Pilot",
 			programming: "Programming",

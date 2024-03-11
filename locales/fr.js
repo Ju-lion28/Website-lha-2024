@@ -80,6 +80,7 @@ const fr = {
 			art: "L'Art Digital",
 			captain: "Capitaine",
 			kiosk: "Kiosque",
+			logistics: "Logistique",
 			media: "Médias / Production",
 			pilot: "Pilote",
 			programming: "Programmation",
