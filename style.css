@@ -70,6 +70,8 @@ img#mainpic {
 .dropdown {
     position: relative;
     display: inline-block;
+    min-height: 48px;
+    min-width: 48px;
 }
 
 .dropdown_button {
@@ -233,10 +235,15 @@ menu#links-menu {
 }
 
 #navImage {
-    height: 48px;
-    width: 48px;
+    height: auto;
+    width: 100%;
     padding: 16px;
     transition: all 0.3s cubic-bezier(0.18, 0.89, 0.43, 1.54);
+    min-width: 80px;
+    min-height: 80px;
+    max-width: 80px;
+    max-height: 80px;
+    box-sizing: border-box;
 }
 
 button.dropdown_button {
@@ -270,13 +277,17 @@ button.theme:active {
 }
 
 #themeIcon {
-    height: 100%;
+    height: auto;
     width: 100%;
+    min-height: 48px;
+    min-width: 48px;
 }
 
 #langIcon {
-    height: 100%;
+    height: auto;
     width: 100%;
+    min-height: 48px;
+    min-width: 48px;
 }
 
 article.content {
@@ -431,7 +442,7 @@ article.content {
     .roster .person .description li {
         list-style-position: outside;
         margin: 0, 20px;
-        margin-top: 15px;
+        padding-top: 12px;
         transition: none;
         transform: none;
         line-height: 1.5em;
@@ -440,6 +451,21 @@ article.content {
     
     .roster .person:hover .description li {
         opacity: 1;
+        transform: none;
+    }
+    .roster .person {
+        position: relative;
+        width: 300px;
+        height: 350px;
+        background-color: var(--primary);
+        border-radius: 16px;
+        margin: 16px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: none;
+    }
+    .roster .person:hover {
         transform: none;
     }
 }
