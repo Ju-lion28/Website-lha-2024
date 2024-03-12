@@ -427,6 +427,23 @@ article.content {
     opacity: 1;
 }
 
+@media  screen and (max-width: 900px) {
+    .roster .person .description li {
+        list-style-position: outside;
+        margin: 0, 20px;
+        margin-top: 15px;
+        transition: none;
+        transform: none;
+        line-height: 1.5em;
+        opacity: 1;
+    }
+    
+    .roster .person:hover .description li {
+        opacity: 1;
+        transform: none;
+    }
+}
+
 /* Styles for buttons */
 .btn {
     padding: 10px 20px;
