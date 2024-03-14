@@ -1,7 +1,9 @@
-rm -rf ./dist
+rm -rf dist
 
-cd serverScripts
+cd serverScripts || exit
 
 node build.js
 
-mv dist ../
+rm -f dist/locales/*.md
+
+cp -rf dist/* ../dist/ && rm -rf dist
