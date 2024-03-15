@@ -82,6 +82,9 @@ document.addEventListener("DOMContentLoaded", function () {
     let themeIcon = document.getElementById("themeIcon");
     let hamburgerIcon = document.querySelector('.hamburger-icon');
     let navbarButtons = document.querySelector('.navbar-buttons');
+    let logo = document.getElementById('logo');
+    let openNav = document.getElementById("openNavImage");
+    let closeNav = document.getElementById("closeSidenav")
 
     hamburgerIcon.addEventListener('click', () => navbarButtons.classList.toggle('show'));
 
@@ -89,14 +92,24 @@ document.addEventListener("DOMContentLoaded", function () {
         document.documentElement.setAttribute("data-theme", newTheme);
         localStorage.setItem("theme", newTheme);
         themeIcon.src = `../assets/icons/theme/${newTheme}.svg`;
-        if (window.location.pathname === '/index.html' || window.location.pathname === '/')
-            document.getElementById('logo').src = `./assets/content/images/home/logo_${newTheme}.webp`;
+        if (window.location.pathname === '/index.html' || window.location.pathname === '/') {
+            logo.src = `./assets/content/images/home/logo_${newTheme}.webp`;
+        }
+        if (window.location.pathname === '/pages/journal.html') {
+            openNav.src = `../assets/icons/nav/openNav_${newTheme}.svg`;
+            closeNav.src = `../assets/icons/nav/closeNav_${newTheme}.svg`;
+        }
     }
 
     document.documentElement.setAttribute("data-theme", storedTheme);
     themeIcon.src = `../assets/icons/theme/${storedTheme}.svg`;
-    if (window.location.pathname === '/index.html' || window.location.pathname === '/')
-        document.getElementById('logo').src = `./assets/content/images/home/logo_${storedTheme}.webp`;
+    if (window.location.pathname === '/index.html' || window.location.pathname === '/') {
+        logo.src = `./assets/content/images/home/logo_${storedTheme}.webp`;
+    }
+    if (window.location.pathname === '/pages/journal.html') {
+        openNav.src = `../assets/icons/nav/openNav_${storedTheme}.svg`;
+        closeNav.src = `../assets/icons/nav/closeNav_${storedTheme}.svg`;
+    }
 
     themeToggleButton.addEventListener("click", () => {
         storedTheme = storedTheme === "light" ? "dark" : "light";
