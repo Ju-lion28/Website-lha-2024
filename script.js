@@ -121,7 +121,7 @@ window.onload = function () {
     }
 };
 
-const highscoreBox = document.getElementById("highscore");
+const highscoreBox = document.getElementById("highscoreBox");
 
 // Modifies in DOM
 function updateHighScoreDOM(score) {
@@ -161,13 +161,13 @@ resetButton.onclick = function resetScore() {
 };
 
 // Show clear button and hide score
-highscoreBox.onmouseover = function () {
+highscoreBox.onmouseenter = function () {
     resetButton.hidden = false;
     highscoreBox.hidden = true;
 };
 
 // Hide clear button and show score
-highscoreBox.onmouseout = function () {
+highscoreBox.onmouseleave = function () {
     resetButton.hidden = true;
     highscoreBox.hidden = false;
 };
