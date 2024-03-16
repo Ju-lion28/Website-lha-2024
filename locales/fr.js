@@ -16,6 +16,7 @@ const fr = {
 	},
 	experience: {
 		title1: "L'expérience des étudiants",
+		title2: "Nos Vidéos",
 		xpgallerylink: "Voir la Galerie",
 		stxp1: "La compétition CRC est vraiment l'une des plus grandes opportunités pour notre équipe. L'année dernière, c'était la première fois que nous revenions au CRC et, sans expérience, nous avons tout de même réussi à obtenir un excellent classement, à tisser des liens avec d'autres écoles et à acquérir davantage de connaissances sur ce qu'il faut préparer et comment se préparer pour l'année à venir. ",
 		stxp2: "L'année dernière, nous avons eu beaucoup de mal à nous organiser, alors cette année, nous en avons tenu compte. Nous avons créé des équipes et des sous-équipes afin d'être plus efficaces. Cependant, nous avons accepté trop de personnes dans l'équipe et nous n'avons pas pu suivre qui était où et qui faisait quoi. Il y a donc eu des conflits pour déterminer qui devait aller où en fonction de ses compétences, mais nous nous en sommes sortis ensemble. Aujourd'hui, nous avons réussi à stabiliser le flux et tout se passe bien. ",
