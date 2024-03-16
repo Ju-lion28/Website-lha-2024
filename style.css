@@ -145,7 +145,7 @@ h1 {
 }
 
 h2 {
-    color: var(--primary);
+    color: var(--darker-accent);
     font-size: 2em;
     font-style: italic;
 }
