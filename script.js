@@ -82,9 +82,13 @@ document.addEventListener("DOMContentLoaded", function () {
     let themeIcon = document.getElementById("themeIcon");
     let hamburgerIcon = document.querySelector('.hamburger-icon');
     let navbarButtons = document.querySelector('.navbar-buttons');
+
     let logo = document.getElementById('logo');
     let openNav = document.getElementById("openNavImage");
-    let closeNav = document.getElementById("closeSidenav")
+    let closeNav = document.getElementById("closeSidenav");
+    let crc_logo = document.getElementById("crc_logo");
+    let hamburgerImg = document.getElementById("hamburgerIcon");
+    let translateButton = document.getElementById("langIcon");
 
     hamburgerIcon.addEventListener('click', () => navbarButtons.classList.toggle('show'));
 
@@ -92,23 +96,29 @@ document.addEventListener("DOMContentLoaded", function () {
         document.documentElement.setAttribute("data-theme", newTheme);
         localStorage.setItem("theme", newTheme);
         themeIcon.src = `../assets/icons/theme/${newTheme}.svg`;
+        hamburgerImg.src = `../assets/icons/hamburger_${newTheme}.svg`;
+        translateButton.src = `../assets/icons/translate_${newTheme}.svg`;
         if (window.location.pathname === '/index.html' || window.location.pathname === '/') {
             logo.src = `./assets/content/images/home/logo_${newTheme}.webp`;
-        }
-        if (window.location.pathname === '/pages/journal.html') {
+        } else if (window.location.pathname === '/pages/journal.html') {
             openNav.src = `../assets/icons/nav/openNav_${newTheme}.svg`;
             closeNav.src = `../assets/icons/nav/closeNav_${newTheme}.svg`;
+        } else if (window.location.pathname === '/pages/game.html') {
+            crc_logo.src = `../assets/content/images/Game/CRC_logo_${newTheme}.webp`;
         }
     }
 
     document.documentElement.setAttribute("data-theme", storedTheme);
     themeIcon.src = `../assets/icons/theme/${storedTheme}.svg`;
+    hamburgerImg.src = `../assets/icons/hamburger_${storedTheme}.svg`;
+    translateButton.src = `../assets/icons/translate_${storedTheme}.svg`;
     if (window.location.pathname === '/index.html' || window.location.pathname === '/') {
         logo.src = `./assets/content/images/home/logo_${storedTheme}.webp`;
-    }
-    if (window.location.pathname === '/pages/journal.html') {
+    } else if (window.location.pathname === '/pages/journal.html') {
         openNav.src = `../assets/icons/nav/openNav_${storedTheme}.svg`;
         closeNav.src = `../assets/icons/nav/closeNav_${storedTheme}.svg`;
+    } else if (window.location.pathname === '/pages/game.html') {
+        crc_logo.src = `../assets/content/images/Game/CRC_logo_${storedTheme}.webp`;
     }
 
     themeToggleButton.addEventListener("click", () => {
