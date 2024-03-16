@@ -547,7 +547,8 @@ article.content {
 @media screen and (max-width: 600px) {
     .navbar-buttons {
         color: var(--text);
-        display: none;
+        display: flex;
+        flex-direction: column;
         text-align: center;
         background-color: var(--secondary);
         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
