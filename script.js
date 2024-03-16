@@ -104,7 +104,7 @@ document.addEventListener("DOMContentLoaded", function () {
             openNav.src = `../assets/icons/nav/openNav_${newTheme}.svg`;
             closeNav.src = `../assets/icons/nav/closeNav_${newTheme}.svg`;
         } else if (window.location.pathname === '/pages/game.html') {
-            crc_logo.src = `../assets/content/images/Game/CRC_logo_${newTheme}.webp`;
+            crc_logo.src = `../assets/content/images/Game/CRC_Logo_${newTheme}.webp`;
         }
     }
 
@@ -118,7 +118,7 @@ document.addEventListener("DOMContentLoaded", function () {
         openNav.src = `../assets/icons/nav/openNav_${storedTheme}.svg`;
         closeNav.src = `../assets/icons/nav/closeNav_${storedTheme}.svg`;
     } else if (window.location.pathname === '/pages/game.html') {
-        crc_logo.src = `../assets/content/images/Game/CRC_logo_${storedTheme}.webp`;
+        crc_logo.src = `../assets/content/images/Game/CRC_Logo_${storedTheme}.webp`;
     }
 
     themeToggleButton.addEventListener("click", () => {

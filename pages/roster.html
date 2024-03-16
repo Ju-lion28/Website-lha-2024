@@ -86,7 +86,7 @@
                 </div>
             </div>
             <ul class="description">
-                <li>robot</li>
+                <li>robot_building</li>
                 <li>secondary_5</li>
             </ul>
         </div>
@@ -684,49 +684,49 @@
 
     document.getElementById('frButton').addEventListener('click', () => setLanguage('fr'));
 
-	function setLanguage(value) {
-		localStorage.setItem('language', value);
-		location.reload();
-	}
+    function setLanguage(value) {
+        localStorage.setItem('language', value);
+        location.reload();
+    }
 
-	const script = document.createElement('script');
-	script.src = `../locales/${localStorage.getItem('language').split('-')[0]}.js`;
-	script.onload = updateLocalization; // Call the function to update localization after the script is loaded
-	document.head.appendChild(script);
+    const script = document.createElement('script');
+    script.src = `../locales/${localStorage.getItem('language').split('-')[0]}.js`;
+    script.onload = updateLocalization; // Call the function to update localization after the script is loaded
+    document.head.appendChild(script);
 
-	function updateLocalization() {
-		// Access the localized strings from the loaded script
-		const localizedStrings = window.localization || {};
+    function updateLocalization() {
+        // Access the localized strings from the loaded script
+        const localizedStrings = window.localization || {};
 
-		document.getElementById('gameNav').innerHTML = `<a href="../pages/game.html">${localizedStrings.menu_options.game}</a>`;
-		document.getElementById('journalNav').innerHTML = `<a href="../pages/journal.html">${localizedStrings.menu_options.journal}</a>`;
-		document.getElementById('langIcon').alt = localizedStrings.menu_options.language;
-		document.getElementById('rosterNav').innerHTML = `<a href="../pages/roster.html">${localizedStrings.menu_options.roster}</a>`;
-		document.getElementById('title-1').innerText = localizedStrings.roster.title;
-		document.getElementById('title-2').innerText = localizedStrings.roster.leaders;
-		document.getElementById('title-3').innerText = localizedStrings.roster.team;
-
-
-		const descriptions = document.getElementsByClassName('description');
-		for (let i = 0; i < descriptions.length; i++) {
-			if (descriptions[i].children?.[1]?.innerText.includes('secondary')) {
-				descriptions[i].children[1].innerText = localizedStrings.roster.roles.secondary + ' ' + descriptions[i].children[1].innerText.split('_')[1];
-			}
+        document.getElementById('gameNav').innerHTML = `<a href="../pages/game.html">${localizedStrings.menu_options.game}</a>`;
+        document.getElementById('journalNav').innerHTML = `<a href="../pages/journal.html">${localizedStrings.menu_options.journal}</a>`;
+        document.getElementById('langIcon').alt = localizedStrings.menu_options.language;
+        document.getElementById('rosterNav').innerHTML = `<a href="../pages/roster.html">${localizedStrings.menu_options.roster}</a>`;
+        document.getElementById('title-1').innerText = localizedStrings.roster.title;
+        document.getElementById('title-2').innerText = localizedStrings.roster.leaders;
+        document.getElementById('title-3').innerText = localizedStrings.roster.team;
 
 
-			descriptions[i].children[0].innerText = descriptions[i].children[0].innerText
-			.replace('art', localizedStrings.roster.roles.art)
+        const descriptions = document.getElementsByClassName('description');
+        for (let i = 0; i < descriptions.length; i++) {
+            if (descriptions[i].children?.[1]?.innerText.includes('secondary')) {
+                descriptions[i].children[1].innerText = localizedStrings.roster.roles.secondary + ' ' + descriptions[i].children[1].innerText.split('_')[1];
+            }
+
+
+            descriptions[i].children[0].innerText = descriptions[i].children[0].innerText
+            .replace('art', localizedStrings.roster.roles.art)
             .replace('captain', localizedStrings.roster.roles.captain)
-			.replace('kiosk', localizedStrings.roster.roles.kiosk)
+            .replace('kiosk', localizedStrings.roster.roles.kiosk)
             .replace('logistics', localizedStrings.roster.roles.logistics)
-			.replace('media', localizedStrings.roster.roles.media)
+            .replace('media', localizedStrings.roster.roles.media)
             .replace('pilot', localizedStrings.roster.roles.pilot)
-			.replace('programming', localizedStrings.roster.roles.programming)
-			.replace('robot_building', localizedStrings.roster.roles.robot_building)
-			.replace('robot_design', localizedStrings.roster.roles.robot_design)
-			.replace('Teacher', localizedStrings.roster.roles.teacher)
-			.replace('website', localizedStrings.roster.roles.website)
-		}
-	}
+            .replace('programming', localizedStrings.roster.roles.programming)
+            .replace('robot_building', localizedStrings.roster.roles.robot_building)
+            .replace('robot_design', localizedStrings.roster.roles.robot_design)
+            .replace('Teacher', localizedStrings.roster.roles.teacher)
+            .replace('website', localizedStrings.roster.roles.website)
+        }
+    }
 </script>
 </body></html>
