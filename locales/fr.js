@@ -91,7 +91,7 @@ const fr = {
 			website: "Site Web"
 		},
 		team: "Équipe",
-		title: "LHA Robotics 2024 Roster"
+		title: "Liste"
 	},
 	game: {
 		title1: "La Compétition",

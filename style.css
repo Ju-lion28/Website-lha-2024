@@ -689,6 +689,7 @@ button.theme:active {
     max-height: 600px;
     width: 100%;
     height: auto;
+    object-fit: contain;
 }
 
 #xp-gallery-button {

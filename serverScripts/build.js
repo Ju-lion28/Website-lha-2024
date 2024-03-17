@@ -170,7 +170,7 @@ async function webpHandler(imageSrcs) {
       console.log(`Processing: ${inputPath} -> ${outputPath}`);
       try {
         await sharp(inputPath)
-          .webp({ quality: 30, effort: 0 })
+          .webp({ quality: 40, effort: 0 })
           .toFile(outputPath, { force: true });
       } catch (error) {
         console.log(`An error occurred during processing: ${error}`);
