@@ -86,7 +86,7 @@
                 </div>
             </div>
             <ul class="description">
-                <li>programming, website lead</li>
+                <li>programming and website lead</li>
                 <li>secondary_5</li>
             </ul>
         </div>
@@ -114,7 +114,7 @@
                 </div>
             </div>
             <ul class="description">
-                <li>Media lead</li>
+                <li>media lead</li>
                 <li>secondary_5</li>
             </ul>
         </div>
@@ -128,7 +128,7 @@
                 </div>
             </div>
             <ul class="description">
-                <li>Kiosk lead</li>
+                <li>kiosk lead</li>
                 <li>secondary_5</li>
             </ul>
         </div>
@@ -713,19 +713,24 @@
                 descriptions[i].children[1].innerText = localizedStrings.roster.roles.secondary + ' ' + descriptions[i].children[1].innerText.split('_')[1];
             }
 
-
             descriptions[i].children[0].innerText = descriptions[i].children[0].innerText
-            .replace('art', localizedStrings.roster.roles.art)
-            .replace('captain', localizedStrings.roster.roles.captain)
-            .replace('kiosk', localizedStrings.roster.roles.kiosk)
-            .replace('logistics', localizedStrings.roster.roles.logistics)
-            .replace('media', localizedStrings.roster.roles.media)
-            .replace('pilot', localizedStrings.roster.roles.pilot)
-            .replace('programming', localizedStrings.roster.roles.programming)
-            .replace('robot_building', localizedStrings.roster.roles.robot_building)
-            .replace('robot_design', localizedStrings.roster.roles.robot_design)
-            .replace('Teacher', localizedStrings.roster.roles.teacher)
-            .replace('website', localizedStrings.roster.roles.website)
+                .replace('art', localizedStrings.roster.roles.art)
+                .replace('captain', localizedStrings.roster.roles.captain)
+                .replace('kiosk', localizedStrings.roster.roles.kiosk)
+                .replace('logistics', localizedStrings.roster.roles.logistics)
+                .replace('media', localizedStrings.roster.roles.media)
+                .replace('pilot', localizedStrings.roster.roles.pilot)
+                .replace('programming', localizedStrings.roster.roles.programming)
+                .replace('robot_building', localizedStrings.roster.roles.robot_building)
+                .replace('robot_design', localizedStrings.roster.roles.robot_design)
+                .replace('Teacher', localizedStrings.roster.roles.teacher)
+                .replace('website', localizedStrings.roster.roles.website);
+            
+            console.log(localStorage.getItem('language'))
+
+            if (localStorage.getItem('language') === "fr" && descriptions[i].children[0].innerText.includes('lead')) {
+                descriptions[i].children[0].innerText = 'Lead de ' + descriptions[i].children[0].innerText.replace('lead', ''); // Add "Lead de " and remove original "lead"
+            }
         }
     }
 </script>
