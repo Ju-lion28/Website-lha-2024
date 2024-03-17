@@ -79,7 +79,6 @@ const fr = {
 		roles: {
 			art: "L'Art Digital",
 			captain: "Capitaine",
-			Captain: "Capitain",
 			kiosk: "Kiosque",
 			logistics: "Logistique",
 			media: "Médias / Production",
@@ -98,7 +97,7 @@ const fr = {
 		title1: "La Compétition",
 		title2: "Le Jeu",
 		game1: "Le concours annuel de robotique du CRC permet aux élèves de différentes écoles et de différents âges de démontrer leurs compétences de manière créative et innovante.",
-		game2: "Tout d'abord, nous sommes chargés de concevoir et de construire un robot qui participera au jeu le jour de la compétition. Deuxièmement, construire et décorer un kiosque sur le thème choisi par l'équipe. Troisièmement, nous avons filmé et monté une vidéo pour créer une narration en corrélation avec le thème choisi et expliquer le jeu et d'autres informations importantes. Enfin et surtout, la programmation. Nous devons développer un site web🎀 et programmer le robot. De plus, si des mini-jeux sont inclus dans le kiosque, c'est généralement l'équipe de programmation qui s'en charge.",
+		game2: "Tout d'abord, nous sommes chargés de concevoir et de construire un robot qui participera au jeu le jour de la compétition. Deuxièmement, construire et décorer un kiosque sur le thème choisi par l'équipe. Troisièmement, nous avons filmé et monté une vidéo pour créer une narration en corrélation avec le thème choisi et expliquer le jeu et d'autres informations importantes. Enfin et surtout, la programmation. Nous devons développer un site web et programmer le robot. De plus, si des mini-jeux sont inclus dans le kiosque, c'est généralement l'équipe de programmation qui s'en charge.",
 		game3: "Tous ces éléments doivent être accomplis avant la soumission ; la seule exception est la compétition. Chaque année, un nouveau jeu est fourni à toutes les équipes le jour du coup d'envoi, et le jour de la compétition, chaque équipe est tenue de respecter les règles et règlements de ce jeu particulier.",
 		game4: "La compétition de cette année s'appelle Kryptik. Elle se déroulera à l'école secondaire Curé-Antoine-Labelle, 216 Boul Marc-Aurèle-Fortin, Laval, QC, H7L 1Z5, du 11 au 13 avril.",
 		game5: "L'objectif est simple: obtenir le plus grand nombre de points possible pour votre équipe. Il y a une équipe bleue et une équipe jaune, chacune avec deux robots qui s'échangent au cours de la compétition. Le jeu se déroule sur le terrain de jeu représenté ci-dessous:",
