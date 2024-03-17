@@ -79,6 +79,7 @@ const fr = {
 		roles: {
 			art: "L'Art Digital",
 			captain: "Capitaine",
+			Captain: "Capitain",
 			kiosk: "Kiosque",
 			logistics: "Logistique",
 			media: "Médias / Production",
