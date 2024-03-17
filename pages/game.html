@@ -2,155 +2,162 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8"/>
-    <meta name="description" content="LaurenHill Academy's website submission for the 2024 CRC competition"/>
-    <title>LHA Robotics</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="stylesheet" href="../style.css"/>
-    <link rel="icon" type="image/x-icon" href="../assets/icons/favicon.png"/>
+    <meta charset="utf-8" />
+    <meta name="description" content="Learn about the CRC annual robotics competition, including the rules, objectives, and details of this year's game called Kryptik.">
+    <title>Game Details - LHA Robotics</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="icon" type="image/x-icon" href="../assets/icons/favicon.png" />
 </head>
 
 <body>
-<div class="header">
-    <a href="../index.html">
-        <img src="../assets/icons/favicon.png" id="navImage" alt="Logo"/>
-    </a>
-    <div class="navbar">
-        <button class="hamburger-icon">
-            <img type="image/svg" src="../assets/icons/hamburger_light.svg" alt="Hamburger Icon" id="hamburgerIcon"/>
+    <div class="header">
+        <a href="../index.html">
+            <img src="../assets/icons/favicon.png" id="navImage" alt="Logo" />
+        </a>
+        <div class="navbar">
+            <button class="hamburger-icon">
+                <img type="image/svg" src="../assets/icons/hamburger_light.svg" alt="Hamburger Icon"
+                    id="hamburgerIcon" />
+            </button>
+            <menu class="navbar-buttons" id="links-menu">
+                <li class="navbar" id="gameNav"><a href="./game.html">Game</a></li>
+                <li class="navbar" id="rosterNav"><a href="./roster.html">Roster</a></li>
+                <li class="navbar" id="journalNav"><a href="./journal.html">Journal</a></li>
+                <li class="navbar" id="ExpNav"><a href="./experience.html">Experience</a></li>
+            </menu>
+        </div>
+        <button class="theme" id="themeToggleButton">
+            <img src="../assets/icons/theme/light.svg" alt="Website Theme Icon" id="themeIcon" />
         </button>
-        <menu class="navbar-buttons" id="links-menu">
-            <li class="navbar" id="gameNav"><a href="./game.html">Game</a></li>
-            <li class="navbar" id="rosterNav"><a href="./roster.html">Roster</a></li>
-            <li class="navbar" id="journalNav"><a href="./journal.html">Journal</a></li>
-            <li class="navbar" id="ExpNav"><a href="./experience.html">Experience</a></li>
-        </menu>
-    </div>
-    <button class="theme" id="themeToggleButton">
-        <img src="../assets/icons/theme/light.svg" alt="Website Theme Icon" id="themeIcon"/>
-    </button>
-    <div class="dropdown">
-        <button class="dropdown_button" id="language">
-            <img type="image/svg" src="../assets/icons/translate_light.svg" alt="Language" id="langIcon"/>
-        </button>
-        <div class="dropdown-content">
-            <button class="langButton" id="enButton" onclick="setLanguage('en')">English</button>
-            <button class="langButton" id="frButton" onclick="setLanguage('fr')">Français</button>
+        <div class="dropdown">
+            <button class="dropdown_button" id="language">
+                <img type="image/svg" src="../assets/icons/translate_light.svg" alt="Language" id="langIcon" />
+            </button>
+            <div class="dropdown-content">
+                <button class="langButton" id="enButton" onclick="setLanguage('en')">English</button>
+                <button class="langButton" id="frButton" onclick="setLanguage('fr')">Français</button>
+            </div>
         </div>
     </div>
-</div>
 
-<article class="content">
-    <h1 id="title-1">The Competition</h1>
+    <article class="content">
+        <h1 id="title-1">The Competition</h1>
 
-    <img src="../assets/content/images/Game/CRC_Logo_light.webp" class="Media" id="crc_logo" type = "image/webp" alt="CRC_Logo">
+        <img src="../assets/content/images/Game/CRC_Logo_light.webp" class="Media" id="crc_logo" type="image/webp"
+            alt="CRC_Logo">
 
-    <p id="game-1">The CRC annual robotics competition allows students from various schools and ages to demonstrate their skill sets creatively and innovatively.</p>
-    
-    <p id="game-2">Firstly, we are given the task of designing and constructing a robot that will participate in the game on the day of the competition. 
-        Secondly, build and decorate a kiosk that will encompass the team's chosen theme. 
-        Thirdly, we Film and edit a video where we create a narrative in correlation with 
-        the theme chosen and explain the game as well as other important information. 
-        Lastly and most importantly the programming. We are required to create a website and program the robot. 
-        Additionally, if there are any mini-games included in the kiosk, the program team is usually in charge. </p>
-    
-    <p id="game-3">All these elements must be accomplished before the submission date, the only exception is the actual competition. 
-        Every year there is a new game provided to all the teams on the day of the kickoff and the day of the competition, 
-        each team is required to follow the rules and regulations of that particular game.</p> 
-    
-    <img class="Media" type = "image/webp" src="../assets/content/images/Game/Kryptik.webp" 
-    alt="Kryptik_logo">  
-        
-    <p id="game-4">This year’s competition is called Kryptik, it will be held at Curé-Antoine-Labelle H.S. 
-        216 Boul Marc-Aurèle-Fortin, Laval, QC, H7L 1Z5 from April 11th to the 13th. </p>
-    
-    <h1 id="title-2">The Game</h1>
-    <p id="game-5">The goal is simple; get as many possible points for your team. 
-        There is a blue and yellow team each with two robots that will 
-        interchange through the competition. The game is played on the 
-        playing field represented below</p>
+        <p id="game-1">The CRC annual robotics competition allows students from various schools and ages to demonstrate
+            their skill sets creatively and innovatively.</p>
 
-    <img class="Media" type = "image/jpeg" src="../assets/content/images/Game/Game_Field.webp" 
-    alt="Game_Field">
+        <p id="game-2">Firstly, we are given the task of designing and constructing a robot that will participate in the
+            game on the day of the competition.
+            Secondly, build and decorate a kiosk that will encompass the team's chosen theme.
+            Thirdly, we Film and edit a video where we create a narrative in correlation with
+            the theme chosen and explain the game as well as other important information.
+            Lastly and most importantly the programming. We are required to create a website and program the robot.
+            Additionally, if there are any mini-games included in the kiosk, the program team is usually in charge. </p>
 
-    <p id="game-6">The robots start in the designated area outlined by the color assigned and are controlled by the pilots and directed by the co-pilots of the team.  
-        They must stay within their side or the neutral area indicated by the red area in the middle where the game pieces will be placed at the beginning. 
-        The teams must stay within the red zone. After the balls are retrieved at the beginning of the game. </p>
+        <p id="game-3">All these elements must be accomplished before the submission date, the only exception is the
+            actual competition.
+            Every year there is a new game provided to all the teams on the day of the kickoff and the day of the
+            competition,
+            each team is required to follow the rules and regulations of that particular game.</p>
 
-    <p id="game-7">On each side of the playing field there will be 2 of the following targets:</p>
-    
-    <img class="Media" type = "image/jpeg" src="../assets/content/images/Game/tower.webp" 
-    alt="target_tower">
+        <img class="Media" type="image/webp" src="../assets/content/images/Game/Kryptik.webp" alt="Kryptik_logo">
 
-    <p id="game-8">There will be one tall target on the back of each side and one short target on the side with each team’s color. 
-        The goal is to get the game pieces into the targets or on the multiplier and get as many points as possible for your team.</p>
+        <p id="game-4">This year’s competition is called Kryptik, it will be held at Curé-Antoine-Labelle H.S.
+            216 Boul Marc-Aurèle-Fortin, Laval, QC, H7L 1Z5 from April 11th to the 13th. </p>
 
-    <p id="game-9">There are also 3 multipliers on both sides. 
-        These poles of various sizes are scattered around the field, 
-        and depending on how many game pieces you put on the pole, 
-        your score multiplies.</p>
+        <h1 id="title-2">The Game</h1>
+        <p id="game-5">The goal is simple; get as many possible points for your team.
+            There is a blue and yellow team each with two robots that will
+            interchange through the competition. The game is played on the
+            playing field represented below</p>
 
-    <img class="Media" type = "image/png" src="../assets/content/images/Game/Multiplier.webp" alt="Multiplier">
-    
-    <p id="game-10">All the teams playing must be identified with their color and number before the games. </p>
+        <img class="Media" type="image/jpeg" src="../assets/content/images/Game/Game_Field.webp" alt="Game_Field">
 
-    <p id="game-11">The referee has full authority and can make any judgment about the game. 
-        For example; when a piece of a robot drops and obstructs other players from continuing, 
-        if a robot is damaging the playing field or game piece, 
-        prevent robots from violating the air space on the edges 
-        of the playing field and make sure the scoring is accurate.</p>
-    <br/>
-</article>
+        <p id="game-6">The robots start in the designated area outlined by the color assigned and are controlled by the
+            pilots and directed by the co-pilots of the team.
+            They must stay within their side or the neutral area indicated by the red area in the middle where the game
+            pieces will be placed at the beginning.
+            The teams must stay within the red zone. After the balls are retrieved at the beginning of the game. </p>
 
-<div class="footer">
-    Copyright © 2023-2024 LaurenHill Academy Robotics
-    <div class="score" id="highscoreBox"></div>
-    <div class="score" id="resetButton" hidden>Reset Score</div>
-</div>
+        <p id="game-7">On each side of the playing field there will be 2 of the following targets:</p>
 
-<script src="../script.js"></script>
+        <img class="Media" type="image/jpeg" src="../assets/content/images/Game/tower.webp" alt="target_tower">
 
-<script type="module">
+        <p id="game-8">There will be one tall target on the back of each side and one short target on the side with each
+            team’s color.
+            The goal is to get the game pieces into the targets or on the multiplier and get as many points as possible
+            for your team.</p>
 
-    document.getElementById('enButton').addEventListener('click', () => setLanguage('en'));
+        <p id="game-9">There are also 3 multipliers on both sides.
+            These poles of various sizes are scattered around the field,
+            and depending on how many game pieces you put on the pole,
+            your score multiplies.</p>
 
-    document.getElementById('frButton').addEventListener('click', () => setLanguage('fr'));
+        <img class="Media" type="image/png" src="../assets/content/images/Game/Multiplier.webp" alt="Multiplier">
 
-    function setLanguage(value) {
-        localStorage.setItem('language', value);
-        location.reload();
-    }
+        <p id="game-10">All the teams playing must be identified with their color and number before the games. </p>
 
-    const script = document.createElement('script');
-    script.src = `../locales/${localStorage.getItem('language').split('-')[0]}.js`;
-    script.onload = updateLocalization; // Call the function to update localization after the script is loaded
-    document.head.appendChild(script);
+        <p id="game-11">The referee has full authority and can make any judgment about the game.
+            For example; when a piece of a robot drops and obstructs other players from continuing,
+            if a robot is damaging the playing field or game piece,
+            prevent robots from violating the air space on the edges
+            of the playing field and make sure the scoring is accurate.</p>
+        <br />
+    </article>
 
-    function updateLocalization() {
-        // Access the localized strings from the loaded script
-        const localizedStrings = window.localization || {};
+    <div class="footer">
+        Copyright © 2023-2024 LaurenHill Academy Robotics
+        <div class="score" id="highscoreBox"></div>
+        <div class="score" id="resetButton" hidden>Reset Score</div>
+    </div>
 
-        document.getElementById('gameNav').innerHTML = `<a href="../pages/game.html">${localizedStrings.menu_options.game}</a>`;
-        document.getElementById('journalNav').innerHTML = `<a href="../pages/journal.html">${localizedStrings.menu_options.journal}</a>`;
-        document.getElementById('langIcon').alt = localizedStrings.menu_options.language;
-        document.getElementById('rosterNav').innerHTML = `<a href="../pages/roster.html">${localizedStrings.menu_options.roster}</a>`;
+    <script src="../script.js"></script>
 
-        document.getElementById("title-1").innerText = localizedStrings.game.title1
-        document.getElementById("title-2").innerText = localizedStrings.game.title2
+    <script type="module">
 
-        document.getElementById('game-1').innerText = localizedStrings.game.game1
-        document.getElementById('game-2').innerText = localizedStrings.game.game2
-        document.getElementById('game-3').innerText = localizedStrings.game.game3
-        document.getElementById('game-4').innerText = localizedStrings.game.game4
-        document.getElementById('game-5').innerText = localizedStrings.game.game5
-        document.getElementById('game-6').innerText = localizedStrings.game.game6
-        document.getElementById('game-7').innerText = localizedStrings.game.game7
-        document.getElementById('game-8').innerText = localizedStrings.game.game8
-        document.getElementById('game-9').innerText = localizedStrings.game.game9
-        document.getElementById('game-10').innerText = localizedStrings.game.game10
-        document.getElementById('game-11').innerText = localizedStrings.game.game11
-    }
-</script>
+        document.getElementById('enButton').addEventListener('click', () => setLanguage('en'));
+
+        document.getElementById('frButton').addEventListener('click', () => setLanguage('fr'));
+
+        function setLanguage(value) {
+            localStorage.setItem('language', value);
+            location.reload();
+        }
+
+        const script = document.createElement('script');
+        script.src = `../locales/${localStorage.getItem('language').split('-')[0]}.js`;
+        script.onload = updateLocalization; // Call the function to update localization after the script is loaded
+        document.head.appendChild(script);
+
+        function updateLocalization() {
+            // Access the localized strings from the loaded script
+            const localizedStrings = window.localization || {};
+
+            document.getElementById('gameNav').innerHTML = `<a href="../pages/game.html">${localizedStrings.menu_options.game}</a>`;
+            document.getElementById('journalNav').innerHTML = `<a href="../pages/journal.html">${localizedStrings.menu_options.journal}</a>`;
+            document.getElementById('langIcon').alt = localizedStrings.menu_options.language;
+            document.getElementById('rosterNav').innerHTML = `<a href="../pages/roster.html">${localizedStrings.menu_options.roster}</a>`;
+
+            document.getElementById("title-1").innerText = localizedStrings.game.title1
+            document.getElementById("title-2").innerText = localizedStrings.game.title2
+
+            document.getElementById('game-1').innerText = localizedStrings.game.game1
+            document.getElementById('game-2').innerText = localizedStrings.game.game2
+            document.getElementById('game-3').innerText = localizedStrings.game.game3
+            document.getElementById('game-4').innerText = localizedStrings.game.game4
+            document.getElementById('game-5').innerText = localizedStrings.game.game5
+            document.getElementById('game-6').innerText = localizedStrings.game.game6
+            document.getElementById('game-7').innerText = localizedStrings.game.game7
+            document.getElementById('game-8').innerText = localizedStrings.game.game8
+            document.getElementById('game-9').innerText = localizedStrings.game.game9
+            document.getElementById('game-10').innerText = localizedStrings.game.game10
+            document.getElementById('game-11').innerText = localizedStrings.game.game11
+        }
+    </script>
 
 </body>
 
