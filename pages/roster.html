@@ -741,7 +741,7 @@
                     .replace('Teacher', localizedStrings.roster.roles.teacher)
                     .replace('website', localizedStrings.roster.roles.website);
 
-                console.log(localStorage.getItem('language'))
+                // console.log(localStorage.getItem('language'))
 
                 if (localStorage.getItem('language') === "fr" && descriptions[i].children[0].innerText.includes('lead')) {
                     descriptions[i].children[0].innerText = 'Lead de ' + descriptions[i].children[0].innerText.replace('lead', ''); // Add "Lead de " and remove original "lead"

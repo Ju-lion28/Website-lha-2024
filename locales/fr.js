@@ -5,7 +5,7 @@ const fr = {
 	home: {
 		about_us: {
 			title: "À propos de nous",
-			text: "Nous sommes un groupe d'élèves du programme de robotique de la LaurenHill Academy. Ensemble, nous avons construit des machines innovantes, des jeux vidéo et même ce site web! Les élèves de la LHA sont toujours les bienvenus dans notre équipe."
+			text: "Nous sommes un groupe d'élèves du programme de robotique de LaurenHill Academy. Ensemble, nous avons construit des machines innovantes, des jeux vidéo et même ce site web! Les élèves de la LHA sont toujours les bienvenus dans notre équipe."
 		},
 	},
 	menu_options: {

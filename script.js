@@ -65,7 +65,7 @@ document.addEventListener("click", (event) => {
         }
 
         // Load the new page with animation and redirect to the URL, including target attribute
-        console.log(url, targetAttr)
+        // console.log(url, targetAttr)
         loadPageWithAnimation(url, targetAttr);
     }
 });
@@ -179,7 +179,7 @@ const resetButton = document.getElementById("resetButton");
 
 // Set highscore to 0
 resetButton.onclick = function resetScore() {
-    console.log("Score Reset");
+    // console.log("Score Reset");
     localStorage.setItem("HIGHSCORE", Number(0 - 2)); //Forces HIGHSCORE to show as 0
 };
 
