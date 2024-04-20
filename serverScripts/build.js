@@ -163,9 +163,10 @@ async function webpHandler(imageSrcs) {
   for (let image of imageSrcs) {
     if (image.includes("webp")) {
       const inputPath = path.join(__dirname, '..', 'assets', image);
-      
+
       const outputname = image.replace(/\.\./g, '');
       const outputPath = path.join(__dirname, "dist", outputname);
+      console.log(outputPath)
 
       console.log(`Processing: ${inputPath} -> ${outputPath}`);
       try {
