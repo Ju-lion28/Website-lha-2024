@@ -9,7 +9,7 @@
   "dependencies": {
     "@minify-html/node": "^0.15.0",
     "@minify-js/node": "^0.6.0",
-    "esbuild": "0.20.1",
+    "esbuild": "0.25.0",
     "fs-extra": "^11.2.0",
     "jsdom": "^24.0.0",
     "sharp": "^0.33.2"
